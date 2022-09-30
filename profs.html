@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.1.251">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
 <title>Relatórios reprodutíveis com R - Docentes</title>
 <style>
 code{white-space: pre-wrap;}
@@ -18,6 +21,7 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 </style>
+
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -35,7 +39,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -53,22 +58,40 @@ ul.task-list li input[type="checkbox"] {
     "search-detached-cancel-button-title": "Cancelar",
     "search-submit-button-title": "Enviar"
   }
-}</script><script src="site_libs/core-js-2.5.3/shim.min.js"></script><script src="site_libs/react-17.0.0/react.min.js"></script><script src="site_libs/react-17.0.0/react-dom.min.js"></script><script src="site_libs/reactwidget-1.0.0/react-tools.js"></script><script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><script src="site_libs/reactable-binding-0.3.0/reactable.js"></script><link rel="stylesheet" href="styles.scss">
+}</script>
+
+<script src="site_libs/core-js-2.5.3/shim.min.js"></script>
+<script src="site_libs/react-17.0.0/react.min.js"></script>
+<script src="site_libs/react-17.0.0/react-dom.min.js"></script>
+<script src="site_libs/reactwidget-1.0.0/react-tools.js"></script>
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="site_libs/reactable-binding-0.3.0/reactable.js"></script>
+
+
+<link rel="stylesheet" href="styles.scss">
 </head>
+
 <body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }"><div class="container-fluid d-flex justify-content-between">
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
       <h1 class="quarto-secondary-nav-title">Docentes</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
       <a href="./" class="sidebar-logo-link">
-      <img src="https://www.ime.usp.br/verao/assets/images/logo_verao.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
+      <img src="https://www.ime.usp.br/verao/assets/images/logo_verao.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Relatórios reprodutíveis com R <br></a> 
         <div class="sidebar-tools-main">
@@ -84,15 +107,15 @@ ul.task-list li input[type="checkbox"] {
       </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-<li class="sidebar-item sidebar-item-section">
+        <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Sobre o curso</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./informacoes-gerais.html" class="sidebar-item-text sidebar-link">Informações gerais</a>
   </div>
@@ -113,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">Edições anteriores</a>
@@ -121,14 +144,14 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/programacao-do-curso.html" class="sidebar-item-text sidebar-link">Edição 2022</a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">Sobre o material</a>
@@ -136,25 +159,32 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./licenca.html" class="sidebar-item-text sidebar-link">Licença de uso</a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
     </ul>
-</div>
-</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-<li><a href="#monitoria-em-ordem-alfab%C3%A9tica" id="toc-monitoria-em-ordem-alfabética" class="nav-link active" data-scroll-target="#monitoria-em-ordem-alfab%C3%A9tica">Monitoria (em ordem alfabética)</a></li>
-  </ul></nav>
+  <li><a href="#monitoria-em-ordem-alfabética" id="toc-monitoria-em-ordem-alfabética" class="nav-link active" data-scroll-target="#monitoria-em-ordem-alfabética">Monitoria (em ordem alfabética)</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
 <h1 class="title d-none d-lg-block">Docentes</h1>
 </div>
 
@@ -167,7 +197,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
-</header><div class="callout-warning callout callout-style-default callout-captioned">
+</header>
+
+<div class="callout-warning callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -186,19 +218,25 @@ Atenção!
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="htmlwidget-146b3755dbb498c5d594" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-146b3755dbb498c5d594">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"foto":["<center><img src='https://beatrizmilz.com/about/sidebar/avatar.jpeg' width='100' style='border-radius: 50%;'><br><b>Beatriz Milz<\/b> <br> <a href=\"https://beatrizmilz.com/\" target=\"_blank\"><i class=\"fas fa-home\"><\/i><\/a> <a href=\"https://github.com/beatrizmilz\" target=\"_blank\"><i class=\"fab fa-github\"><\/i><\/a> <a href=\"https://www.linkedin.com/in/beatrizmilz/\" target=\"_blank\"><i class=\"fab fa-linkedin\"><\/i><\/a> <a href=\"https://twitter.com/BeaMilz\" target=\"_blank\"><i class=\"fab fa-twitter\"><\/i><\/a> <\/center>"],"destaque":["- Doutoranda em Ciência Ambiental na\n  Universidade de São Paulo (PROCAM/IEE/USP). <br> \n  - Professora e consultora na <a href='https://curso-r.com/'>Curso-R/R6<\/a>. <br>\n  - <a href='https://education.rstudio.com/trainers/people/milz+beatriz/'>Instrutora de tidyverse certificada pela RStudio<\/a>.<br>\n  - Co-organizadora da <a href='https://linktr.ee/rladies_sp'>R-Ladies SP<\/a>, uma comunidade que tem como\n  objetivo promover a diversidade de gênero na comunidade da linguagem R. <br>"]},"columns":[{"accessor":"foto","name":"Docente","type":["glue","character"],"html":true,"maxWidth":250},{"accessor":"destaque","name":"","type":["glue","character"],"html":true}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"5eebe3509c49f7c95e8cf833a567f927"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-54efb7cd7acbd4ec2252" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-54efb7cd7acbd4ec2252">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"foto":["<center><img src='https://beatrizmilz.com/about/sidebar/avatar.jpeg' width='100' style='border-radius: 50%;'><br><b>Beatriz Milz<\/b> <br> <a href=\"https://beatrizmilz.com/\" target=\"_blank\"><i class=\"fas fa-home\"><\/i><\/a> <a href=\"https://github.com/beatrizmilz\" target=\"_blank\"><i class=\"fab fa-github\"><\/i><\/a> <a href=\"https://www.linkedin.com/in/beatrizmilz/\" target=\"_blank\"><i class=\"fab fa-linkedin\"><\/i><\/a> <a href=\"https://twitter.com/BeaMilz\" target=\"_blank\"><i class=\"fab fa-twitter\"><\/i><\/a> <\/center>"],"destaque":["- Doutoranda em Ciência Ambiental na\n  Universidade de São Paulo (PROCAM/IEE/USP). <br> \n  - Professora e consultora na <a href='https://curso-r.com/'>Curso-R/R6<\/a>. <br>\n  - <a href='https://education.rstudio.com/trainers/people/milz+beatriz/'>Instrutora de tidyverse certificada pela RStudio<\/a>.<br>\n  - Co-organizadora da <a href='https://linktr.ee/rladies_sp'>R-Ladies SP<\/a>, uma comunidade que tem como\n  objetivo promover a diversidade de gênero na comunidade da linguagem R. <br>"]},"columns":[{"accessor":"foto","name":"Docente","type":["glue","character"],"html":true,"maxWidth":250},{"accessor":"destaque","name":"","type":["glue","character"],"html":true}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"5eebe3509c49f7c95e8cf833a567f927"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
-<section id="monitoria-em-ordem-alfabética" class="level2"><h2 class="anchored" data-anchor-id="monitoria-em-ordem-alfabética">Monitoria (em ordem alfabética)</h2>
+<section id="monitoria-em-ordem-alfabética" class="level2">
+<h2 class="anchored" data-anchor-id="monitoria-em-ordem-alfabética">Monitoria (em ordem alfabética)</h2>
 <p>Em breve!</p>
 <div class="cell">
 
 </div>
 <!-- inicio font awesome -->
-<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script><!-- final font awesome -->
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
+<!-- final font awesome -->
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -295,7 +333,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 });
-</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
       <a href="./informacoes-gerais.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Informações gerais</span>
       </a>          
@@ -307,11 +347,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left">© Copyright 2022-2023, <a href="https://beamilz.com">Beatriz Milz</a></div>   
     <div class="nav-footer-right">Página criada usando <a href="https://quarto.org/">Quarto</a>. Licença de uso: <a href="./licenca.html">Creative Commons Atribuição-Compartilha Igual (CC BY-SA)</a>.</div>
   </div>
 </footer>
+
 
 
 </body></html>
