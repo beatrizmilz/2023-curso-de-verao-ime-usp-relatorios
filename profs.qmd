@@ -1,0 +1,83 @@
+---
+title: "Docentes"
+execute:
+  message: FALSE
+---
+
+::: callout-warning
+## Atenção!
+
+Conteúdo em atualização.
+:::
+
+
+```{r}
+#| message: FALSE
+#| echo: FALSE
+library(magrittr)
+
+googlesheets4::gs4_auth()
+sheet_profs <- googlesheets4::read_sheet("16-NokZ3NTaHfavyo77gSGdH_EtsAaeaCZWNBe9JfPMA", sheet = "info-profs")
+  
+
+df_profs <- sheet_profs %>% 
+  
+dplyr::mutate(
+  icon_github = dplyr::case_when(!is.na(url_github) ~ glue::glue('<a href="{url_github}" target="_blank"><i class="fab fa-github"></i></a>'),
+                                 TRUE ~ "") ,
+  
+  icon_twitter = dplyr::case_when(!is.na(url_twitter) ~ glue::glue('<a href="{url_twitter}" target="_blank"><i class="fab fa-twitter"></i></a>'),
+                                 TRUE ~ "") ,
+  
+    icon_facebook = dplyr::case_when(!is.na(url_facebook) ~ glue::glue('<a href="{url_facebook}" target="_blank"><i class="fab fa-facebook"></i></a>'),
+                                 TRUE ~ "") ,
+  
+      icon_linkedin = dplyr::case_when(!is.na(url_linkedin) ~ glue::glue('<a href="{url_linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>'),
+                                 TRUE ~ "") ,
+  
+      icon_site = dplyr::case_when(!is.na(url_site) ~ glue::glue('<a href="{url_site}" target="_blank"><i class="fas fa-home"></i></a>'),
+                                 TRUE ~ "") ,
+  
+  
+  destaque = glue::glue("{mini_bio}"),
+  foto = glue::glue("<center><img src='{url_foto}' width='100' style='border-radius: 50%;'><br><b>{nome}</b> <br> {icon_site} {icon_github} {icon_linkedin} {icon_twitter} {icon_facebook}</center>")
+    ) %>%  
+  dplyr::arrange(nome) %>% 
+  dplyr::select(foto,  atividade, destaque) 
+```
+
+```{r}
+#| message: FALSE
+#| echo: FALSE
+df_profs %>% 
+  dplyr::filter(atividade == "Docente") %>% 
+  dplyr::select(-atividade) %>% 
+  reactable::reactable(columns = list(
+        foto = reactable::colDef(html = TRUE, name = "Docente", maxWidth = 250), 
+        destaque = reactable::colDef(html = TRUE, name = "")
+    ))
+```
+
+## Monitoria (em ordem alfabética)
+
+
+Em breve!
+
+```{r}
+#| message: FALSE
+#| echo: FALSE
+# df_profs %>% 
+#   dplyr::filter(atividade == "Monitoria") %>% 
+#   dplyr::select(-atividade) %>% 
+#   reactable::reactable(columns = list(
+#         foto = reactable::colDef(html = TRUE, name = "", maxWidth = 250), 
+#         destaque = reactable::colDef(html = TRUE, name = "")
+#     ))
+```
+
+<!-- inicio font awesome -->
+
+```{=html}
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
+```
+<!-- final font awesome -->

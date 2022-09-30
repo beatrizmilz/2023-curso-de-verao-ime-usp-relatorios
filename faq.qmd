@@ -1,0 +1,25 @@
+---
+title: "Perguntas Frequentes (FAQ)"
+params: 
+  link_inscricao: "https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php"
+---
+
+1.  **O curso será online ou presencial?**
+
+O curso será oferecido de forma online.
+
+2.  **Apenas estudantes da USP podem participar do curso?**
+
+As inscrições serão abertas para todas as pessoas interessadas.
+
+3.  **Como posso me inscrever?**
+
+A inscrição será realizada através do IME-USP. Acompanhe as informações na página do [Programa de Verão do IME-USP](`r params$link_inscricao`).
+
+4.  **O curso é gratuito?**
+
+Não, o curso é pago. Acompanhe as informações na página do [Programa de Verão do IME-USP](`r params$link_inscricao`).
+
+5.  **As aulas serão gravadas?**
+
+Sim.

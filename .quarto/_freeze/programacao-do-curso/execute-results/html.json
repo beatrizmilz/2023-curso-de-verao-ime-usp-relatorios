@@ -1,0 +1,16 @@
+{
+  "hash": "df77b42be14b4ae7b332bb9b13f60f3a",
+  "result": {
+    "markdown": "---\ntitle: \"Programação do curso\"\n---\n\n\n::: callout-warning\n## Atenção!\n\nConteúdo em atualização.\n:::\n\n<!-- https://docs.google.com/spreadsheets/d/16-NokZ3NTaHfavyo77gSGdH_EtsAaeaCZWNBe9JfPMA/edit#gid=1416308561 -->\n\n\n::: {.cell}\n\n:::\n\n\n## Slides do curso\n\n<center><a href='https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/slides/' target='_blank'><img src=\"https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/slides/img/share-card.jpg\" width=\"80%\"/> </a></center>\n\n\n##  Parte 1 - Reprodutibilidade e RMarkdown \n### [Aula 1 (02/02/2022)](/aula1.html) \n**Conteúdo**  \n\n- Introdução ao curso - [Slides](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/slides/#sobre-o-curso){target=\"_blank\"}\n\n- Introdução ao conceito de reprodutibilidade  - [Slides](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/slides/#reprodutibilidade){target=\"_blank\"}\n  - Reprodutibilidade no contexto do desenvolvimento em R: Usando projetos do RStudio (`.Rprojs`)  \n\n- RMarkdown  - [Slides](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/slides/#rmarkdown){target=\"_blank\"}\n  - Introdução ao pacote RMarkdown\n  - Como criar arquivos `.Rmd`   \n\n### [Aula 2 (07/02/2022)](/aula2.html) \n**Conteúdo**  \n\n- RMarkdown (continuação)  - [Slides](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/slides/#rmarkdown){target=\"_blank\"}\n  - Como textos marcados com markdown no `.Rmd` \n  - Como adicionar elementos no `.Rmd`, como: imagens, tabelas, gráficos, códigos e resultados.\n  - Criando `.Rmd` a partir de templates   \n\n### [Aula 3 (09/02/2022)](/aula3.html) \n**Conteúdo**  \n\n- RMarkdown (continuação)  - [Slides](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/slides/#rmarkdown){target=\"_blank\"} \n  - Gerando diferentes tipos de relatórios: `.html`, `.docx`, `.pdf` \n  - Relatórios com parâmetros \n  - Usando e gerenciando bibliografias com arquivos `.bib`   \n\n##  Parte 2 - Controle de versão e disponibilização dos resultados \n### [Aula 4 (14/02/2022)](/aula4.html) \n**Conteúdo**  \n\n- Git e GitHub - [Slides](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/slides/#git-e-github){target=\"_blank\"}\n  - Introdução ao controle de versão\n  - Diferença entre Git e GitHub\n  - Como configurar o Git e o GitHub no RStudio usando o pacote {usethis}   \n\n### [Aula 5 (16/02/2022)](/aula5.html) \n**Conteúdo**  \n\n- Git e GitHub (continuação)  - [Slides](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/slides/#git-e-github){target=\"_blank\"}\n  - Fluxo de trabalho em projetos no RStudio usando controle de versão com Git e GitHub\n  - Disponibilizar os relatórios gerados em `.html` na internet\n    - Com GitHub Pages   \n",
+    "supporting": [
+      "programacao-do-curso_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,63 @@
+project:
+  type: website
+
+lang: "pt"
+
+website:
+  page-navigation: true
+  title: "Relatórios reprodutíveis com R"
+  description: "Página do curso de verão oferecido pelo IME/USP, 2023."
+  repo-url: "https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios"
+  
+  page-footer: 
+    right: "Página criada usando [Quarto](https://quarto.org/). Licença de uso: [Creative Commons Atribuição-Compartilha Igual (CC BY-SA)](licenca.qmd)."
+    left: "&copy; Copyright 2022-2023, [Beatriz Milz](https://beamilz.com)"
+    background: "#1094ab"
+    
+  sidebar:
+    title: "Relatórios reprodutíveis com R <br>"
+    background: "#1094ab"  
+    logo: https://www.ime.usp.br/verao/assets/images/logo_verao.png
+    pinned: true
+    align: center
+    style: "docked"
+    search: true
+    collapse-level: 1    
+    tools:
+      - icon: github
+        href: https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios   
+        text: "Repositório no GitHub"
+      - icon: book-half
+        href: https://www.ime.usp.br/~verao/
+        text: "Inscrições"
+    
+    contents:
+      - section: "Sobre o curso"
+        contents:
+           - informacoes-gerais.qmd
+           - profs.qmd
+           - bibliografia.qmd
+           - faq.qmd    
+      - section: "Edições anteriores"
+        contents:
+          - href: https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/programacao-do-curso.html
+            text: "Edição 2022" 
+      - section: "Sobre o material"
+        contents:
+          - licenca.qmd
+  
+  
+
+
+format:
+  html:
+    theme: cosmo
+    mainfont: "Montserrat"
+    css: styles.scss
+    toc: true
+    code-copy: true
+    code-link: true
+    code-overflow: wrap
+
+editor: visual
+

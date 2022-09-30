@@ -1,0 +1,11 @@
+---
+title: "Licença de uso"
+---
+
+<center>![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)</center>
+
+<br> Estes materiais são disponibilizados com a licença Creative Commons Atribuição-Compartilha Igual (CC BY-SA), ou seja, você pode compartilhar e adaptar este material, porém deve atribuir os créditos para as pessoas autoras, adicionando um link para o material original, e o seu material também deve ter este mesmo tipo de licença.
+
+Saiba mais em: [Creative Commons](https://br.creativecommons.net/licencas/)
+
+Visual da página inspirado em: [STA 210: Regression Analysis](https://sta210-s22.github.io/website/), por [Mine Çetinkaya-Rundel](https://mine-cr.com/).

@@ -1,0 +1,14 @@
+{
+  "hash": "abfa0cc3c74ab90e21b2e5c183ccf08e",
+  "result": {
+    "markdown": "---\ntitle: \"Perguntas Frequentes (FAQ)\"\nparams: \n  link_inscricao: \"https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php\"\n---\n\n\n1.  **O curso será online ou presencial?**\n\nO curso será oferecido de forma online.\n\n2.  **Apenas estudantes da USP podem participar do curso?**\n\nAs inscrições serão abertas para todas as pessoas interessadas.\n\n3.  **Como posso me inscrever?**\n\nA inscrição será realizada através do IME-USP. Acompanhe as informações na página do [Programa de Verão do IME-USP](https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php).\n\n4.  **O curso é gratuito?**\n\nNão, o curso é pago. Acompanhe as informações na página do [Programa de Verão do IME-USP](https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php).\n\n5.  **As aulas serão gravadas?**\n\nSim.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,27 @@
+---
+title: "Bibliografia"
+---
+
+::: callout-warning
+## Atenção!
+
+Conteúdo em atualização.
+:::
+
+## Em Português
+
+Caio Lente, Athos Damiani, Beatriz Milz, Daniel Falbel, Fernando Correa, Julio Trecenti, Tereza Lacerda, William Amorim. **Zen do R.** Disponível em: <https://curso-r.github.io/zen-do-r/git-github.html>
+
+Athos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Correa, Julio Tricenti, Nicole Luduvice, William Amorim. **Ciência de Dados em R**. Disponível em: <https://livro.curso-r.com/9-relatorios.html>
+
+## Em Inglês
+
+Yihui Xie, J. J. Allaire, Garrett Grolemund. **R Markdown: The Definitive Guide**. 2019. Chapman & Hall/CRC. Disponível em: <https://bookdown.org/yihui/rmarkdown/>
+
+Yihui Xie, Christophe Dervieux, Emily Riederer. **R Markdown Cookbook.** 2021. Chapman & Hall/CRC. Disponível em: <https://bookdown.org/yihui/rmarkdown-cookbook/>
+
+Jenny Bryan, the STAT 545 TAs, Jim Hester. **Happy Git and GitHub for the useR**. Disponível em: <https://happygitwithr.com/>
+
+The Carpentries & Data Carpentry. **Reproducible Research Introduction**. Disponível em: <https://datacarpentry.org/rr-intro/>
+
+National Center for Ecological Analysis and Synthesis (NCEAS). **Reproducible Analysis With R**. Disponível em: <https://nceas.github.io/sasap-training/materials/reproducible_research_in_r_fairbanks/>

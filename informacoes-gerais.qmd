@@ -1,0 +1,47 @@
+---
+title: "Informações gerais"
+---
+
+::: callout-warning
+## Atenção!
+
+**Inscrições** exclusivamente no site do [Programa de Verão IME-USP](https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php).
+:::
+
+## Público Alvo
+
+-   Estudantes de graduação que desejam se aprofundar no conhecimento do R.
+
+-   Profissionais do mercado de trabalho que usam o R e desejam aprimorar os seus conhecimentos.
+
+-   Pessoas na academia com interesse em tornar suas análises e códigos mais legíveis, reprodutíveis, eficientes e organizados.
+
+## Pré-requisitos
+
+É recomendado que as pessoas participantes estejam familiarizadas com o conteúdo do curso Introdução à programação em R.
+
+Obs: O material do curso de Introdução ao R, ministrado por Nathália Demétrio, está disponível [neste link](https://github.com/natydemi/intro_R_language/tree/master/aulas), caso queira consultar.
+
+## Método avaliativo
+
+-   Trabalho prático final (extraclasse)
+
+-   Para receber o certificado, é necessário ter **frequência superior à 75%** e **aprovação no trabalho final**.
+
+## Informações gerais
+
+**Carga horária:** 15h (5 aulas de 3h)
+
+**Local:** Online
+
+**Datas:** Janeiro/Fevereiro de 2023. Datas em breve.
+
+**Horário:** Noturno (19h-22h)
+
+**Vagas:** 70
+
+## Política de isenção de taxa de inscrição
+
+Segue abaixo a política de Isenção que está no sistema para os cursos de verão:
+
+> 25. Política de Isenções<br> ISENÇÃO<br> O aluno deverá fazer sua inscrição on-line no curso que desejar e efetuar o pagamento, para assegurar sua vaga. Após dois dias úteis solicitar isenção (via Sistema Web do Verão).<br> O sorteio das isenções, bem como, a divulgação dos contemplados ocorrerá no mês de dezembro. Aqueles que NÃO forem sorteados e desistirem de realizar o curso deverão solicitar a devolução da taxa de inscrição, na Secretaria do Programa de Verão. <br> No caso de ausência de interessados em alguma categoria, as vagas serão remanejadas de acordo com a procura ou será substituído por isenção para alunos indicados por docentes. A devolução da taxa, referente a isenção será feita via depósito em conta bancária.

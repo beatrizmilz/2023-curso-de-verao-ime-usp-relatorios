@@ -1,0 +1,18 @@
+{
+  "hash": "42da7d6da52bed4cd5ec06eaef33d9bb",
+  "result": {
+    "markdown": "---\ntitle: \"Docentes\"\nexecute:\n  message: FALSE\n---\n\n\n::: callout-warning\n## Atenção!\n\nConteúdo em atualização.\n:::\n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n```{=html}\n<div id=\"htmlwidget-12edd84236941bc133c6\" class=\"reactable html-widget\" style=\"width:auto;height:auto;\"></div>\n<script type=\"application/json\" data-for=\"htmlwidget-12edd84236941bc133c6\">{\"x\":{\"tag\":{\"name\":\"Reactable\",\"attribs\":{\"data\":{\"foto\":[\"<center><img src='https://beatrizmilz.com/about/sidebar/avatar.jpeg' width='100' style='border-radius: 50%;'><br><b>Beatriz Milz<\\/b> <br> <a href=\\\"https://beatrizmilz.com/\\\" target=\\\"_blank\\\"><i class=\\\"fas fa-home\\\"><\\/i><\\/a> <a href=\\\"https://github.com/beatrizmilz\\\" target=\\\"_blank\\\"><i class=\\\"fab fa-github\\\"><\\/i><\\/a> <a href=\\\"https://www.linkedin.com/in/beatrizmilz/\\\" target=\\\"_blank\\\"><i class=\\\"fab fa-linkedin\\\"><\\/i><\\/a> <a href=\\\"https://twitter.com/BeaMilz\\\" target=\\\"_blank\\\"><i class=\\\"fab fa-twitter\\\"><\\/i><\\/a> <\\/center>\"],\"destaque\":[\"- Doutoranda em Ciência Ambiental na\\n  Universidade de São Paulo (PROCAM/IEE/USP). <br> \\n  - Professora na <a href='https://curso-r.com/'>Curso-R<\\/a>. <br>\\n  - <a href='https://education.rstudio.com/trainers/people/milz+beatriz/'>Instrutora de tidyverse certificada pela RStudio<\\/a>.<br>\\n  - Co-organizadora da <a href='https://linktr.ee/rladies_sp'>R-Ladies SP<\\/a>, uma comunidade que tem como\\n  objetivo promover a diversidade de gênero na comunidade da linguagem R. <br>\"]},\"columns\":[{\"accessor\":\"foto\",\"name\":\"Docente\",\"type\":[\"glue\",\"character\"],\"html\":true,\"maxWidth\":250},{\"accessor\":\"destaque\",\"name\":\"\",\"type\":[\"glue\",\"character\"],\"html\":true}],\"defaultPageSize\":10,\"paginationType\":\"numbers\",\"showPageInfo\":true,\"minRows\":1,\"dataKey\":\"486b1ee77c05f9a35921282b8d29ed57\"},\"children\":[]},\"class\":\"reactR_markup\"},\"evals\":[],\"jsHooks\":[]}</script>\n```\n:::\n:::\n\n\n## Monitoria (em ordem alfabética)\n\n\nEm breve!\n\n\n::: {.cell}\n\n:::\n\n\n<!-- inicio font awesome -->\n\n\n```{=html}\n<script src=\"https://kit.fontawesome.com/1f72d6921a.js\" crossorigin=\"anonymous\"></script>\n```\n\n<!-- final font awesome -->\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"site_libs/core-js-2.5.3/shim.min.js\"></script>\n<script src=\"site_libs/react-17.0.0/react.min.js\"></script>\n<script src=\"site_libs/react-17.0.0/react-dom.min.js\"></script>\n<script src=\"site_libs/reactwidget-1.0.0/react-tools.js\"></script>\n<script src=\"site_libs/htmlwidgets-1.5.4/htmlwidgets.js\"></script>\n<script src=\"site_libs/reactable-binding-0.3.0/reactable.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

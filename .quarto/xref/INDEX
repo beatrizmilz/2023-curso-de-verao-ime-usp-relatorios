@@ -1,0 +1,26 @@
+{
+  "index.qmd": {
+    "index.html": "da58ed8d"
+  },
+  "about.qmd": {
+    "about.html": "55ac3e0c"
+  },
+  "bibliografia.qmd": {
+    "bibliografia.html": "796e65f0"
+  },
+  "licenca.qmd": {
+    "licenca.html": "50af78bd"
+  },
+  "profs.qmd": {
+    "profs.html": "01d2caf2"
+  },
+  "informacoes-gerais.qmd": {
+    "informacoes-gerais.html": "17d369da"
+  },
+  "faq.qmd": {
+    "faq.html": "61513223"
+  },
+  "programacao-do-curso.qmd": {
+    "programacao-do-curso.html": "4b9662f6"
+  }
+}
