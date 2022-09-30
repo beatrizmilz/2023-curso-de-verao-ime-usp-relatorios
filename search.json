@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "bibliografia.html",
+    "href": "bibliografia.html",
+    "title": "Bibliografia",
+    "section": "",
+    "text": "Atenção!\n\n\n\nConteúdo em atualização."
+  },
+  {
+    "objectID": "bibliografia.html#em-português",
+    "href": "bibliografia.html#em-português",
+    "title": "Bibliografia",
+    "section": "Em Português",
+    "text": "Em Português\nCaio Lente, Athos Damiani, Beatriz Milz, Daniel Falbel, Fernando Correa, Julio Trecenti, Tereza Lacerda, William Amorim. Zen do R. Disponível em: https://curso-r.github.io/zen-do-r/git-github.html\nAthos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Correa, Julio Tricenti, Nicole Luduvice, William Amorim. Ciência de Dados em R. Disponível em: https://livro.curso-r.com/9-relatorios.html"
+  },
+  {
+    "objectID": "bibliografia.html#em-inglês",
+    "href": "bibliografia.html#em-inglês",
+    "title": "Bibliografia",
+    "section": "Em Inglês",
+    "text": "Em Inglês\nYihui Xie, J. J. Allaire, Garrett Grolemund. R Markdown: The Definitive Guide. 2019. Chapman & Hall/CRC. Disponível em: https://bookdown.org/yihui/rmarkdown/\nYihui Xie, Christophe Dervieux, Emily Riederer. R Markdown Cookbook. 2021. Chapman & Hall/CRC. Disponível em: https://bookdown.org/yihui/rmarkdown-cookbook/\nJenny Bryan, the STAT 545 TAs, Jim Hester. Happy Git and GitHub for the useR. Disponível em: https://happygitwithr.com/\nThe Carpentries & Data Carpentry. Reproducible Research Introduction. Disponível em: https://datacarpentry.org/rr-intro/\nNational Center for Ecological Analysis and Synthesis (NCEAS). Reproducible Analysis With R. Disponível em: https://nceas.github.io/sasap-training/materials/reproducible_research_in_r_fairbanks/"
+  },
+  {
+    "objectID": "licenca.html",
+    "href": "licenca.html",
+    "title": "Licença de uso",
+    "section": "",
+    "text": "Estes materiais são disponibilizados com a licença Creative Commons Atribuição-Compartilha Igual (CC BY-SA), ou seja, você pode compartilhar e adaptar este material, porém deve atribuir os créditos para as pessoas autoras, adicionando um link para o material original, e o seu material também deve ter este mesmo tipo de licença.\nSaiba mais em: Creative Commons\nVisual da página inspirado em: STA 210: Regression Analysis, por Mine Çetinkaya-Rundel."
+  },
+  {
+    "objectID": "profs.html",
+    "href": "profs.html",
+    "title": "Docentes",
+    "section": "",
+    "text": "Atenção!\n\n\n\nConteúdo em atualização."
+  },
+  {
+    "objectID": "profs.html#monitoria-em-ordem-alfabética",
+    "href": "profs.html#monitoria-em-ordem-alfabética",
+    "title": "Docentes",
+    "section": "Monitoria (em ordem alfabética)",
+    "text": "Monitoria (em ordem alfabética)\nEm breve!"
+  },
+  {
+    "objectID": "informacoes-gerais.html",
+    "href": "informacoes-gerais.html",
+    "title": "Informações gerais",
+    "section": "",
+    "text": "Atenção!\n\n\n\nInscrições exclusivamente no site do Programa de Verão IME-USP."
+  },
+  {
+    "objectID": "informacoes-gerais.html#público-alvo",
+    "href": "informacoes-gerais.html#público-alvo",
+    "title": "Informações gerais",
+    "section": "Público Alvo",
+    "text": "Público Alvo\n\nEstudantes de graduação que desejam se aprofundar no conhecimento do R.\nProfissionais do mercado de trabalho que usam o R e desejam aprimorar os seus conhecimentos.\nPessoas na academia com interesse em tornar suas análises e códigos mais legíveis, reprodutíveis, eficientes e organizados."
+  },
+  {
+    "objectID": "informacoes-gerais.html#pré-requisitos",
+    "href": "informacoes-gerais.html#pré-requisitos",
+    "title": "Informações gerais",
+    "section": "Pré-requisitos",
+    "text": "Pré-requisitos\nÉ recomendado que as pessoas participantes estejam familiarizadas com o conteúdo do curso Introdução à programação em R.\nObs: O material do curso de Introdução ao R, ministrado por Nathália Demétrio, está disponível neste link, caso queira consultar."
+  },
+  {
+    "objectID": "informacoes-gerais.html#método-avaliativo",
+    "href": "informacoes-gerais.html#método-avaliativo",
+    "title": "Informações gerais",
+    "section": "Método avaliativo",
+    "text": "Método avaliativo\n\nTrabalho prático final (extraclasse)\nPara receber o certificado, é necessário ter frequência superior à 75% e aprovação no trabalho final."
+  },
+  {
+    "objectID": "informacoes-gerais.html#informações-gerais",
+    "href": "informacoes-gerais.html#informações-gerais",
+    "title": "Informações gerais",
+    "section": "Informações gerais",
+    "text": "Informações gerais\nCarga horária: 15h (5 aulas de 3h)\nLocal: Online\nDatas: Janeiro/Fevereiro de 2023. Datas em breve.\nHorário: Noturno (19h-22h)\nVagas: 70"
+  },
+  {
+    "objectID": "informacoes-gerais.html#política-de-isenção-de-taxa-de-inscrição",
+    "href": "informacoes-gerais.html#política-de-isenção-de-taxa-de-inscrição",
+    "title": "Informações gerais",
+    "section": "Política de isenção de taxa de inscrição",
+    "text": "Política de isenção de taxa de inscrição\nSegue abaixo a política de Isenção que está no sistema para os cursos de verão:\n\n\nPolítica de Isenções ISENÇÃO O aluno deverá fazer sua inscrição on-line no curso que desejar e efetuar o pagamento, para assegurar sua vaga. Após dois dias úteis solicitar isenção (via Sistema Web do Verão). O sorteio das isenções, bem como, a divulgação dos contemplados ocorrerá no mês de dezembro. Aqueles que NÃO forem sorteados e desistirem de realizar o curso deverão solicitar a devolução da taxa de inscrição, na Secretaria do Programa de Verão.  No caso de ausência de interessados em alguma categoria, as vagas serão remanejadas de acordo com a procura ou será substituído por isenção para alunos indicados por docentes. A devolução da taxa, referente a isenção será feita via depósito em conta bancária."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Relatórios reprodutíveis com R",
+    "section": "",
+    "text": "Mais informações em breve. Confira a página do curso de 2022 e os trabalhos finais criados pelas pessoas participantes da edição."
+  },
+  {
+    "objectID": "index.html#sobre-o-curso",
+    "href": "index.html#sobre-o-curso",
+    "title": "Relatórios reprodutíveis com R",
+    "section": "Sobre o curso",
+    "text": "Sobre o curso\nNo curso utilizaremos a linguagem de programação R e a interface de desenvolvimento RStudio. Primeiramente será apresentada uma introdução ao conceito de reprodutibilidade no contexto de desenvolvimento em R, e discutiremos boas práticas ao longo do curso.\nUtilizaremos o RMarkdown (https://rmarkdown.rstudio.com/) e o Quarto (https://quarto.org/), e conheceremos como criar relatórios reprodutíveis com R, como: listas de exercícios, relatórios, apresentações em HTML, apresentações em powerpoint, relatórios em word, relatórios interativos, entre outros.\nAprenderemos também a criar relatórios reprodutíveis utilizando relatórios parametrizados, que permitem especificar parâmetros para customizar a análise, o que é muito útil para criar relatórios que podem ser reutilizados.\nAlém disso, o conceito de controle de versão com Git será apresentado e também como podemos configurar o Git e o GitHub no RStudio para que seja possível versionar os projetos que criaremos em R. Também aprenderemos a disponibilizar o conteúdo criado no curso de forma online, através do GitHub."
+  },
+  {
+    "objectID": "faq.html",
+    "href": "faq.html",
+    "title": "Perguntas Frequentes (FAQ)",
+    "section": "",
+    "text": "O curso será oferecido de forma online.\n\nApenas estudantes da USP podem participar do curso?\n\nAs inscrições serão abertas para todas as pessoas interessadas.\n\nComo posso me inscrever?\n\nA inscrição será realizada através do IME-USP. Acompanhe as informações na página do Programa de Verão do IME-USP.\n\nO curso é gratuito?\n\nNão, o curso é pago. Acompanhe as informações na página do Programa de Verão do IME-USP.\n\nAs aulas serão gravadas?\n\nSim."
+  }
+]

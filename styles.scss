@@ -1,0 +1,21 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$font-family: "Montserrat", sans-serif;
+
+/*-- scss:rules --*/
+
+.sidebar-header-stacked .sidebar-title {
+  font-size: 1rem !important;
+}
+
+.sidebar-title > a {
+  font-size: 1rem !important;
+}
+
+
+.sidebar-navigation .sidebar-tool {
+
+  font-size: 1.3rem !important;
+}
