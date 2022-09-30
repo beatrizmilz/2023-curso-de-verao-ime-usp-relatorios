@@ -10,13 +10,12 @@ execute:
 Conteúdo em atualização.
 :::
 
-
 ```{r}
 #| message: FALSE
 #| echo: FALSE
 library(magrittr)
 
-googlesheets4::gs4_auth()
+googlesheets4::gs4_deauth()
 sheet_profs <- googlesheets4::read_sheet("16-NokZ3NTaHfavyo77gSGdH_EtsAaeaCZWNBe9JfPMA", sheet = "info-profs")
   
 
@@ -59,7 +58,6 @@ df_profs %>%
 ```
 
 ## Monitoria (em ordem alfabética)
-
 
 Em breve!
 
