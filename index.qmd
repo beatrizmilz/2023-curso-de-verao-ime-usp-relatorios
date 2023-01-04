@@ -11,13 +11,24 @@ title: "Relatórios reprodutíveis com R"
 
 ## Sobre o curso
 
-No curso utilizaremos a linguagem de programação R e a interface de desenvolvimento RStudio. Primeiramente será apresentada uma introdução ao conceito de reprodutibilidade no contexto de desenvolvimento em R, e discutiremos boas práticas ao longo do curso.
-
-Utilizaremos o RMarkdown (<https://rmarkdown.rstudio.com/>) e o Quarto (<https://quarto.org/>), e conheceremos como criar relatórios reprodutíveis com R, como: listas de exercícios, relatórios, apresentações em HTML, apresentações em powerpoint, relatórios em word, relatórios interativos, entre outros.
+Utilizaremos o Quarto (<https://quarto.org/>), e conheceremos como criar relatórios reprodutíveis com R ou Python, como: listas de exercícios, relatórios, apresentações em HTML, apresentações em powerpoint, relatórios em word, relatórios interativos, entre outros.
 
 Aprenderemos também a criar relatórios reprodutíveis utilizando relatórios parametrizados, que permitem especificar parâmetros para customizar a análise, o que é muito útil para criar relatórios que podem ser reutilizados.
 
-Além disso, o conceito de controle de versão com Git será apresentado e também como podemos configurar o Git e o GitHub no RStudio para que seja possível versionar os projetos que criaremos em R. Também aprenderemos a disponibilizar o conteúdo criado no curso de forma online, através do GitHub.
+Além disso, o conceito de controle de versão com Git será apresentado. Também aprenderemos a disponibilizar o conteúdo criado no curso de forma online, através do GitHub.
+
+## Temas abordados
+
+- O que é reprodutibilidade;
+
+- O que é o RMarkdown e o Quarto, e quais são as diferenças;
+
+- Como criar um documento reprodutível com Quarto usando R ou Python;
+
+- Como versionar os arquivos no Git e GitHub;
+
+- Como disponibilizar estes documentos HTML criados com Quarto na internet para que outras pessoas consigam acessar.
+
 
 ## Edição passada
 
