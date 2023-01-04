@@ -4,11 +4,6 @@ execute:
   message: FALSE
 ---
 
-::: callout-warning
-## Atenção!
-
-Conteúdo em atualização.
-:::
 
 ```{r}
 #| message: FALSE
@@ -59,18 +54,20 @@ df_profs %>%
 
 ## Monitoria (em ordem alfabética)
 
-Em breve!
-
 ```{r}
 #| message: FALSE
 #| echo: FALSE
-# df_profs %>% 
-#   dplyr::filter(atividade == "Monitoria") %>% 
-#   dplyr::select(-atividade) %>% 
-#   reactable::reactable(columns = list(
-#         foto = reactable::colDef(html = TRUE, name = "", maxWidth = 250), 
-#         destaque = reactable::colDef(html = TRUE, name = "")
-#     ))
+df_profs %>%
+  dplyr::filter(atividade == "Monitoria") %>%
+  dplyr::select(-atividade) %>%
+  reactable::reactable(columns = list(
+    foto = reactable::colDef(
+      html = TRUE,
+      name = "",
+      maxWidth = 250
+    ),
+    destaque = reactable::colDef(html = TRUE, name = "")
+  ))
 ```
 
 <!-- inicio font awesome -->
