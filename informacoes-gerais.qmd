@@ -10,11 +10,7 @@ title: "Informações gerais"
 
 ## Público Alvo
 
--   Estudantes de graduação que desejam se aprofundar no conhecimento do R.
-
--   Profissionais do mercado de trabalho que usam o R e desejam aprimorar os seus conhecimentos.
-
--   Pessoas na academia com interesse em tornar suas análises e códigos mais legíveis, reprodutíveis, eficientes e organizados.
+-   Estudantes de graduação, profissionais do mercado e pesquisadoras(es) com interesse em tornar suas análises e códigos mais legíveis, reprodutíveis, eficientes e organizados.
 
 ## Pré-requisitos
 
@@ -34,7 +30,9 @@ Obs: O material do curso de Introdução ao R, ministrado por Nathália Demétri
 
 **Local:** Online
 
-**Datas:** Janeiro/Fevereiro de 2023. Datas em breve.
+**Datas:** 23/01/2023 à 06/02/2023
+
+**Horário:** Segundas e Quintas das 19:00 às 22:00
 
 **Horário:** Noturno (19h-22h)
 

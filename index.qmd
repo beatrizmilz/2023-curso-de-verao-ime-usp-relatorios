@@ -2,19 +2,23 @@
 title: "Relatórios reprodutíveis com R"
 ---
 
+::: callout-warning
+## Atenção!
 
-Mais informações **em breve**. Confira a [página do curso de 2022](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/programacao-do-curso.html) e os [trabalhos finais](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/trabalho_final.html) criados pelas pessoas participantes da edição.
+**Inscrições** abertas exclusivamente no site do [Programa de Verão IME-USP](https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php).
+:::
+
 
 ## Sobre o curso
 
-No curso utilizaremos a linguagem de programação R e a interface de desenvolvimento RStudio. Primeiramente será apresentada uma introdução ao conceito de reprodutibilidade no contexto de desenvolvimento em R, e discutiremos boas práticas ao longo do curso. 
- 
-Utilizaremos o RMarkdown (<https://rmarkdown.rstudio.com/>) e o Quarto (<https://quarto.org/>), e conheceremos como criar relatórios reprodutíveis com R, como: listas de exercícios, relatórios, apresentações em HTML, apresentações em powerpoint, relatórios em word, relatórios interativos, entre outros. 
+No curso utilizaremos a linguagem de programação R e a interface de desenvolvimento RStudio. Primeiramente será apresentada uma introdução ao conceito de reprodutibilidade no contexto de desenvolvimento em R, e discutiremos boas práticas ao longo do curso.
 
-Aprenderemos também a criar relatórios reprodutíveis utilizando relatórios parametrizados, que permitem especificar parâmetros para customizar a análise, o que é muito útil para criar relatórios que podem ser reutilizados. 
+Utilizaremos o RMarkdown (<https://rmarkdown.rstudio.com/>) e o Quarto (<https://quarto.org/>), e conheceremos como criar relatórios reprodutíveis com R, como: listas de exercícios, relatórios, apresentações em HTML, apresentações em powerpoint, relatórios em word, relatórios interativos, entre outros.
+
+Aprenderemos também a criar relatórios reprodutíveis utilizando relatórios parametrizados, que permitem especificar parâmetros para customizar a análise, o que é muito útil para criar relatórios que podem ser reutilizados.
 
 Além disso, o conceito de controle de versão com Git será apresentado e também como podemos configurar o Git e o GitHub no RStudio para que seja possível versionar os projetos que criaremos em R. Também aprenderemos a disponibilizar o conteúdo criado no curso de forma online, através do GitHub.
 
+## Edição passada
 
-
-
+Confira a [página do curso de 2022](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/programacao-do-curso.html) e os [trabalhos finais](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/trabalho_final.html) criados pelas pessoas participantes da edição.
