@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.2.280">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
-      <a href="./" class="sidebar-logo-link">
+      <a href="./index.html" class="sidebar-logo-link">
       <img src="https://www.ime.usp.br/verao/assets/images/logo_verao.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
@@ -189,6 +189,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
@@ -211,9 +212,7 @@ Atenção!
 <section id="público-alvo" class="level2">
 <h2 class="anchored" data-anchor-id="público-alvo">Público Alvo</h2>
 <ul>
-<li><p>Estudantes de graduação que desejam se aprofundar no conhecimento do R.</p></li>
-<li><p>Profissionais do mercado de trabalho que usam o R e desejam aprimorar os seus conhecimentos.</p></li>
-<li><p>Pessoas na academia com interesse em tornar suas análises e códigos mais legíveis, reprodutíveis, eficientes e organizados.</p></li>
+<li>Estudantes de graduação, profissionais do mercado e pesquisadoras(es) com interesse em tornar suas análises e códigos mais legíveis, reprodutíveis, eficientes e organizados.</li>
 </ul>
 </section>
 <section id="pré-requisitos" class="level2">
@@ -232,7 +231,8 @@ Atenção!
 <h2 class="anchored" data-anchor-id="informações-gerais">Informações gerais</h2>
 <p><strong>Carga horária:</strong> 15h (5 aulas de 3h)</p>
 <p><strong>Local:</strong> Online</p>
-<p><strong>Datas:</strong> Janeiro/Fevereiro de 2023. Datas em breve.</p>
+<p><strong>Datas:</strong> 23/01/2023 à 06/02/2023</p>
+<p><strong>Horário:</strong> Segundas e Quintas das 19:00 às 22:00</p>
 <p><strong>Horário:</strong> Noturno (19h-22h)</p>
 <p><strong>Vagas:</strong> 70</p>
 </section>
@@ -290,7 +290,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copiada");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiada");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -326,24 +343,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
