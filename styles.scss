@@ -15,8 +15,11 @@ $font-weight: normal;
   font-size: 1rem !important;
 }
 
-
 .sidebar-navigation .sidebar-tool {
 
   font-size: 1.3rem !important;
+}
+
+body, p{
+  font-weight: $font-weight;
 }

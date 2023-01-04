@@ -39,7 +39,14 @@
     "href": "index.html#sobre-o-curso",
     "title": "Relatórios reprodutíveis com R",
     "section": "Sobre o curso",
-    "text": "Sobre o curso\nNo curso utilizaremos a linguagem de programação R e a interface de desenvolvimento RStudio. Primeiramente será apresentada uma introdução ao conceito de reprodutibilidade no contexto de desenvolvimento em R, e discutiremos boas práticas ao longo do curso.\nUtilizaremos o RMarkdown (https://rmarkdown.rstudio.com/) e o Quarto (https://quarto.org/), e conheceremos como criar relatórios reprodutíveis com R, como: listas de exercícios, relatórios, apresentações em HTML, apresentações em powerpoint, relatórios em word, relatórios interativos, entre outros.\nAprenderemos também a criar relatórios reprodutíveis utilizando relatórios parametrizados, que permitem especificar parâmetros para customizar a análise, o que é muito útil para criar relatórios que podem ser reutilizados.\nAlém disso, o conceito de controle de versão com Git será apresentado e também como podemos configurar o Git e o GitHub no RStudio para que seja possível versionar os projetos que criaremos em R. Também aprenderemos a disponibilizar o conteúdo criado no curso de forma online, através do GitHub."
+    "text": "Sobre o curso\nUtilizaremos o Quarto (https://quarto.org/), e conheceremos como criar relatórios reprodutíveis com R ou Python, como: listas de exercícios, relatórios, apresentações em HTML, apresentações em powerpoint, relatórios em word, relatórios interativos, entre outros.\nAprenderemos também a criar relatórios reprodutíveis utilizando relatórios parametrizados, que permitem especificar parâmetros para customizar a análise, o que é muito útil para criar relatórios que podem ser reutilizados.\nAlém disso, o conceito de controle de versão com Git será apresentado. Também aprenderemos a disponibilizar o conteúdo criado no curso de forma online, através do GitHub."
+  },
+  {
+    "objectID": "index.html#temas-abordados",
+    "href": "index.html#temas-abordados",
+    "title": "Relatórios reprodutíveis com R",
+    "section": "Temas abordados",
+    "text": "Temas abordados\n\nO que é reprodutibilidade;\nO que é o RMarkdown e o Quarto, e quais são as diferenças;\nComo criar um documento reprodutível com Quarto usando R ou Python;\nComo versionar os arquivos no Git e GitHub;\nComo disponibilizar estes documentos HTML criados com Quarto na internet para que outras pessoas consigam acessar."
   },
   {
     "objectID": "index.html#edição-passada",
