@@ -52,7 +52,7 @@ website:
 format:
   html:
     theme: cosmo
-    mainfont: "Montserrat"
+#    mainfont: "Montserrat"
     css: styles.scss
     toc: true
     code-copy: true

@@ -2,8 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-$font-family: "Montserrat", sans-serif;
-$font-weight: normal;
+/*-- $font-family: "Montserrat", sans-serif; --*/
+/*--  $font-weight: normal;--*/
 
 /*-- scss:rules --*/
 
@@ -18,8 +18,4 @@ $font-weight: normal;
 .sidebar-navigation .sidebar-tool {
 
   font-size: 1.3rem !important;
-}
-
-body, p{
-  font-weight: $font-weight;
 }
