@@ -1,0 +1,60 @@
+---
+title: "Relatórios  reprodutíveis com R"
+subtitle: 'Curso de Verão IME-USP 2022' 
+author: "Ministrante: Beatriz Milz"
+date: 'Janeiro 2023'
+format: 
+  revealjs:
+    toc: true
+    toc_float: true
+    toc-depth: 2
+    toc-location: body
+    toc-title: "Conteúdos"
+editor: visual
+---
+
+
+
+# Sobre o curso
+
+
+## Ministrantes e monitoria
+
+```{r echo=FALSE, results='asis'}
+googlesheets4::gs4_auth()
+
+sheet_profs <- googlesheets4::read_sheet("16-NokZ3NTaHfavyo77gSGdH_EtsAaeaCZWNBe9JfPMA", sheet = "info-profs")
+
+profs <- sheet_profs |> 
+  dplyr::arrange(atividade, nome) |> 
+  dplyr::mutate(texto = glue::glue("- {nome} - {atividade}"))
+
+profs |>
+  dplyr::pull(texto)
+
+```
+
+Saiba mais [na página do curso](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/profs.html).
+
+## Código de conduta
+
+- Seja gentil! Estamos aqui para aprender, e estamos em etapas diferentes do aprendizado.
+
+- Não existe "pergunta burra". Não deveria ser comum ouvir "como você não sabe isso ainda?". 
+
+-  Objetivo é proporcionar uma experiência de livre de assédio e inclusiva para todas as pessoas (incluindo alunas, alunos, professores, monitores, equipe da secretaria do IME/USP, etc).
+
+- Qualquer pessoa que viole estas regras pode ser advertida ou removida do curso, conforme critérios das pessoas docentes. 
+
+- Leia completo em: <https://saopaulo2019.satrdays.org/codigodeconduta/> 
+
+
+---
+
+## Plataformas utilizadas
+
+
+- Plataforma USP: <https://cursosextensao.usp.br/course/view.php?id=3449>
+
+
+- Site do curso: <https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/>
