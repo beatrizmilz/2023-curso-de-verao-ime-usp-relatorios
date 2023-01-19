@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Relatórios reprodutíveis com R - Bibliografia</title>
+<title>Relatórios reprodutíveis com R - Pré-curso: Instalações necessárias</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -29,6 +92,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./slides.html" rel="next">
+<link href="./faq.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -68,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Bibliografia</h1>
+      <h1 class="quarto-secondary-nav-title">Pré-curso: Instalações necessárias</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -130,15 +195,15 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">Materias</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Materias</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./instrucoes-de-instalacao.html" class="sidebar-item-text sidebar-link">Pré-curso: Instalações necessárias</a>
+  <a href="./instrucoes-de-instalacao.html" class="sidebar-item-text sidebar-link active">Pré-curso: Instalações necessárias</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -182,8 +247,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#em-português" id="toc-em-português" class="nav-link active" data-scroll-target="#em-português">Em Português</a></li>
-  <li><a href="#em-inglês" id="toc-em-inglês" class="nav-link" data-scroll-target="#em-inglês">Em Inglês</a></li>
+  <li><a href="#contas-em-serviços" id="toc-contas-em-serviços" class="nav-link active" data-scroll-target="#contas-em-serviços">Contas em serviços</a></li>
+  <li><a href="#instalações-obrigatórias" id="toc-instalações-obrigatórias" class="nav-link" data-scroll-target="#instalações-obrigatórias">Instalações obrigatórias</a></li>
+  <li><a href="#instalações-recomendadas" id="toc-instalações-recomendadas" class="nav-link" data-scroll-target="#instalações-recomendadas">Instalações recomendadas</a></li>
   </ul>
 </nav>
     </div>
@@ -192,7 +258,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Bibliografia</h1>
+<h1 class="title d-none d-lg-block">Pré-curso: Instalações necessárias</h1>
 </div>
 
 
@@ -207,31 +273,87 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div class="cell">
+
 </div>
-<div class="callout-caption-container flex-fill">
-Atenção!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Conteúdo em atualização.</p>
-</div>
-</div>
-<section id="em-português" class="level2">
-<h2 class="anchored" data-anchor-id="em-português">Em Português</h2>
-<p>Caio Lente, Athos Damiani, Beatriz Milz, Daniel Falbel, Fernando Correa, Julio Trecenti, Tereza Lacerda, William Amorim. <strong>Zen do R.</strong> Disponível em: <a href="https://curso-r.github.io/zen-do-r/git-github.html" class="uri">https://curso-r.github.io/zen-do-r/git-github.html</a></p>
-<p>Athos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Correa, Julio Tricenti, Nicole Luduvice, William Amorim. <strong>Ciência de Dados em R</strong>. Disponível em: <a href="https://livro.curso-r.com/9-relatorios.html" class="uri">https://livro.curso-r.com/9-relatorios.html</a></p>
+<section id="contas-em-serviços" class="level2">
+<h2 class="anchored" data-anchor-id="contas-em-serviços">Contas em serviços</h2>
+<ul>
+<li>Criar uma conta gratuita no <a href="https://github.com/">GitHub</a></li>
+</ul>
 </section>
-<section id="em-inglês" class="level2">
-<h2 class="anchored" data-anchor-id="em-inglês">Em Inglês</h2>
-<p>Yihui Xie, J. J. Allaire, Garrett Grolemund. <strong>R Markdown: The Definitive Guide</strong>. 2019. Chapman &amp; Hall/CRC. Disponível em: <a href="https://bookdown.org/yihui/rmarkdown/" class="uri">https://bookdown.org/yihui/rmarkdown/</a></p>
-<p>Yihui Xie, Christophe Dervieux, Emily Riederer. <strong>R Markdown Cookbook.</strong> 2021. Chapman &amp; Hall/CRC. Disponível em: <a href="https://bookdown.org/yihui/rmarkdown-cookbook/" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/</a></p>
-<p>Jenny Bryan, the STAT 545 TAs, Jim Hester. <strong>Happy Git and GitHub for the useR</strong>. Disponível em: <a href="https://happygitwithr.com/" class="uri">https://happygitwithr.com/</a></p>
-<p>The Carpentries &amp; Data Carpentry. <strong>Reproducible Research Introduction</strong>. Disponível em: <a href="https://datacarpentry.org/rr-intro/" class="uri">https://datacarpentry.org/rr-intro/</a></p>
-<p>National Center for Ecological Analysis and Synthesis (NCEAS). <strong>Reproducible Analysis With R</strong>. Disponível em: <a href="https://nceas.github.io/sasap-training/materials/reproducible_research_in_r_fairbanks/" class="uri">https://nceas.github.io/sasap-training/materials/reproducible_research_in_r_fairbanks/</a></p>
+<section id="instalações-obrigatórias" class="level2">
+<h2 class="anchored" data-anchor-id="instalações-obrigatórias">Instalações obrigatórias</h2>
+<ol type="1">
+<li><strong>Instalar o R</strong> - Versão 4.1 ou superior:</li>
+</ol>
+<ul>
+<li><p>Download direto: <a href="https://vps.fmvz.usp.br/CRAN/" class="uri">https://vps.fmvz.usp.br/CRAN/</a></p></li>
+<li><p>Tutorial: <a href="https://livro.curso-r.com/1-1-instalacao-do-r.html" class="uri">https://livro.curso-r.com/1-1-instalacao-do-r.html</a></p></li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Instalar o RStudio</strong> - Versão mínima 2022.07:</li>
+</ol>
+<ul>
+<li><p>Download direto: <a href="https://www.rstudio.com/products/rstudio/download/#download" class="uri">https://www.rstudio.com/products/rstudio/download/#download</a></p></li>
+<li><p>Tutorial: <a href="https://livro.curso-r.com/1-2-instalacao-do-rstudio.html" class="uri">https://livro.curso-r.com/1-2-instalacao-do-rstudio.html</a></p></li>
+</ul>
+<ol start="3" type="1">
+<li><strong>Instalar o Git</strong>:</li>
+</ol>
+<ul>
+<li><p>Caso você utilize Linux ou Mac, confira antes se o Git já está instalado. Você pode conferir abrindo o terminal, e digitando <code>git</code>. Caso o terminal avise que você não tem <code>git</code> instalado, você precisará instalar.</p></li>
+<li><p>Download direto: <a href="http://git-scm.com/download/" class="uri">http://git-scm.com/download/</a></p></li>
+</ul>
+<ol start="4" type="1">
+<li><strong>Instalar pacotes</strong>:</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pacotes_necessarios <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"usethis"</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"devtools"</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"rmarkdown"</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"knitr"</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pagedown"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"bookdown"</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"xaringan"</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"readr"</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"dplyr"</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"DT"</span>,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"reactable"</span>,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"janitor"</span>,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"prettydoc"</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(pacotes_necessarios)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pacotes_exemplos <span class="ot">&lt;-</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"xaringanthemer"</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"distill"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"flexdashboard"</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"rmdformats"</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"bslib"</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"officedown"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"postcards"</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"rticles"</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(pacotes_exemplos)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="instalações-recomendadas" class="level2">
+<h2 class="anchored" data-anchor-id="instalações-recomendadas">Instalações recomendadas</h2>
+<ol type="1">
+<li><strong>Google Chrome</strong>. Para exportar os relatórios em formato <code>PDF</code>, utilizaremos uma função que depende do uso do navegador Google Chrome.</li>
+</ol>
+<ul>
+<li><p>Download direto: <a href="https://www.google.com/intl/pt-BR/chrome/" class="uri">https://www.google.com/intl/pt-BR/chrome/</a></p></li>
+<li><p>Caso você utilize Linux, uma alternativa é instalar o Chromium: <a href="https://www.chromium.org/getting-involved/download-chromium/" class="uri">https://www.chromium.org/getting-involved/download-chromium/</a></p></li>
+<li><p>Mais informações em: <a href="https://livro.curso-r.com/1-3-instalacao-adicionais.html#pagedown-e-chrome" class="uri">https://livro.curso-r.com/1-3-instalacao-adicionais.html#pagedown-e-chrome</a></p></li>
+</ul>
+<ol start="2" type="1">
+<li><strong>LibreOffice</strong>. Para abrir documentos do Office, como <code>.pptx</code> e <code>.docx</code>, é necessário ter o Office ou alguma alternativa gratuita instalados. <strong>Caso não tenha</strong> nenhum software para abertura destes arquivos instalado, recomendo instalar o LibreOffice, pois é um software gratuito:</li>
+</ol>
+<ul>
+<li><p>Download direto: <a href="https://pt-br.libreoffice.org/baixe-ja/libreoffice-novo/" class="uri">https://pt-br.libreoffice.org/baixe-ja/libreoffice-novo/</a></p></li>
+<li><p>Tutorial de instalação: <a href="https://livro.curso-r.com/1-3-instalacao-adicionais.html#office" class="uri">https://livro.curso-r.com/1-3-instalacao-adicionais.html#office</a></p></li>
+</ul>
 
 
 </section>
@@ -370,6 +492,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./faq.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Perguntas Frequentes (FAQ)</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./slides.html" class="pagination-link">
+        <span class="nav-page-text">Slides</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

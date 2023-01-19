@@ -126,6 +126,27 @@
     "text": "O curso será online ou presencial?\n\nO curso será oferecido de forma online.\n\nApenas estudantes da USP podem participar do curso?\n\nAs inscrições serão abertas para todas as pessoas interessadas.\n\nComo posso me inscrever?\n\nA inscrição será realizada através do IME-USP. Acompanhe as informações na página do Programa de Verão do IME-USP.\n\nO curso é gratuito?\n\nNão, o curso é pago. Acompanhe as informações na página do Programa de Verão do IME-USP.\n\nAs aulas serão gravadas?\n\nSim."
   },
   {
+    "objectID": "instrucoes-de-instalacao.html#contas-em-serviços",
+    "href": "instrucoes-de-instalacao.html#contas-em-serviços",
+    "title": "Pré-curso: Instalações necessárias",
+    "section": "Contas em serviços",
+    "text": "Contas em serviços\n\nCriar uma conta gratuita no GitHub"
+  },
+  {
+    "objectID": "instrucoes-de-instalacao.html#instalações-obrigatórias",
+    "href": "instrucoes-de-instalacao.html#instalações-obrigatórias",
+    "title": "Pré-curso: Instalações necessárias",
+    "section": "Instalações obrigatórias",
+    "text": "Instalações obrigatórias\n\nInstalar o R - Versão 4.1 ou superior:\n\n\nDownload direto: https://vps.fmvz.usp.br/CRAN/\nTutorial: https://livro.curso-r.com/1-1-instalacao-do-r.html\n\n\nInstalar o RStudio - Versão mínima 2022.07:\n\n\nDownload direto: https://www.rstudio.com/products/rstudio/download/#download\nTutorial: https://livro.curso-r.com/1-2-instalacao-do-rstudio.html\n\n\nInstalar o Git:\n\n\nCaso você utilize Linux ou Mac, confira antes se o Git já está instalado. Você pode conferir abrindo o terminal, e digitando git. Caso o terminal avise que você não tem git instalado, você precisará instalar.\nDownload direto: http://git-scm.com/download/\n\n\nInstalar pacotes:\n\npacotes_necessarios <- c(\n  \"usethis\",\n  \"devtools\",\n  \"rmarkdown\",\n  \"knitr\",\n  \"pagedown\",\n  \"bookdown\",\n  \"xaringan\",\n  \"readr\",\n  \"dplyr\",\n  \"DT\",\n  \"reactable\",\n  \"janitor\",\n  \"prettydoc\"\n)\ninstall.packages(pacotes_necessarios)\npacotes_exemplos <-\n  c(\n    \"xaringanthemer\",\n    \"distill\",\n    \"flexdashboard\",\n    \"rmdformats\",\n    \"bslib\",\n    \"officedown\",\n    \"postcards\",\n    \"rticles\"\n  )\ninstall.packages(pacotes_exemplos)"
+  },
+  {
+    "objectID": "instrucoes-de-instalacao.html#instalações-recomendadas",
+    "href": "instrucoes-de-instalacao.html#instalações-recomendadas",
+    "title": "Pré-curso: Instalações necessárias",
+    "section": "Instalações recomendadas",
+    "text": "Instalações recomendadas\n\nGoogle Chrome. Para exportar os relatórios em formato PDF, utilizaremos uma função que depende do uso do navegador Google Chrome.\n\n\nDownload direto: https://www.google.com/intl/pt-BR/chrome/\nCaso você utilize Linux, uma alternativa é instalar o Chromium: https://www.chromium.org/getting-involved/download-chromium/\nMais informações em: https://livro.curso-r.com/1-3-instalacao-adicionais.html#pagedown-e-chrome\n\n\nLibreOffice. Para abrir documentos do Office, como .pptx e .docx, é necessário ter o Office ou alguma alternativa gratuita instalados. Caso não tenha nenhum software para abertura destes arquivos instalado, recomendo instalar o LibreOffice, pois é um software gratuito:\n\n\nDownload direto: https://pt-br.libreoffice.org/baixe-ja/libreoffice-novo/\nTutorial de instalação: https://livro.curso-r.com/1-3-instalacao-adicionais.html#office"
+  },
+  {
     "objectID": "bibliografia.html",
     "href": "bibliografia.html",
     "title": "Bibliografia",
