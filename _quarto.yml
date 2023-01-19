@@ -41,6 +41,7 @@ website:
            - faq.qmd
       - section: "Materias"
         contents:
+           - instrucoes-de-instalacao.qmd        
            - slides.qmd
            - trabalho_final.qmd
       - section: "Edições anteriores"
