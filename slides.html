@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Relatórios reprodutíveis com R - Docentes</title>
+<title>Relatórios reprodutíveis com R - Slides</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./faq.html" rel="next">
-<link href="./informacoes-gerais.html" rel="prev">
+<link href="./trabalho_final.html" rel="next">
+<link href="./faq.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -60,14 +60,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-<script src="site_libs/core-js-2.5.3/shim.min.js"></script>
-<script src="site_libs/react-17.0.0/react.min.js"></script>
-<script src="site_libs/react-17.0.0/react-dom.min.js"></script>
-<script src="site_libs/reactwidget-1.0.0/react-tools.js"></script>
-<script src="site_libs/htmlwidgets-1.6.1/htmlwidgets.js"></script>
-<link href="site_libs/reactable-0.4.3/reactable.css" rel="stylesheet">
-<script src="site_libs/reactable-binding-0.4.3/reactable.js"></script>
-
 
 <link rel="stylesheet" href="styles.scss">
 </head>
@@ -78,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Docentes</h1>
+      <h1 class="quarto-secondary-nav-title">Slides</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -115,12 +107,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Sobre o curso</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">Sobre o curso</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./informacoes-gerais.html" class="sidebar-item-text sidebar-link">Informações gerais</a>
@@ -128,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./profs.html" class="sidebar-item-text sidebar-link active">Docentes</a>
+  <a href="./profs.html" class="sidebar-item-text sidebar-link">Docentes</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -140,15 +132,15 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">Materias</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Materias</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides.html" class="sidebar-item-text sidebar-link">Slides</a>
+  <a href="./slides.html" class="sidebar-item-text sidebar-link active">Slides</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -183,20 +175,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Nesta página</h2>
-   
-  <ul>
-  <li><a href="#monitoria-em-ordem-alfabética" id="toc-monitoria-em-ordem-alfabética" class="nav-link active" data-scroll-target="#monitoria-em-ordem-alfabética">Monitoria (em ordem alfabética)</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Docentes</h1>
+<h1 class="title d-none d-lg-block">Slides</h1>
 </div>
 
 
@@ -211,31 +197,14 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="cell">
-
-</div>
-<div class="cell">
-<div class="cell-output-display">
-
-<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-5c34f89aedbc3fa2f43b" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-5c34f89aedbc3fa2f43b">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"foto":["<center><img src='https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/blob/main/static/img/foto_beatriz_milz.jpg?raw=true' width='100' style='border-radius: 50%;'><br><b>Beatriz Milz<\/b> <br> <a href=\"https://beamilz.com/\" target=\"_blank\"><i class=\"fas fa-home\"><\/i><\/a> <a href=\"https://github.com/beatrizmilz\" target=\"_blank\"><i class=\"fab fa-github\"><\/i><\/a> <a href=\"https://www.linkedin.com/in/beatrizmilz/\" target=\"_blank\"><i class=\"fab fa-linkedin\"><\/i><\/a> <a href=\"https://twitter.com/BeaMilz\" target=\"_blank\"><i class=\"fab fa-twitter\"><\/i><\/a> <\/center>"],"destaque":["- Doutoranda em Ciência Ambiental na\n  Universidade de São Paulo (PROCAM/IEE/USP). <br> \n  - Professora e consultora na <a href='https://curso-r.com/'>Curso-R/R6<\/a>. <br>\n  - <a href='https://education.rstudio.com/trainers/people/milz+beatriz/'>Instrutora de tidyverse certificada pela RStudio<\/a>.<br>\n  - Co-organizadora da <a href='https://linktr.ee/rladies_sp'>R-Ladies SP<\/a>, uma comunidade que tem como\n  objetivo promover a diversidade de gênero na comunidade da linguagem R. <br>"]},"columns":[{"id":"foto","name":"Docente","type":["glue","character"],"html":true,"maxWidth":250},{"id":"destaque","name":"","type":["glue","character"],"html":true}],"dataKey":"4f63056b7f3573c65651a464342ac367"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-<section id="monitoria-em-ordem-alfabética" class="level2">
-<h2 class="anchored" data-anchor-id="monitoria-em-ordem-alfabética">Monitoria (em ordem alfabética)</h2>
-<div class="cell">
-<div class="cell-output-display">
-
-<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-06e560791426c3367f93" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-06e560791426c3367f93">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"foto":["<center><img src='https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/blob/main/static/img/foto_alan.jpeg?raw=true' width='100' style='border-radius: 50%;'><br><b>Alan da Silva<\/b> <br>  <a href=\"https://github.com/Alandasilva\" target=\"_blank\"><i class=\"fab fa-github\"><\/i><\/a> <a href=\"https://www.linkedin.com/in/alan-silva-341600196/\" target=\"_blank\"><i class=\"fab fa-linkedin\"><\/i><\/a>  <a href=\"https://www.facebook.com/profile.php?id=100003267154291\" target=\"_blank\"><i class=\"fab fa-facebook\"><\/i><\/a><\/center>","<center><img src='https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/blob/main/static/img/foto_alexandre.png?raw=true' width='100' style='border-radius: 50%;'><br><b>Alexandre Moura dos Santos<\/b> <br> <a href=\"https://www.researchgate.net/profile/Alexandre-Santos-31\" target=\"_blank\"><i class=\"fas fa-home\"><\/i><\/a> <a href=\"https://github.com/AlexandreStos\" target=\"_blank\"><i class=\"fab fa-github\"><\/i><\/a> <a href=\"https://www.linkedin.com/in/alexandre-moura-dos-santos-a606401a3/\" target=\"_blank\"><i class=\"fab fa-linkedin\"><\/i><\/a> <a href=\"https://twitter.com/AlexandreMStos\" target=\"_blank\"><i class=\"fab fa-twitter\"><\/i><\/a> <a href=\"https://www.instagram.com/alexandremstos/\" target=\"_blank\"><i class=\"fab fa-facebook\"><\/i><\/a><\/center>","<center><img src='https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/blob/main/static/img/foto_beatriz_carvalho.jpg?raw=true' width='100' style='border-radius: 50%;'><br><b>Beatriz Proença Carvalho<\/b> <br>  <a href=\"-\" target=\"_blank\"><i class=\"fab fa-github\"><\/i><\/a> <a href=\"https://www.linkedin.com/in/beapcarvalho/\" target=\"_blank\"><i class=\"fab fa-linkedin\"><\/i><\/a> <a href=\"https://twitter.com/BeaPCarvalho\" target=\"_blank\"><i class=\"fab fa-twitter\"><\/i><\/a> <\/center>","<center><img src='https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/blob/main/static/img/foto_tatyane.jpg?raw=true' width='100' style='border-radius: 50%;'><br><b>Tatyane Paz Dominguez dos Santos Alves<\/b> <br>  <a href=\"https://github.com/peixemtogrande\" target=\"_blank\"><i class=\"fab fa-github\"><\/i><\/a> <a href=\"https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/\" target=\"_blank\"><i class=\"fab fa-linkedin\"><\/i><\/a> <a href=\"https://twitter.com/peixemtogrande\" target=\"_blank\"><i class=\"fab fa-twitter\"><\/i><\/a> <\/center>"],"destaque":["- Doutorando em Estatística pela Universidade de São Paulo (IME/USP) <br>\n - Participou da manutenção/atualizações do pacote <a href='https://ipeagit.github.io/geobr/'>geobr<\/a>, um pacote R que tem como objetivo facilitar o acesso de base de dados espaciais oficiais do Brasil.","- Doutorando em Ciências do Sistema Musculoesquelético pela Faculdade de Medicina pela Universidade de São Paulo (IOT/FMUSP) <br>\n - Mestre em Ciências do Sistema Musculoesquelético pela Faculdade de Medicina pela Universidade de São Paulo (IOT/FMUSP)  <br>\n - Cursando MBA em Data Science e Analytics (USP-ESALQ)  <br>\n - Profissional de Educação Física","- Graduanda em Estátistica e Ciências de Dados pela USP de São Carlos <br>\n- Participou de diversos projetos de extensão durante a graduação  <br>\n- Profissional de Marketing Digital <br>","- Doutoranda em Meteorologia pela Universidade de São Paulo (IAG/USP) <br> - Mestre em Meteorologia pelo IAG/USP <br> - Bacharel em Meteorologia pela Universidade Federal do Rio de Janeiro."]},"columns":[{"id":"foto","name":"","type":["glue","character"],"html":true,"maxWidth":250},{"id":"destaque","name":"","type":["glue","character"],"html":true}],"dataKey":"c59893aa7964e92505ffafba74a72fcc"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
+<ul>
+<li><a href="https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/aula-1.html">Slides aula 1</a> - Introdução ao Curso</li>
+</ul>
 <!-- inicio font awesome -->
 <script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
 <!-- final font awesome -->
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -373,13 +342,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./informacoes-gerais.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Informações gerais</span>
+      <a href="./faq.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Perguntas Frequentes (FAQ)</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./faq.html" class="pagination-link">
-        <span class="nav-page-text">Perguntas Frequentes (FAQ)</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./trabalho_final.html" class="pagination-link">
+        <span class="nav-page-text">Trabalho final</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
