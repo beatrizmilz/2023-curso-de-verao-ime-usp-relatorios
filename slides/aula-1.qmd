@@ -5,18 +5,24 @@ author: "Ministrante: Beatriz Milz"
 date: 'Janeiro 2023'
 format: 
   revealjs:
+    width: 1600
+    height: 900  
     toc: true
     toc_float: true
     toc-depth: 2
     toc-location: body
     toc-title: "Conteúdos"
+    logo: "https://www.ime.usp.br/verao/assets/images/logo_verao.png" 
+    footer: "Slides por [Beatriz Milz](https://beamilz.com) (@BeaMilz), feito com  [Quarto](https://quarto.org/docs/presentations/revealjs/index.html). Código disponível no [GitHub](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/)."
+    theme: ["custom.scss"]
+    slide-number: c/t
+    show-slide-number: all
+    hash-type: number
+    preview-links: false    
 editor: visual
 ---
 
-
-
 # Sobre o curso
-
 
 ## Ministrantes e monitoria
 
@@ -38,23 +44,68 @@ Saiba mais [na página do curso](https://beatrizmilz.github.io/2023-curso-de-ver
 
 ## Código de conduta
 
-- Seja gentil! Estamos aqui para aprender, e estamos em etapas diferentes do aprendizado.
+-   Seja gentil! Estamos aqui para aprender, e estamos em etapas diferentes do aprendizado.
 
-- Não existe "pergunta burra". Não deveria ser comum ouvir "como você não sabe isso ainda?". 
+-   Não existe "pergunta burra". Não deveria ser comum ouvir "como você não sabe isso ainda?".
 
--  Objetivo é proporcionar uma experiência de livre de assédio e inclusiva para todas as pessoas (incluindo alunas, alunos, professores, monitores, equipe da secretaria do IME/USP, etc).
+-   Objetivo é proporcionar uma experiência de livre de assédio e inclusiva para todas as pessoas (incluindo alunas, alunos, professores, monitores, equipe da secretaria do IME/USP, etc).
 
-- Qualquer pessoa que viole estas regras pode ser advertida ou removida do curso, conforme critérios das pessoas docentes. 
+-   Qualquer pessoa que viole estas regras pode ser advertida ou removida do curso, conforme critérios das pessoas docentes.
 
-- Leia completo em: <https://saopaulo2019.satrdays.org/codigodeconduta/> 
-
-
----
+-   Leia completo em: <https://saopaulo2019.satrdays.org/codigodeconduta/>
 
 ## Plataformas utilizadas
 
+-   Plataforma USP: <https://cursosextensao.usp.br/course/view.php?id=3449>
 
-- Plataforma USP: <https://cursosextensao.usp.br/course/view.php?id=3449>
+-   Site do curso: <https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/>
+
+-   Grupo no Whatsapp temporário: **Compartilhado por email e na Plataforma USP**.
+
+## Objetivos de aprendizagem
+
+Que vocês saibam ao final do curso:
+
+-   Noções de reprodutibilidade
+
+-   Como criar documentos usando Quarto
+
+-   Como exportar esses documentos em word, PDF e HTML.
+
+-   Como controlar as versões do documento usando o Git e GitHub.
+
+-   Como disponibilizar o documento na internet.
+
+## Gravação das aulas
+
+-   As aulas serão gravadas.
+
+-   Caso a aula comece e não esteja sendo gravada, por favor nos avise no chat :)
+
+-   Caso não queira aparecer na gravação, mantenha sua câmera fechada.
+
+![](images/paste-66D271C4.png){fig-align="center"}
+
+## Dúvidas
+
+-   De preferência, não envie no email :)
+
+-   Durante as aulas: enviem dúvidas no chat.
+
+-   Fora do horário de aulas:
+
+    -   Durante o oferecimento do curso: [na plataforma USP Extensão](https://cursosextensao.usp.br/mod/forum/view.php?id=160206) se for dúvida técnica, no grupo do Whatsapp se for uma dúvida sobre o curso/plataforma/etc.
+    -   Após a finalização do curso: [Fórum da Curso-R](https://discourse.curso-r.com/)
+
+## Requisitos para o certificado
+
+-   Teremos um trabalho final, que deverá ser entregue até 1 semana após o final do curso. O trabalho final é obrigatório para o recebimento do certificado.
+
+-   Certificado = Ter **frequência igual ou superior à 75%** (ou seja, pode ter 1 falta) + entrega do trabalho final.
+
+## Trabalho final
+
+**Objetivo:** Você deverá criar um documento com Quarto, versionar no GitHub e disponibilizar na internet. Esse trabalho final oferece orientações para que você pratique o que foi apresentado no curso.
 
 
-- Site do curso: <https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/>
+Mais informações em: [Trabalho final](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/trabalho_final.html)

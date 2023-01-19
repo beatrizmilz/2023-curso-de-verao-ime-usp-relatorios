@@ -36,15 +36,15 @@ website:
         contents:
            - informacoes-gerais.qmd
            - profs.qmd
-           - bibliografia.qmd
-           - faq.qmd    
+           - faq.qmd
+      - section: "Materias"
+        contents:
+           - trabalho_final.qmd
       - section: "Edições anteriores"
         contents:
           - href: https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/programacao-do-curso.html
             text: "Edição 2022" 
-      - section: "Sobre o material"
-        contents:
-          - licenca.qmd
+      - licenca.qmd
   
   
 
