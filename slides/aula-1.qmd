@@ -2,7 +2,6 @@
 title: "Relatórios  reprodutíveis com R"
 subtitle: 'Curso de Verão IME-USP 2022' 
 author: "Ministrante: Beatriz Milz"
-date: 'Janeiro 2023'
 format: 
   revealjs:
     width: 1600

@@ -32,6 +32,8 @@ website:
         text: "Inscrições"
     
     contents:
+      - href: https://cursosextensao.usp.br/course/view.php?id=3449
+        text: "Plataforma USP"
       - section: "Sobre o curso"
         contents:
            - informacoes-gerais.qmd
@@ -39,6 +41,7 @@ website:
            - faq.qmd
       - section: "Materias"
         contents:
+           - slides.qmd
            - trabalho_final.qmd
       - section: "Edições anteriores"
         contents:
