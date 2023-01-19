@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/profs.html</loc>
-    <lastmod>2023-01-04T18:33:07.147Z</lastmod>
+    <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/licenca.html</loc>
+    <lastmod>2023-01-19T21:52:34.814Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/bibliografia.html</loc>
-    <lastmod>2023-01-04T18:33:07.823Z</lastmod>
+    <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/trabalho_final.html</loc>
+    <lastmod>2023-01-19T21:52:35.778Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/index.html</loc>
-    <lastmod>2023-01-04T18:33:08.195Z</lastmod>
+    <lastmod>2023-01-19T21:52:36.194Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/licenca.html</loc>
-    <lastmod>2023-01-04T18:33:08.523Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/faq.html</loc>
-    <lastmod>2023-01-04T18:33:09.975Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/slides/aula-1.html</loc>
-    <lastmod>2023-01-04T18:33:12.031Z</lastmod>
+    <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/profs.html</loc>
+    <lastmod>2023-01-19T21:52:39.062Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/informacoes-gerais.html</loc>
-    <lastmod>2023-01-04T18:33:12.703Z</lastmod>
+    <lastmod>2023-01-19T21:52:39.450Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/faq.html</loc>
+    <lastmod>2023-01-19T21:52:40.994Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/slides/aula-1.html</loc>
+    <lastmod>2023-01-19T21:52:44.146Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/bibliografia.html</loc>
+    <lastmod>2023-01-19T21:52:44.842Z</lastmod>
   </url>
 </urlset>

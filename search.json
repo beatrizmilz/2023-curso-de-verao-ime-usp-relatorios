@@ -1,31 +1,38 @@
 [
   {
-    "objectID": "profs.html#monitoria-em-ordem-alfabética",
-    "href": "profs.html#monitoria-em-ordem-alfabética",
-    "title": "Docentes",
-    "section": "Monitoria (em ordem alfabética)",
-    "text": "Monitoria (em ordem alfabética)"
-  },
-  {
-    "objectID": "bibliografia.html",
-    "href": "bibliografia.html",
-    "title": "Bibliografia",
+    "objectID": "licenca.html",
+    "href": "licenca.html",
+    "title": "Licença de uso",
     "section": "",
-    "text": "Atenção!\n\n\n\nConteúdo em atualização."
+    "text": "Estes materiais são disponibilizados com a licença Creative Commons Atribuição-Compartilha Igual (CC BY-SA), ou seja, você pode compartilhar e adaptar este material, porém deve atribuir os créditos para as pessoas autoras, adicionando um link para o material original, e o seu material também deve ter este mesmo tipo de licença.\nSaiba mais em: Creative Commons\nVisual da página inspirado em: STA 210: Regression Analysis, por Mine Çetinkaya-Rundel."
   },
   {
-    "objectID": "bibliografia.html#em-português",
-    "href": "bibliografia.html#em-português",
-    "title": "Bibliografia",
-    "section": "Em Português",
-    "text": "Em Português\nCaio Lente, Athos Damiani, Beatriz Milz, Daniel Falbel, Fernando Correa, Julio Trecenti, Tereza Lacerda, William Amorim. Zen do R. Disponível em: https://curso-r.github.io/zen-do-r/git-github.html\nAthos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Correa, Julio Tricenti, Nicole Luduvice, William Amorim. Ciência de Dados em R. Disponível em: https://livro.curso-r.com/9-relatorios.html"
+    "objectID": "trabalho_final.html",
+    "href": "trabalho_final.html",
+    "title": "Trabalho final",
+    "section": "",
+    "text": "Objetivo: Você deverá criar um documento com Quarto, versionar no GitHub e disponibilizar na internet. Esse trabalho final oferece orientações para que você pratique o que foi apresentado no curso.\nRECOMENDAÇÃO: Faça as etapas sugeridas após cada aula.\nATENÇÃO: O recebimento do certificado está vinculado à entrega e aprovação deste trabalho final, além de ter frequência mínima de 75%."
   },
   {
-    "objectID": "bibliografia.html#em-inglês",
-    "href": "bibliografia.html#em-inglês",
-    "title": "Bibliografia",
-    "section": "Em Inglês",
-    "text": "Em Inglês\nYihui Xie, J. J. Allaire, Garrett Grolemund. R Markdown: The Definitive Guide. 2019. Chapman & Hall/CRC. Disponível em: https://bookdown.org/yihui/rmarkdown/\nYihui Xie, Christophe Dervieux, Emily Riederer. R Markdown Cookbook. 2021. Chapman & Hall/CRC. Disponível em: https://bookdown.org/yihui/rmarkdown-cookbook/\nJenny Bryan, the STAT 545 TAs, Jim Hester. Happy Git and GitHub for the useR. Disponível em: https://happygitwithr.com/\nThe Carpentries & Data Carpentry. Reproducible Research Introduction. Disponível em: https://datacarpentry.org/rr-intro/\nNational Center for Ecological Analysis and Synthesis (NCEAS). Reproducible Analysis With R. Disponível em: https://nceas.github.io/sasap-training/materials/reproducible_research_in_r_fairbanks/"
+    "objectID": "trabalho_final.html#etapas-pré-codigo",
+    "href": "trabalho_final.html#etapas-pré-codigo",
+    "title": "Trabalho final",
+    "section": "Etapas pré-codigo",
+    "text": "Etapas pré-codigo\n\nPense no tipo de relatório que quer criar, qual é o objetivo do mesmo e o público-alvo. Por exemplo:\n\nUma análise de dados da pesquisa, a ser apresentada para outras pessoas pesquisadoras.\nUm tutorial com código em R ou Python.\nUma página pessoal de divulgação.\n\nEscolha uma base de dados para utilizar! Segue algumas ideias:\n\nPacote dados\nRepositório tidytuesday (em inglês)\nMais pacotes da comunidade BR: mananciais, reservatoriosBR, qualR, Outros\nAlguma que você tenha interesse!"
+  },
+  {
+    "objectID": "trabalho_final.html#passo-a-passo-com-r",
+    "href": "trabalho_final.html#passo-a-passo-com-r",
+    "title": "Trabalho final",
+    "section": "Passo a passo com R",
+    "text": "Passo a passo com R\n\nAula 1\n\nCrie um Projeto do RStudio para realizar a tarefa. Lembre-se de boas práticas para nomear o projeto: não utilize espaços, caracteres especiais, acentuação. O seu projeto deverá chamar “trabalho_relatorios_nome_sobrenome” (tudo minúsculo, separado por _). Ex: trabalho_relatorios_beatriz_milz\n\nA função usethis::create_project() será útil neste passo:\nusethis::create_project(\"caminho/trabalho_relatorios_nome_sobrenome\")\nTodos os passos seguintes serão realizados neste projeto criado.\n\nCrie a estrutura do seu projeto: uma pasta dados, onde adicionará bases de dados (se necessário), e uma pasta img para imagens (se necessário). Você pode criar manualmente, ou utilizando a função fs::dir_create():\n\nfs::dir_create(\"dados\")\nfs::dir_create(\"img\")\n\n\nAulas 2\n\nCrie o arquivo que será utilizado.\n\n\nFile -> New File -> Quarto document.\n\nVocê deve salvar o arquivo com o nome index.qmd. Clique em Render assim que o arquivo for criado, e confira se o arquivo index.html foi gerado sem erros.\n\n\nAula 3\n\nAgora você pode usar sua criatividade e adicionar conteúdo no relatório.\n\nIsso depende do objetivo do relatório e o público-alvo.\nPense em quais opções de chunk utilizar em cada caso: você pretende mostrar o código ou escondê-lo? Faz sentido apra o seu público alvo ler o seu código?\nAdicione pelo menos:\n\nUm parágrafo de texto, com marcações.\nUm link para uma página da internet.\nUma imagem.\nUma tabela.\nCaso saiba usar ggplot, tente adicionar um gráfico.\nCaso seja uma análise de pesquisa, tente adicionar referências usando .bib.\n\n\n\nAula 4\n\nInicie o versionamento com a seguinte função:\n\nusethis::use_git()\nSiga os passos até que o RStudio reinicie.\n\nCrie um repositório no GitHub que esteja vinculado à este projeto:\n\nusethis::use_github()\nSiga os passos até que uma janela do GitHub seja aberta e você possa ver o repositório criado. Guarde o link deste repositório!\n\n\nAula 5\n\nNo painel Git do RStudio, selecione os arquivos criados e faça um Commit. Clique no botão de Push (seta verde apontada para cima). Confira no repositório do GitHub se as suas mudanças aparecem por lá.\nAtive o GitHub Pages para disponibilizar na internet. Isso deverá ser feito no GitHub, na aba Settings, e então na opção Pages. Siga as instruções neste slide, usando a opção root/.\n\nAnote o link que é fornecido pelo GitHub. Espere alguns minutos, e então veja se algum conteúdo aparece na página.\n\nQuando estiver feliz com o resultado, lembre-se de fazer o Commit com as mudanças, e enviá-las para o GitHub clicando no botão de Push (seta verde apontada para cima).\n\nConfira no repositório do GitHub se as suas mudanças aparecem por lá. Confira na página da internet se as mudanças estão lá."
+  },
+  {
+    "objectID": "trabalho_final.html#pós-curso",
+    "href": "trabalho_final.html#pós-curso",
+    "title": "Trabalho final",
+    "section": "Pós curso",
+    "text": "Pós curso\n\nEnvie o link do relatório online e também do repositório do GitHub no formulário."
   },
   {
     "objectID": "index.html",
@@ -56,39 +63,11 @@
     "text": "Edição passada\nConfira a página do curso de 2022 e os trabalhos finais criados pelas pessoas participantes da edição."
   },
   {
-    "objectID": "licenca.html",
-    "href": "licenca.html",
-    "title": "Licença de uso",
-    "section": "",
-    "text": "Estes materiais são disponibilizados com a licença Creative Commons Atribuição-Compartilha Igual (CC BY-SA), ou seja, você pode compartilhar e adaptar este material, porém deve atribuir os créditos para as pessoas autoras, adicionando um link para o material original, e o seu material também deve ter este mesmo tipo de licença.\nSaiba mais em: Creative Commons\nVisual da página inspirado em: STA 210: Regression Analysis, por Mine Çetinkaya-Rundel."
-  },
-  {
-    "objectID": "faq.html",
-    "href": "faq.html",
-    "title": "Perguntas Frequentes (FAQ)",
-    "section": "",
-    "text": "O curso será online ou presencial?\n\nO curso será oferecido de forma online.\n\nApenas estudantes da USP podem participar do curso?\n\nAs inscrições serão abertas para todas as pessoas interessadas.\n\nComo posso me inscrever?\n\nA inscrição será realizada através do IME-USP. Acompanhe as informações na página do Programa de Verão do IME-USP.\n\nO curso é gratuito?\n\nNão, o curso é pago. Acompanhe as informações na página do Programa de Verão do IME-USP.\n\nAs aulas serão gravadas?\n\nSim."
-  },
-  {
-    "objectID": "slides/aula-1.html#ministrantes-e-monitoria",
-    "href": "slides/aula-1.html#ministrantes-e-monitoria",
-    "title": "Relatórios reprodutíveis com R",
-    "section": "Ministrantes e monitoria",
-    "text": "Ministrantes e monitoria\n\nBeatriz Milz - Docente\nAlan da Silva - Monitoria\nAlexandre Moura dos Santos - Monitoria\nBeatriz Proença Carvalho - Monitoria\nTatyane Paz Dominguez dos Santos Alves - Monitoria\n\nSaiba mais na página do curso."
-  },
-  {
-    "objectID": "slides/aula-1.html#código-de-conduta",
-    "href": "slides/aula-1.html#código-de-conduta",
-    "title": "Relatórios reprodutíveis com R",
-    "section": "Código de conduta",
-    "text": "Código de conduta\n\nSeja gentil! Estamos aqui para aprender, e estamos em etapas diferentes do aprendizado.\nNão existe “pergunta burra”. Não deveria ser comum ouvir “como você não sabe isso ainda?”.\nObjetivo é proporcionar uma experiência de livre de assédio e inclusiva para todas as pessoas (incluindo alunas, alunos, professores, monitores, equipe da secretaria do IME/USP, etc).\nQualquer pessoa que viole estas regras pode ser advertida ou removida do curso, conforme critérios das pessoas docentes.\nLeia completo em: https://saopaulo2019.satrdays.org/codigodeconduta/"
-  },
-  {
-    "objectID": "slides/aula-1.html#plataformas-utilizadas",
-    "href": "slides/aula-1.html#plataformas-utilizadas",
-    "title": "Relatórios reprodutíveis com R",
-    "section": "Plataformas utilizadas",
-    "text": "Plataformas utilizadas\n\nPlataforma USP: https://cursosextensao.usp.br/course/view.php?id=3449\nSite do curso: https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/"
+    "objectID": "profs.html#monitoria-em-ordem-alfabética",
+    "href": "profs.html#monitoria-em-ordem-alfabética",
+    "title": "Docentes",
+    "section": "Monitoria (em ordem alfabética)",
+    "text": "Monitoria (em ordem alfabética)"
   },
   {
     "objectID": "informacoes-gerais.html",
@@ -131,5 +110,33 @@
     "title": "Informações gerais",
     "section": "Política de isenção de taxa de inscrição",
     "text": "Política de isenção de taxa de inscrição\nSegue abaixo a política de Isenção que está no sistema para os cursos de verão:\n\n\nPolítica de Isenções ISENÇÃO O aluno deverá fazer sua inscrição on-line no curso que desejar e efetuar o pagamento, para assegurar sua vaga. Após dois dias úteis solicitar isenção (via Sistema Web do Verão). O sorteio das isenções, bem como, a divulgação dos contemplados ocorrerá no mês de dezembro. Aqueles que NÃO forem sorteados e desistirem de realizar o curso deverão solicitar a devolução da taxa de inscrição, na Secretaria do Programa de Verão.  No caso de ausência de interessados em alguma categoria, as vagas serão remanejadas de acordo com a procura ou será substituído por isenção para alunos indicados por docentes. A devolução da taxa, referente a isenção será feita via depósito em conta bancária."
+  },
+  {
+    "objectID": "faq.html",
+    "href": "faq.html",
+    "title": "Perguntas Frequentes (FAQ)",
+    "section": "",
+    "text": "O curso será online ou presencial?\n\nO curso será oferecido de forma online.\n\nApenas estudantes da USP podem participar do curso?\n\nAs inscrições serão abertas para todas as pessoas interessadas.\n\nComo posso me inscrever?\n\nA inscrição será realizada através do IME-USP. Acompanhe as informações na página do Programa de Verão do IME-USP.\n\nO curso é gratuito?\n\nNão, o curso é pago. Acompanhe as informações na página do Programa de Verão do IME-USP.\n\nAs aulas serão gravadas?\n\nSim."
+  },
+  {
+    "objectID": "bibliografia.html",
+    "href": "bibliografia.html",
+    "title": "Bibliografia",
+    "section": "",
+    "text": "Atenção!\n\n\n\nConteúdo em atualização."
+  },
+  {
+    "objectID": "bibliografia.html#em-português",
+    "href": "bibliografia.html#em-português",
+    "title": "Bibliografia",
+    "section": "Em Português",
+    "text": "Em Português\nCaio Lente, Athos Damiani, Beatriz Milz, Daniel Falbel, Fernando Correa, Julio Trecenti, Tereza Lacerda, William Amorim. Zen do R. Disponível em: https://curso-r.github.io/zen-do-r/git-github.html\nAthos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Correa, Julio Tricenti, Nicole Luduvice, William Amorim. Ciência de Dados em R. Disponível em: https://livro.curso-r.com/9-relatorios.html"
+  },
+  {
+    "objectID": "bibliografia.html#em-inglês",
+    "href": "bibliografia.html#em-inglês",
+    "title": "Bibliografia",
+    "section": "Em Inglês",
+    "text": "Em Inglês\nYihui Xie, J. J. Allaire, Garrett Grolemund. R Markdown: The Definitive Guide. 2019. Chapman & Hall/CRC. Disponível em: https://bookdown.org/yihui/rmarkdown/\nYihui Xie, Christophe Dervieux, Emily Riederer. R Markdown Cookbook. 2021. Chapman & Hall/CRC. Disponível em: https://bookdown.org/yihui/rmarkdown-cookbook/\nJenny Bryan, the STAT 545 TAs, Jim Hester. Happy Git and GitHub for the useR. Disponível em: https://happygitwithr.com/\nThe Carpentries & Data Carpentry. Reproducible Research Introduction. Disponível em: https://datacarpentry.org/rr-intro/\nNational Center for Ecological Analysis and Synthesis (NCEAS). Reproducible Analysis With R. Disponível em: https://nceas.github.io/sasap-training/materials/reproducible_research_in_r_fairbanks/"
   }
 ]
