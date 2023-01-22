@@ -8,33 +8,33 @@ title: "Pré-curso: Instalações necessárias"
 
 ## Contas em serviços
 
-- Criar uma conta gratuita no [GitHub](https://github.com/)
+-   Criar uma conta gratuita no [GitHub](https://github.com/)
 
 ## Instalações obrigatórias
 
-1. **Instalar o R** - Versão 4.1 ou superior: 
+1.  **Instalar o R** - Versão 4.1 ou superior:
 
-  - Download direto: <https://vps.fmvz.usp.br/CRAN/>
-  
-  - Tutorial: <https://livro.curso-r.com/1-1-instalacao-do-r.html>
-    
-    
-2. **Instalar o RStudio** - Versão mínima 2022.07: 
+-   Download direto: <https://vps.fmvz.usp.br/CRAN/>
 
-  - Download direto: <https://www.rstudio.com/products/rstudio/download/#download>
-  
-  - Tutorial: <https://livro.curso-r.com/1-2-instalacao-do-rstudio.html>    
-    
-3. **Instalar o Git**:
+-   Tutorial: <https://livro.curso-r.com/1-1-instalacao-do-r.html>
 
-  - Caso você utilize Linux ou Mac, confira antes se o Git já está instalado. Você pode conferir abrindo o terminal, e digitando `git`. Caso o terminal avise que você não tem `git` instalado, você precisará instalar.
+2.  **Instalar o RStudio** - Versão mínima 2022.07:
 
-  - Download direto: <http://git-scm.com/download/>    
+-   Download direto: <https://www.rstudio.com/products/rstudio/download/#download>
 
-4. **Instalar pacotes**:
+-   Tutorial: <https://livro.curso-r.com/1-2-instalacao-do-rstudio.html>
 
-```r
+3.  **Instalar o Git**:
+
+-   Caso você utilize Linux ou Mac, confira antes se o Git já está instalado. Você pode conferir abrindo o terminal, e digitando `git`. Caso o terminal avise que você não tem `git` instalado, você precisará instalar.
+
+-   Download direto: <http://git-scm.com/download/>
+
+4.  **Instalar pacotes**:
+
+``` r
 pacotes_necessarios <- c(
+  "here",
   "usethis",
   "devtools",
   "rmarkdown",
@@ -52,7 +52,7 @@ pacotes_necessarios <- c(
 install.packages(pacotes_necessarios)
 ```
 
-```r
+``` r
 pacotes_exemplos <-
   c(
     "xaringanthemer",
@@ -66,22 +66,19 @@ pacotes_exemplos <-
   )
 install.packages(pacotes_exemplos)
 ```
-    
+
 ## Instalações recomendadas
 
-  1. **Google Chrome**. Para exportar os relatórios em formato `PDF`, utilizaremos uma função que depende do uso do navegador Google Chrome. 
-  
-  - Download direto: <https://www.google.com/intl/pt-BR/chrome/>
-    
-  - Caso você utilize Linux, uma alternativa é instalar o Chromium: <https://www.chromium.org/getting-involved/download-chromium/>
-    
-  - Mais informações em: <https://livro.curso-r.com/1-3-instalacao-adicionais.html#pagedown-e-chrome>
-  
-  
-  2. **LibreOffice**. Para abrir documentos do Office, como `.pptx` e `.docx`, é necessário ter o Office ou alguma alternativa gratuita instalados. **Caso não tenha** nenhum software para abertura destes arquivos instalado, recomendo instalar o LibreOffice, pois é um software gratuito:
-  
-  - Download direto: <https://pt-br.libreoffice.org/baixe-ja/libreoffice-novo/>
-    
-  - Tutorial de instalação: <https://livro.curso-r.com/1-3-instalacao-adicionais.html#office>
-  
-  
+1.  **Google Chrome**. Para exportar os relatórios em formato `PDF`, utilizaremos uma função que depende do uso do navegador Google Chrome.
+
+-   Download direto: <https://www.google.com/intl/pt-BR/chrome/>
+
+-   Caso você utilize Linux, uma alternativa é instalar o Chromium: <https://www.chromium.org/getting-involved/download-chromium/>
+
+-   Mais informações em: <https://livro.curso-r.com/1-3-instalacao-adicionais.html#pagedown-e-chrome>
+
+2.  **LibreOffice**. Para abrir documentos do Office, como `.pptx` e `.docx`, é necessário ter o Office ou alguma alternativa gratuita instalados. **Caso não tenha** nenhum software para abertura destes arquivos instalado, recomendo instalar o LibreOffice, pois é um software gratuito:
+
+-   Download direto: <https://pt-br.libreoffice.org/baixe-ja/libreoffice-novo/>
+
+-   Tutorial de instalação: <https://livro.curso-r.com/1-3-instalacao-adicionais.html#office>
