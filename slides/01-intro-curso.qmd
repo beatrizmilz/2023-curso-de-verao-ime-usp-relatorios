@@ -107,3 +107,10 @@ Que vocês saibam ao final do curso:
 **Objetivo:** Você deverá criar um documento com Quarto, versionar no GitHub e disponibilizar na internet. Esse trabalho final oferece orientações para que você pratique o que foi apresentado no curso.
 
 Mais informações em: [Trabalho final](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/trabalho_final.html)
+
+# Sobre esse curso....
+
+## Faremos mais prática!
+
+![](images/livecoding.jpg){fig-align="center"}
+
