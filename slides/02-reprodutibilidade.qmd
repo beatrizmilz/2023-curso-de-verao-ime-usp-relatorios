@@ -230,12 +230,13 @@ devtools::session_info()
 
 -   Utilizar boas práticas aumentam as chances de escrever um código reprodutível.
 
--   Exemplos de boas práticas:
 
-    -   Utilizar Projetos do RStudio. Quando usamos projetos do RStudio, o diretório de trabalho será a pasta principal do projeto.
+## Exemplos de boas práticas:
 
-    -   Desabilitar o .Rhistory e .Rdata.
+-   Utilizar Projetos do RStudio. Quando usamos projetos do RStudio, o diretório de trabalho será a pasta principal do projeto.
 
-    -   Utilizar caminhos relativos.
+-   Desabilitar o .Rhistory e .Rdata.
+
+-   Utilizar caminhos relativos.
     
-    -  Documentar os pacotes e versões utilizadas.
+-  Documentar os pacotes e versões utilizadas.
