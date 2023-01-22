@@ -35,6 +35,7 @@ title: "Pré-curso: Instalações necessárias"
 ``` r
 pacotes_necessarios <- c(
   "here",
+  "quarto",
   "usethis",
   "devtools",
   "rmarkdown",

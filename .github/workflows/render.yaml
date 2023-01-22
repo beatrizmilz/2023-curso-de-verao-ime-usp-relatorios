@@ -32,6 +32,9 @@ jobs:
             any::reactable
             any::here
             any::devtools
+            any::knitr
+            any::janitor
+            any::ggplot2
             
             
 

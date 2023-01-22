@@ -1,0 +1,272 @@
+---
+title: "Relatórios reprodutíveis com R"
+subtitle: 'Curso de Verão IME-USP 2022' 
+author: "Ministrante: Beatriz Milz"
+format: 
+  revealjs:
+    width: 1600
+    height: 900  
+    toc: false
+    toc_float: true
+    toc-depth: 2
+    toc-location: body
+    toc-title: "Conteúdos"
+    logo: "https://www.ime.usp.br/verao/assets/images/logo_verao.png" 
+    footer: "Slides por [Beatriz Milz](https://beamilz.com) (@BeaMilz), feito com  [Quarto](https://quarto.org/docs/presentations/revealjs/index.html). Código disponível no [GitHub](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/)."
+    theme: ["custom.scss"]
+    slide-number: c/t
+    show-slide-number: all
+    hash-type: number
+    preview-links: false    
+editor: visual
+---
+
+# Introdução ao RMarkdown
+
+-   O que vamos aprender:
+
+-   O que é o RMarkdown
+
+-   Como criar um documento reprodutível com RMarkdown usando R
+
+## Ciclo da ciência de dados
+
+```{r, out.width="65%"}
+#| fig-align: "center"
+knitr::include_graphics("https://beatrizmilz.github.io/python-brasil-2021-reticulate/img/environmental-data-science-r4ds-general.png")
+```
+
+Fonte: Conceito do ciclo de ciência de dados apresentado por [Hadley Wickham no livro R for Data Science](https://r4ds.had.co.nz/introduction.html), ilustração por [Allison Horst](https://github.com/allisonhorst).
+
+## Pacote R Markdown
+
+-   Criado e mantido pela [RStudio](https://rstudio.com/)
+
+-   Princípio: arquivos onde escrevemos textos e marcamos com `markdown`, mas também podemos adicionar códigos que são executados.
+
+-   Extensão `.Rmd`
+
+-   Possibilita a utilização de códigos `R`, `Python`, `Markdown`, `HTML`, `CSS`, `SQL`, e outros em um único arquivo.
+
+-   É um **pacote em R**, portanto depende do R.
+
+```{r, out.width="70%", fig.cap="<center><b>Logo: <a href='https://rmarkdown.rstudio.com'>Pacote rmarkdown</a></b></center>"}
+#| fig-align: "center"
+knitr::include_graphics("https://beatrizmilz.github.io/python-brasil-2021-reticulate/img/hex-rmarkdown.png")
+```
+
+## Pacote R Markdown
+
+-   A reprodutibilidade é algo importante para o R Markdown.
+
+-   A comunidade de R, e a equipe da RStudio, desenvolveram outros pacotes que integram bem com R Markdown para gerar diversos produtos de análise de dados diferentes, com arquivos .Rmd.
+
+```{r, out.width="30%", fig.cap="<center><b>Fonte: <a href='https://rmarkdown.rstudio.com'>Pacote `rmarkdown`</a></b></center>"}
+#| fig-align: "center"
+knitr::include_graphics("https://beatrizmilz.github.io/slidesR/img/rmarkdown/markdown.png")
+```
+
+## Começando com o R Markdown
+
+-   **Criando um arquivo**:
+
+    -   `File > New File > R Markdown`
+
+-   **Estrutura do arquivo**:
+
+    -   YAML - metadados do documento
+    -   Code chunks - Campos de código (pode receber código em R, SQL, Python, entre outros)
+    -   Textos marcados com Markdown ou HTML
+
+-   **Transformar o .Rmd no arquivo final**
+
+    -   Botão Knit, ou usando o atalho: `Ctrl + Shift + K`
+    -   Boa prática: faça isso com frequência.
+
+## Colocar em prática:
+
+-   Dentro do projeto do RStudio criado, crie uma pasta chamada `relatorio`.
+
+-   Crie um novo arquivo RMarkdown que gera um HTML, e salve ele na pasta `relatorio`. Dê o nome de `primeiro_relatorio.Rmd`.
+
+-   O arquivo já vem com alguns conteúdos para servir de exemplo. Observe a estrutura deste arquivo! Tente imaginar o que será gerado.
+
+-   Aperte o botão `knit` para gerar o resultado final. Veja o resultado: é o que você imaginou?
+
+-   Faça pequenas alterações e aperte o botão `knit` novamente, para ver como ficou. Sugestões:
+
+    -   Altere o título, adicione seu nome, mude a data.
+    -   Escreva algo diferente no corpo do arquivo.
+
+## Markdown
+
+-   O RMarkdown possibilita a utilização da linguagem de marcação simples Markdown. Essa linguagem de marcação foi elaborada para ser fácil de ler e fácil de escrever.
+
+-   Confira as cheatsheets: [`rmarkdown` Cheatsheet 2.0](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) e [`rmarkdown` Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf).
+
+-   O RStudio Visual Editor facilita o uso do Markdown no RStudio.
+
+## Colocar em prática:
+
+-   No arquivo criado, experimente marcar os textos com Markdown.
+
+-   Experimente o Visual Mode Editor do RStudio.
+
+-   Adicione um link no seu relatório para a página dos cursos de extensão da USP: https://cursosextensao.usp.br/
+
+## Chunks de Código em R
+
+-   Os chunks são campos onde podemos inserir código de R (ou Python, SQL, Bash...) em um arquivo RMarkdown.
+
+-   Os chunks podem ter rótulos/nomes, para identificar o conteúdo gerado.
+
+-   Existe um atalho do teclado para criar chunks no RStudio: `Ctrl + ALt + I`.
+
+-   Também é possível criar um chunk clicando no seguinte botão do RStudio:
+
+```{r echo=FALSE, out.width="90%"}
+#| fig-align: "center"
+knitr::include_graphics("images/create-chunk.png")
+```
+
+## Diretório de trabalho em arquivos `.Rmd`
+
+-   Quando usamos projetos do RStudio, o diretório de trabalho será a pasta principal do projeto.
+
+-   Quando estamos trabalhando com arquivos `.Rmd`, por padrão o diretório de trabalho DO ARQUIVO será a pasta onde o arquivo está localizado.
+
+-   Isso gera confusão! Atenção pois isso pode causar erros. Uma dica para escrever os caminhos de forma correta é utilizar a funcionalidade do RStudio: escreva aspas, coloque o cursor entre as pastas e aperte TAB.
+
+-   Exemplo prático: comparar o uso de `getwd()` dentro e fora de um arquivo `.Rmd`.
+
+-   Para acessar arquivos em pastas que estão em um "nível" anterior ao diretório de trabalho, utilize `"../"`.
+
+## Colocar em prática:
+
+1)  No arquivo `primeiro-relatorio.Rmd`, crie um chunk e faça a importação da base de dados de pinguins.
+
+``` r
+caminho <- "...." 
+pinguins <- readr::read_csv(caminho)
+dplyr::glimpse(pinguins)
+```
+
+2)  Lembre-se de se atentar aos caminhos! 
+
+
+
+3)  Aperte `knit` e observe o resultado. O código e o resultado deverá aparecer no relatório. Configure as opções de chunk para que apareça corretamente.
+
+## Código inline
+
+-   É útil para adicionar resultados de código em R dentro de parágrafos.
+
+**Exemplo:**
+
+A base mtcars possui `r nrow(mtcars)` carros. As colunas presentes na base são `r knitr::combine_words(names(mtcars), and = "e ")`.
+
+**Código Markdown:**
+
+```{r eval=FALSE, echo=TRUE}
+A base mtcars possui `r nrow(mtcars)` carros.
+As colunas presentes na base são 
+`r knitr::combine_words(names(mtcars), and = "e ")`.
+```
+
+## Colocar em prática:
+
+```{css}
+.colorido{
+  background-color: #FDB525;
+}
+```
+
+
+
+```{r include=FALSE}
+caminho <- "dados/pinguins.csv" 
+pinguins <- readr::read_csv(caminho)
+```
+
+1 ) O trecho a seguir apresenta um texto com resultados feitos com inline code. Adicione o seguinte código no seu relatório (o arquivo `primeiro_relatorio.Rmd`), substituindo os trechos coloridos por inline code:
+
+A base de dados pinguins apresenta dados referente à [`r nrow(pinguins)`]{.colorido} pinguins, das seguintes espécies: [`r knitr::combine_words(unique(pinguins$especie), and = "e ")`]{.colorido}. Os dados foram coletados entre os anos [`r min(pinguins$ano)`]{.colorido} e [`r max(pinguins$ano)`]{.colorido}, nas seguintes ilhas: [`r knitr::combine_words(unique(pinguins$ilha), and = "e ")`]{.colorido}. O peso médio dos pinguins amostrados foi de [`r round(mean(pinguins$massa_corporal, na.rm = TRUE)/100)`]{.colorido} kg. Os dados foram obtidos através do pacote [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/).
+
+## Tabelas com R
+
+-   Várias opções: `knitr::kable()`, `DT::datatable()` , `reactable::reactable()`, entre outras.
+
+```{r echo=TRUE}
+pinguins |>
+  dplyr::count(especie, sort = TRUE) |>
+  knitr::kable()
+```
+
+## Colocar em prática:
+
+1)  Adicione a seguinte tabela no seu relatório, usando a função `kable()`:
+
+```{r echo=TRUE}
+quantidade_de_especies <- pinguins |>
+  dplyr::count(especie, sort = TRUE) |>
+  janitor::adorn_totals()
+```
+
+Ela deverá ficar assim:
+
+```{r echo = FALSE}
+quantidade_de_especies |>
+  knitr::kable(col.names = c("Espécie", "Quantidade"))
+```
+
+## Adicionando um gráfico
+
+- Coloque o código usado para criar um gráfico em um chunk. Ex:
+
+```{r}
+#| echo: true
+#| fig-align: "center"
+library(ggplot2)
+pinguins |> 
+  dplyr::count(especie) |> 
+  ggplot() +
+  geom_col(aes(x = n, y = especie, fill = especie), show.legend = FALSE) +
+  theme_light() +
+  scale_fill_viridis_d() +
+  labs(x = "Quantidade de pinguins", y = "Espécies")
+```
+
+## Colocar em prática:
+
+1)  Adicione um gráfico no seu relatório, utilizando a base `pinguins`.
+
+2) Caso não tenha experiência com ggplot, um gráfico simples pode ser gerado com esse código:
+
+```{r}
+#| echo: true
+#| fig-align: "center"
+library(ggplot2)
+pinguins |> 
+  ggplot() +
+  geom_point(aes(x = comprimento_bico, y = profundidade_bico, color = especie)) +
+  theme_light() +
+  scale_color_viridis_d() +
+  labs(x = "Comprimento do bico", 
+       y = "Profundidade do bico")
+```
+
+
+
+
+
+## Revisão - R Markdown
+
+-   O pacote rmarkdown possibilita adicionar textos e códigos em um único arquivo.
+
+-   Podemos utilizar códigos em R, Python, Markdown, HTML, CSS, SQL, e outros no RMarkdown.
+
+-   O uso do RMarkdown depende do uso do R.
+
+-   O arquivo RMarkdown é estruturado em: YAML (metadados), textos marcados e campos de código (chamados de chunks).
+
+-   Markdown é uma linguagem de marcação que possibilita marcar textos. Essa linguagem é utilizada nos arquivos RMarkdown e em muitos outros lugares.
