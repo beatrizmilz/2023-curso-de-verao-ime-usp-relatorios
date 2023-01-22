@@ -35,6 +35,7 @@ jobs:
             any::knitr
             any::janitor
             any::ggplot2
+            any::readr
             
             
 
