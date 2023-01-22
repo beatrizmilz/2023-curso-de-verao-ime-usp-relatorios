@@ -4,7 +4,11 @@ title: "Slides"
 
 -   [Slide 1 - Introdução ao Curso](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/01-intro-cursos.html)
 
--   [Slide 2 - Introdução ao conceito de reprodutibilidade](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/01-intro-cursos.html)
+
+-   [Slide 2 - Introdução ao conceito de reprodutibilidade](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/02-reprodutibilidade.html)
+
+
+-   [Slide 3 - Introdução ao RMarkdown e ao Quarto](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/03-intro-rmarkdown-quarto.html)
 
 <!-- inicio font awesome -->
 
