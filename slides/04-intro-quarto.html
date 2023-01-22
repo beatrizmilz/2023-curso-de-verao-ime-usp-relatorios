@@ -28,6 +28,70 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -335,121 +399,232 @@ Ministrante: Beatriz Milz
 </div>
 </div>
 
-</section><section id="TOC">
-<nav role="doc-toc"> 
-<h2 id="toc-title">Conteúdos</h2>
-<ul>
-<li>Sobre o curso
-<ul>
-<li>Ministrantes e monitoria</li>
-<li>Código de conduta</li>
-<li>Plataformas utilizadas</li>
-<li>Objetivos de aprendizagem</li>
-<li>Gravação das aulas</li>
-<li>Dúvidas</li>
-<li>Requisitos para o certificado</li>
-<li>Trabalho final</li>
-</ul></li>
-<li>Sobre esse curso….
-<ul>
-<li>Faremos mais prática!</li>
-</ul></li>
-</ul>
-</nav>
 </section>
 <section>
 <section class="title-slide slide level1 center">
-<h1>Sobre o curso</h1>
+<h1>Introdução ao Quarto</h1>
 
-</section>
-<section class="slide level2">
-<h2>Ministrantes e monitoria</h2>
-<ul>
-<li>Beatriz Milz - Docente</li>
-<li>Alan da Silva - Monitoria</li>
-<li>Alexandre Moura dos Santos - Monitoria</li>
-<li>Beatriz Proença Carvalho - Monitoria</li>
-<li>Tatyane Paz Dominguez dos Santos Alves - Monitoria</li>
-</ul>
-<p>Saiba mais <a href="https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/profs.html">na página do curso</a>.</p>
-</section>
-<section class="slide level2">
-<h2>Código de conduta</h2>
-<ul>
-<li><p>Seja gentil! Estamos aqui para aprender, e estamos em etapas diferentes do aprendizado.</p></li>
-<li><p>Não existe “pergunta burra”. Não deveria ser comum ouvir “como você não sabe isso ainda?”.</p></li>
-<li><p>Objetivo é proporcionar uma experiência de livre de assédio e inclusiva para todas as pessoas (incluindo alunas, alunos, professores, monitores, equipe da secretaria do IME/USP, etc).</p></li>
-<li><p>Qualquer pessoa que viole estas regras pode ser advertida ou removida do curso, conforme critérios das pessoas docentes.</p></li>
-<li><p>Leia completo em: <a href="https://saopaulo2019.satrdays.org/codigodeconduta/" class="uri">https://saopaulo2019.satrdays.org/codigodeconduta/</a></p></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>Plataformas utilizadas</h2>
-<ul>
-<li><p>Plataforma USP: <a href="https://cursosextensao.usp.br/course/view.php?id=3449" class="uri">https://cursosextensao.usp.br/course/view.php?id=3449</a></p></li>
-<li><p>Site do curso: <a href="https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/" class="uri">https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/</a></p></li>
-<li><p>Grupo no Whatsapp temporário: <strong>Compartilhado por email e na Plataforma USP</strong>.</p></li>
-</ul>
 </section>
 <section class="slide level2">
 <h2>Objetivos de aprendizagem</h2>
-<p>Que vocês saibam ao final do curso:</p>
-<ul>
-<li><p>Noções de reprodutibilidade</p></li>
-<li><p>Como criar documentos usando Quarto</p></li>
-<li><p>Como exportar esses documentos em word, PDF e HTML.</p></li>
-<li><p>Como controlar as versões do documento usando o Git e GitHub.</p></li>
-<li><p>Como disponibilizar o documento na internet.</p></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>Gravação das aulas</h2>
-<ul>
-<li><p>As aulas serão gravadas.</p></li>
-<li><p>Caso a aula comece e não esteja sendo gravada, por favor nos avise no chat :)</p></li>
-<li><p>Caso não queira aparecer na gravação, mantenha sua câmera fechada.</p></li>
-</ul>
-
-<img data-src="images/paste-66D271C4.png" class="r-stretch quarto-figure-center"></section>
-<section class="slide level2">
-<h2>Dúvidas</h2>
-<ul>
-<li><p>De preferência, não envie no email :)</p></li>
-<li><p>Durante as aulas: enviem dúvidas no chat.</p></li>
-<li><p>Fora do horário de aulas:</p>
-<ul>
-<li>Durante o oferecimento do curso: <a href="https://cursosextensao.usp.br/mod/forum/view.php?id=160206">na plataforma USP Extensão</a> se for dúvida técnica, no grupo do Whatsapp se for uma dúvida sobre o curso/plataforma/etc.</li>
-<li>Após a finalização do curso: <a href="https://discourse.curso-r.com/">Fórum da Curso-R</a></li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>Requisitos para o certificado</h2>
-<ul>
-<li><p>Teremos um trabalho final, que deverá ser entregue até 1 semana após o final do curso. O trabalho final é obrigatório para o recebimento do certificado.</p></li>
-<li><p>Certificado = Ter <strong>frequência igual ou superior à 75%</strong> (ou seja, pode ter 1 falta) + entrega do trabalho final.</p></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>Trabalho final</h2>
-<p><strong>Objetivo:</strong> Você deverá criar um documento com Quarto, versionar no GitHub e disponibilizar na internet. Esse trabalho final oferece orientações para que você pratique o que foi apresentado no curso.</p>
-<p>Mais informações em: <a href="https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/trabalho_final.html">Trabalho final</a></p>
+<p>Responder as seguintes perguntas….</p>
+<p>⬜ O que é o Quarto?</p>
+<p>⬜ Qual é a diferença entre o Quarto e o RMarkdown?</p>
+<p>⬜ Como criar um documento simples ?</p>
 </section></section>
 <section>
 <section class="title-slide slide level1 center">
-<h1>Sobre esse curso….</h1>
+<h1>O que é o Quarto?</h1>
 
 </section>
 <section class="slide level2">
-<h2>Faremos mais prática!</h2>
+<h2>Seria o Quarto…</h2>
+<div class="r-stack">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/livecoding.jpg"></p>
+<p><img data-src="images/paste-614B8F2C.png" class="fragment"></p>
 </figure>
 </div>
+<p><img data-src="images/paste-23FE8FE7.png" class="fragment absolute" style="top: 15%; left: 40%; width: 400px; height: 400px; "></p>
+</div>
+</section>
+<section class="slide level2">
+<h2>O que é o Quarto?</h2>
+<ul>
+<li>O Quarto é um sistema de escrita técnica e científica, de código aberto.</li>
+</ul>
 
-<p><img src="https://www.ime.usp.br/verao/assets/images/logo_verao.png" class="slide-logo"></p>
-<div class="footer footer-default">
+<img data-src="images/quarto_schematic.png" data-out.width="50%" class="r-stretch quarto-figure-center"><p class="caption">A schematic representing the multi-language input (e.g.&nbsp;Python, R, Observable, Julia) and multi-format output (e.g.&nbsp;PDF, html, Word documents, and more) versatility of Quarto</p><div class="footer">
+<p>Arte por <a href="https://mobile.twitter.com/allison_horst">Allison Horst</a>.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Por que o Quarto existe?</h2>
+<ul>
+<li><p><strong>O Quarto é a nova geração do R Markdown!</strong></p></li>
+<li><p>O rmarkdown é um pacote em R. Para usá-lo, é necessário ter o R instalado (mesmo que o seu arquivo não tenha conteúdos em R).</p></li>
+<li><p>O R Markdown é uma ferramenta muito boa para escrita técnica e científica reprodutível, possibilitando criar vários tipos de documentos. Porém, <strong>o seu uso acaba ficando limitado às pessoas que usam R</strong>.</p></li>
+<li><p><strong>O Quarto é um software novo, que não depende do R</strong>!</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Por exemplo: Você pode usar o VSCode como IDE, escrever um documento com código em Python e gerar o documento final. Tudo isso sem precisar ter o R e/ou RStudio instalados.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Quais são as similaridades?</h2>
+<ul>
+<li><p>A estrutura do arquivo é muito similar! Para muitos arquivos, há compatibilidade (bastando alterar a extensão de <code>.Rmd</code> para <code>.qmd</code>).</p></li>
+<li><p>Podemos adicionar código em R, Python, Julia, etc etc.</p></li>
+<li><p>Podemos criar diversos tipos de arquivos, como: páginas da internet (arquivos <code>.html</code>), PDFs, <code>.docx</code>, apresentações, documentos interativos, livros, e mais está sendo produzido :)</p></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Quarto na linha de comando</h2>
+<ul>
+<li><p>O Quarto é um CLI: Command Line Interface - Interface de linha de comando.</p></li>
+<li><p>Podemos usar o Quarto no terminal.</p></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2></h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">/cloud/project$</span> quarto help</span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="ex">Usage:</span>   quarto </span>
+<span id="cb1-3"><a href="#cb1-3"></a>  <span class="ex">Version:</span> 1.1.251</span>
+<span id="cb1-4"><a href="#cb1-4"></a>                  </span>
+<span id="cb1-5"><a href="#cb1-5"></a>  <span class="ex">Description:</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>    <span class="ex">Quarto</span> CLI</span>
+<span id="cb1-7"><a href="#cb1-7"></a>  <span class="ex">Options:</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>    <span class="ex">-h,</span> <span class="at">--help</span>     <span class="at">-</span> Show this help.                            </span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="ex">-V,</span> <span class="at">--version</span>  <span class="at">-</span> Show the version number for this program.  </span>
+<span id="cb1-10"><a href="#cb1-10"></a>  <span class="ex">Commands:</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a>    <span class="ex">render</span>          [input] [args...]   <span class="at">-</span> Render input file<span class="er">(</span><span class="ex">s</span><span class="kw">)</span> <span class="ex">to</span> various document types.            </span>
+<span id="cb1-12"><a href="#cb1-12"></a>    <span class="ex">preview</span>         [file] [args...]    <span class="at">-</span> Render and preview a document or website project.          </span>
+<span id="cb1-13"><a href="#cb1-13"></a>    <span class="ex">serve</span>           [input]             <span class="at">-</span> Serve a Shiny interactive document.                        </span>
+<span id="cb1-14"><a href="#cb1-14"></a>    <span class="ex">create-project</span>  [dir]               <span class="at">-</span> Create a project for rendering multiple documents          </span>
+<span id="cb1-15"><a href="#cb1-15"></a>    <span class="ex">convert</span>         <span class="op">&lt;</span>input<span class="op">&gt;</span>             - Convert documents to alternate representations.            </span>
+<span id="cb1-16"><a href="#cb1-16"></a>    <span class="ex">pandoc</span>          [args...]           <span class="at">-</span> Run the version of Pandoc embedded within Quarto.          </span>
+<span id="cb1-17"><a href="#cb1-17"></a>    <span class="ex">run</span>             [script] [args...]  <span class="at">-</span> Run a TypeScript, R, Python, or Lua script.                </span>
+<span id="cb1-18"><a href="#cb1-18"></a>    <span class="fu">install</span>         <span class="op">&lt;</span>type<span class="op">&gt;</span> [target]     <span class="at">-</span> Installs an extension or global dependency.                </span>
+<span id="cb1-19"><a href="#cb1-19"></a>    <span class="ex">publish</span>         [provider] [path]   <span class="at">-</span> Publish a document or project. Available providers include:</span>
+<span id="cb1-20"><a href="#cb1-20"></a>    <span class="ex">check</span>           [target]            <span class="at">-</span> Verify correct functioning of Quarto installation.         </span>
+<span id="cb1-21"><a href="#cb1-21"></a>    <span class="bu">help</span>            [command]           <span class="at">-</span> Show this help or the help of a sub-command.               </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+<h2>Como começar a usar o quarto</h2>
+<p><a href="https://quarto.org/docs/get-started/">Instalar o Quarto:</a></p>
+<p><br></p>
+<center>
+<a href="https://quarto.org/docs/get-started/"> <img data-src="images/install-quarto.png" style="width: 80%; !important" data-fig-align="center" alt="Print screen da página de instalação do Quarto"> </a>
+</center>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Como criar um documento simples?</h1>
+
+</section>
+<section class="slide level2">
+<h2>Engines</h2>
+<ul>
+<li>Ao criar um novo arquivo com Quarto, podemos escolher entre duas <em>engines</em>: knitr ou jupyter.</li>
+</ul>
+<h3>Com knitr</h3>
+<p>Caso não tenha o pacote rmarkdown instalado, execute no console:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">install.packages</span>(<span class="st">"rmarkdown"</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br></p>
+<h3>Com jupyter</h3>
+<p>Caso não tenha o jupyter instalado, execute no terminal:</p>
+<pre><code>python3 -m pip install jupyter</code></pre>
+</section>
+<section class="slide level2">
+<h2>Criar novo arquivo: New file</h2>
+<center>
+<img data-src="images/rstudio-newfile.png" style="width: 90%; !important" data-fig-align="center" alt="Print screen da IDE RStudio">
+</center>
+</section>
+<section class="slide level2">
+<h2>Renderizar o arquivo: Render file</h2>
+<center>
+<img data-src="images/rstudio-cloud-2.png" style="width: 90%; !important" data-fig-align="center" alt="Print screen da IDE RStudio Cloud">
+</center>
+</section>
+<section class="slide level2">
+<h2>Visual Editor</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<ul>
+<li>As versões mais recentes do RStudio permitem usar o Visual Editor.</li>
+</ul>
+<p>Leitura indicada:</p>
+<ul>
+<li><a href="https://www.rstudio.com/blog/exploring-rstudio-visual-markdown-editor/">Exploring RStudio’s Visual Markdown Editor</a></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://www.rstudio.com/blog/rstudio-v1-4-preview-visual-markdown-editing/images/visual-editing.png" style="width:90.0%"></p>
+<p></p><figcaption>Fonte: RStudio</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+<h2>Vamos praticar!</h2>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Como alterar entre formatos de arquivos?</h1>
+
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Altere o cabeçalho do arquivo!</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb4-1" class="hljs-ln-code"><a href="#cb4-1"></a><span class="sc">---</span></span>
+<span id="cb4-2" class="hljs-ln-code"><a href="#cb4-2"></a>title<span class="sc">:</span> <span class="st">"Título"</span></span>
+<span id="cb4-3" class="hljs-ln-code"><a href="#cb4-3"></a>format<span class="sc">:</span> html</span>
+<span id="cb4-4" class="hljs-ln-code"><a href="#cb4-4"></a>editor<span class="sc">:</span> visual</span>
+<span id="cb4-5" class="hljs-ln-code"><a href="#cb4-5"></a><span class="sc">---</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Word</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb5-1" class="hljs-ln-code"><a href="#cb5-1"></a><span class="sc">---</span></span>
+<span id="cb5-2" class="hljs-ln-code"><a href="#cb5-2"></a>title<span class="sc">:</span> <span class="st">"Título"</span></span>
+<span id="cb5-3" class="hljs-ln-code"><a href="#cb5-3"></a>format<span class="sc">:</span> docx</span>
+<span id="cb5-4" class="hljs-ln-code"><a href="#cb5-4"></a>editor<span class="sc">:</span> visual</span>
+<span id="cb5-5" class="hljs-ln-code"><a href="#cb5-5"></a><span class="sc">---</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">PDF</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb6-1" class="hljs-ln-code"><a href="#cb6-1"></a><span class="sc">---</span></span>
+<span id="cb6-2" class="hljs-ln-code"><a href="#cb6-2"></a>title<span class="sc">:</span> <span class="st">"Título"</span></span>
+<span id="cb6-3" class="hljs-ln-code"><a href="#cb6-3"></a>format<span class="sc">:</span> pdf</span>
+<span id="cb6-4" class="hljs-ln-code"><a href="#cb6-4"></a>editor<span class="sc">:</span> visual</span>
+<span id="cb6-5" class="hljs-ln-code"><a href="#cb6-5"></a><span class="sc">---</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Apresentação</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb7-1" class="hljs-ln-code"><a href="#cb7-1"></a><span class="sc">---</span></span>
+<span id="cb7-2" class="hljs-ln-code"><a href="#cb7-2"></a>title<span class="sc">:</span> <span class="st">"Título"</span></span>
+<span id="cb7-3" class="hljs-ln-code"><a href="#cb7-3"></a>format<span class="sc">:</span> revealjs</span>
+<span id="cb7-4" class="hljs-ln-code"><a href="#cb7-4"></a>editor<span class="sc">:</span> visual</span>
+<span id="cb7-5" class="hljs-ln-code"><a href="#cb7-5"></a><span class="sc">---</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p>Os slides são separados considerando os títulos e subtítulos: <code>#</code> e <code>##</code>.</p></li>
+<li><p>Use <code>#</code> para criar uma nova seção.</p></li>
+<li><p>Use <code>##</code> para criar um novo slide.</p></li>
+</ul>
+</section>
+<section class="slide level2 center">
+<h2>Vamos praticar!</h2>
+</section>
+<section class="slide level2">
+<h2>Onde aprender mais…</h2>
+<ul>
+<li><p><a href="https://quarto.org/docs/gallery/">Documentação do Quarto</a> e a <a href="https://quarto.org/docs/gallery">Galeria</a>.</p></li>
+<li><p><a href="https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/">Não falamos do Quarto</a> <br>Post em inglês por <a href="https://www.apreshill.com/">Alison Hill</a></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=6p4vOKS6Xls&amp;t=67s">Reproducible Authoring with Quarto</a> <br> Apresentação em inglês por <a href="https://mine-cr.com/">Mine Çetinkaya-Rundel</a></p></li>
+<li><p><a href="https://quarto.org/docs/blog/posts/2022-06-21-rstudio-conf-2022-quarto/">Conteúdos sobre o Quarto na RStudio Conf 2022</a></p></li>
+<li><p><a href="https://rstudio-conf-2022.github.io/get-started-quarto/">Workshop Get Started with Quarto</a></p></li>
+<li><p><a href="https://github.com/mcanouil/awesome-quarto">Awesome Quarto</a></p></li>
+</ul>
+
+
+<img src="https://www.ime.usp.br/verao/assets/images/logo_verao.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p>Slides por <a href="https://beamilz.com">Beatriz Milz</a> (<span class="citation" data-cites="BeaMilz">@BeaMilz</span>), feito com <a href="https://quarto.org/docs/presentations/revealjs/index.html">Quarto</a>. Código disponível no <a href="https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/">GitHub</a>.</p>
 </div>
 </section></section>

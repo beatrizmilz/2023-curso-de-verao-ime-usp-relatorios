@@ -4,7 +4,7 @@
     "href": "slides.html",
     "title": "Slides",
     "section": "",
-    "text": "Slide 1 - Introdução ao Curso\nSlide 2 - Introdução ao conceito de reprodutibilidade\nSlide 3 - Introdução ao RMarkdown e ao Quarto"
+    "text": "Slide 1 - Introdução ao Curso\nSlide 2 - Introdução ao conceito de reprodutibilidade\nSlide 3 - Introdução ao RMarkdown"
   },
   {
     "objectID": "licenca.html",
@@ -137,7 +137,7 @@
     "href": "instrucoes-de-instalacao.html#instalações-obrigatórias",
     "title": "Pré-curso: Instalações necessárias",
     "section": "Instalações obrigatórias",
-    "text": "Instalações obrigatórias\n\n\nInstalar o R - Versão 4.1 ou superior:\n\n\nDownload direto: https://vps.fmvz.usp.br/CRAN/\nTutorial: https://livro.curso-r.com/1-1-instalacao-do-r.html\n\n\n\nInstalar o RStudio - Versão mínima 2022.07:\n\n\nDownload direto: https://www.rstudio.com/products/rstudio/download/#download\nTutorial: https://livro.curso-r.com/1-2-instalacao-do-rstudio.html\n\n\n\nInstalar o Git:\n\n\nCaso você utilize Linux ou Mac, confira antes se o Git já está instalado. Você pode conferir abrindo o terminal, e digitando git. Caso o terminal avise que você não tem git instalado, você precisará instalar.\nDownload direto: http://git-scm.com/download/\n\n\n\nInstalar pacotes:\n\npacotes_necessarios <- c(\n  \"here\",\n  \"usethis\",\n  \"devtools\",\n  \"rmarkdown\",\n  \"knitr\",\n  \"pagedown\",\n  \"bookdown\",\n  \"xaringan\",\n  \"readr\",\n  \"dplyr\",\n  \"DT\",\n  \"reactable\",\n  \"janitor\",\n  \"prettydoc\"\n)\ninstall.packages(pacotes_necessarios)\npacotes_exemplos <-\n  c(\n    \"xaringanthemer\",\n    \"distill\",\n    \"flexdashboard\",\n    \"rmdformats\",\n    \"bslib\",\n    \"officedown\",\n    \"postcards\",\n    \"rticles\"\n  )\ninstall.packages(pacotes_exemplos)"
+    "text": "Instalações obrigatórias\n\n\nInstalar o R - Versão 4.1 ou superior:\n\n\nDownload direto: https://vps.fmvz.usp.br/CRAN/\nTutorial: https://livro.curso-r.com/1-1-instalacao-do-r.html\n\n\n\nInstalar o RStudio - Versão mínima 2022.07:\n\n\nDownload direto: https://www.rstudio.com/products/rstudio/download/#download\nTutorial: https://livro.curso-r.com/1-2-instalacao-do-rstudio.html\n\n\n\nInstalar o Git:\n\n\nCaso você utilize Linux ou Mac, confira antes se o Git já está instalado. Você pode conferir abrindo o terminal, e digitando git. Caso o terminal avise que você não tem git instalado, você precisará instalar.\nDownload direto: http://git-scm.com/download/\n\n\n\nInstalar pacotes:\n\npacotes_necessarios <- c(\n  \"here\",\n  \"quarto\",\n  \"usethis\",\n  \"devtools\",\n  \"rmarkdown\",\n  \"knitr\",\n  \"pagedown\",\n  \"bookdown\",\n  \"xaringan\",\n  \"readr\",\n  \"dplyr\",\n  \"DT\",\n  \"reactable\",\n  \"janitor\",\n  \"prettydoc\"\n)\ninstall.packages(pacotes_necessarios)\npacotes_exemplos <-\n  c(\n    \"xaringanthemer\",\n    \"distill\",\n    \"flexdashboard\",\n    \"rmdformats\",\n    \"bslib\",\n    \"officedown\",\n    \"postcards\",\n    \"rticles\"\n  )\ninstall.packages(pacotes_exemplos)"
   },
   {
     "objectID": "instrucoes-de-instalacao.html#instalações-recomendadas",
