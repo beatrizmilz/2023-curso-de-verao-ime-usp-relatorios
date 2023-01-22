@@ -1,5 +1,5 @@
 ---
-title: "Relatórios  reprodutíveis com R"
+title: "Relatórios reprodutíveis com R"
 subtitle: 'Curso de Verão IME-USP 2022' 
 author: "Ministrante: Beatriz Milz"
 format: 
@@ -105,6 +105,5 @@ Que vocês saibam ao final do curso:
 ## Trabalho final
 
 **Objetivo:** Você deverá criar um documento com Quarto, versionar no GitHub e disponibilizar na internet. Esse trabalho final oferece orientações para que você pratique o que foi apresentado no curso.
-
 
 Mais informações em: [Trabalho final](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/trabalho_final.html)

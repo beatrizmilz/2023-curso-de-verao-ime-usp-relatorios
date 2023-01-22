@@ -1,0 +1,241 @@
+---
+title: "Relatórios reprodutíveis com R"
+subtitle: 'Curso de Verão IME-USP 2022' 
+author: "Ministrante: Beatriz Milz"
+format: 
+  revealjs:
+    width: 1600
+    height: 900  
+    toc: false
+    toc_float: true
+    toc-depth: 2
+    toc-location: body
+    toc-title: "Conteúdos"
+    logo: "https://www.ime.usp.br/verao/assets/images/logo_verao.png" 
+    footer: "Slides por [Beatriz Milz](https://beamilz.com) (@BeaMilz), feito com  [Quarto](https://quarto.org/docs/presentations/revealjs/index.html). Código disponível no [GitHub](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/)."
+    theme: ["custom.scss"]
+    slide-number: c/t
+    show-slide-number: all
+    hash-type: number
+    preview-links: false    
+editor: visual
+---
+
+# Introdução ao conceito de reprodutibilidade
+
+-   O que vamos aprender:
+
+    -   O que é reprodutibilidade?
+
+    -   O que são projetos no RStudio, e qual é a importância de usá-los?
+
+    -   O que são caminhos relativos e absolutos?
+
+    -   Como desabilitar a funcionalidade do RStudio que armazena automaticamente os objetos e o histórico?
+
+## Reprodutibilidade
+
+-   "É um conceito que não tem uma definição única e comum". [(Gundersen, 2021)](https://doi.org/10.1098/rsta.2020.0210)
+
+-   "Para alguém fazer uma afirmação científica legítima, ele deve ser capaz de reproduzir totalmente seus resultados a partir de seus dados brutos (e de preferência outros devem ser capazes de reproduzi-los também)". [Dr. John Paul Helveston](https://jhelvy.github.io/r4aPrimer/L6-reproducible-reporting.html)
+
+---
+
+
+### Reprodutibilidade
+
+Quais fatores contribuem com pesquisa não reprodutível? Fonte: <a href='https://doi.org/10.1038/533452a'>Baker (2016)</a>
+
+```{r echo=FALSE, out.width="100%"}
+#| fig-align: "center"
+knitr::include_graphics("images/irreproducible.png")
+```
+
+
+---
+
+### Reprodutibilidade
+
+
+> "Reprodutibilidade é como escovar os dentes. Isso é bom para você, mas leva tempo e esforço. Depois de aprender, torna-se um hábito." - Irakli Loladze, Bryan College of Health Sciences em Lincoln, Nebraska.
+
+
+Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452--454 (2016). <https://doi.org/10.1038/533452a>
+
+
+
+## Exemplos
+
+-   Boas práticas, como: não usar caracteres especiais nos caminhos, variáveis, nomes de coluna, etc; armazenar os arquivos de forma consistente.
+
+-   Registrar a versão do R e dos pacotes utilizados
+
+-   Documentar a análise
+
+-   Controlar a versão dos arquivos
+
+Outras referências interessantes:
+
+-   [Introduction to bioinformatics - Chapter 8 Reproducible research, - Laurent Gatto](https://uclouvain-cbio.github.io/WSBIM1207/sec-rr.html)
+
+## Projetos do RStudio
+
+
+-   O RStudio permite a criação de Projetos.
+
+-   O projeto é uma pasta no computador, onde devemos armazenar todos os arquivos usados ou criados em uma análise. Essa pasta irá conter também um arquivo com o nome do projeto e a extensão `.Rproj`.
+
+-   Para cada análise, lembre-se de criar um `.Rproj` correspondente.
+
+### Projetos do RStudio
+
+-   Usar projetos no RStudio facilita a organização dos arquivos, posteriormente sincronizar com o GitHub, entre outros.
+
+```{r echo=FALSE, out.width="50%"}
+#| fig-align: "center"
+knitr::include_graphics("images/rprojs.png")
+```
+
+
+
+## Criando um projeto
+
+-   Criando um projeto em uma nova pasta:
+
+    -   File \> New Project \> New Directory \> New Project
+
+    -   Dê um nome para seu projeto (será o nome da pasta), escolha a pasta no seu computador, e clique em `Create Project`.
+
+## Diretório de trabalho/Working Directory
+
+-   O diretório de trabalho é a pasta em que o R irá:
+
+    -   procurar arquivos na hora de ler informações;
+    -   gravar arquivos na hora de salvar objetos.
+
+-   Quando usamos Projetos do RStudio, o nosso diretório de trabalho é a pasta principal do projeto.
+
+-   A função `getwd()` serve para conferir o diretório de trabalho:
+
+``` r
+> getwd()
+[1] "/Users/beatrizmilz/GitHub/2023-curso-de-verao-ime-usp-relatorios"
+```
+
+-   A função `setwd()` serve para alterar o diretório de trabalho. **NÃO É RECOMENDADO O USO! Isso torna o código não reprodutível.**
+
+## Caminhos
+
+-   Caminhos são textos que representam o endereço do arquivo no computador.
+
+-   É muito importante entender como funcionam! Caso contrário, ficará difícil fazer coisas como importar dados para o R.
+
+-   Caminhos podem ser relativos ou absolutos.
+
+-   Caminhos absolutos: tem início na pasta raiz do seu computador/usuário. **NÃO É RECOMENDADO O USO! Isso torna o código não reprodutível.**
+
+-   Caminhos relativos: tem início no diretório de trabalho da sessão. Caso você esteja usando projetos, os caminhos relativos tem início na pasta inicial do projeto.
+
+-   **Utilize sempre que possível caminhos relativos.**
+
+## Exemplos de caminhos
+
+Exemplos acessando o mesmo arquivo:
+
+-   Caminho absoluto:
+
+```
+"/Users/beatrizmilz/GitHub/2023-curso-de-verao-ime-usp-relatorios/docs/slides/images/rprojs.png"
+```
+
+
+-   Caminho relativo:
+
+```
+"docs/slides/images/rprojs.png"
+```
+
+O pacote `here` também possui funções úteis para escrever caminhos:
+
+```{r echo=TRUE}
+here::here()
+```
+
+## Os arquivos .RData e .Rhistory
+
+-   Em sua configuração padrão, a IDE manterá na "memória" todos os últimos comandos executados, todos os dados utilizados e todos os objetos criados.
+
+-   Ao fechar e abrir o RStudio, essas informações serão recarregadas na memória como se o usuário nunca tivesse saído do programa. Esse recurso é tornado possível pela criação de dois arquivos ocultos: `.RData` e `.Rhistory`.
+
+-   O primeiro abriga absolutamente todos os objetos criados por uma sessão R, enquanto o segundo contém uma lista com os últimos comandos executados.
+
+-   Ao reabrir o RStudio, o conteúdo armazenados nestes arquivos será carregado no ambiente de trabalho atual como se nada tivesse acontecido.
+
+- Leia mais [neste capítulo do livro Zen do R](https://curso-r.github.io/zen-do-r/rdata-rhistory.html)
+
+## Por que desistir do .RData e .Rhistory
+
+-   Se todos os resultados parciais de uma análise estiverem disponíveis a qualquer momento, **diminui o incentivo para a escrita de código reprodutível**
+
+-   Ao dependermos ativamente do `.Rdata`, **se acidentalmente sobrescrevemos um objeto** relevante e o código para recriá-lo não estiver mais acessível, **não haverá nenhuma forma confiável de recuperá-lo**.
+
+-   O R trata todos os objetos guardados na memória igualmente. Isso significa que ele também irá armazenar nos arquivos ocultos todas as bases de dados da sessão. Assim, o `.RData` **pode ser um arquivo de múltiplos gigabytes**
+
+## Como desabilitar .RData e .Rhistory
+
+-   Na barra superior: **Tools \> Global Options...**
+
+```{r, echo=FALSE, out.width="40%"}
+#| fig-align: "center"
+knitr::include_graphics("https://curso-r.github.io/zen-do-r/static/rdata-rhistory/config.png")
+```
+
+## Colocar em prática
+
+1)  Crie um projeto no RStudio para armazenar o que vamos criar durante o curso. Salve em algum lugar no seu computador que seja fácil de encontrar.
+
+2)  Desabilite o .RData e .Rhistory no seu RStudio
+
+3)  Execute o seguinte código no console, verifique o resultado: `devtools::session_info()`
+
+4)  Dentro do projeto criado, crie uma pasta chamada "dados", e salve o seguinte arquivo na mesma: [clique aqui para baixar o arquivo `pinguins.csv`](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/dados/pinguins.csv)
+
+Dados originais: <https://allisonhorst.github.io/palmerpenguins/>
+
+Dados traduzidos para Português: <https://cienciadedatos.github.io/dados/>
+
+## Colocar em prática: Continuação
+
+5)  Crie um R Script, copie e cole o código abaixo, e substitua o caminho correto para ler a base de pinguins. Aproveite que o RStudio nos ajuda a buscar caminhos: dentro das aspas, experimente clicar a tecla TAB.
+
+``` r
+caminho <- "...." 
+pinguins <- readr::read_csv(caminho)
+```
+
+6)  Verifique no painel Environment do RStudio se a base de Pinguins foi importada corretamente.
+
+
+---
+
+### Exemplo do Session Info
+
+```{r echo=TRUE}
+devtools::session_info()
+```
+
+## Revisão - Reprodutibilidade
+
+-   Em um código reprodutível, devemos ser capazes de reproduzir totalmente os resultados a partir dos dados brutos, assim como outras pessoas (em computadores diferentes) também devem ser capazes de reproduzir esses mesmos resultados a partir dos dados brutos.
+
+-   Utilizar boas práticas aumentam as chances de escrever um código reprodutível.
+
+-   Exemplos de boas práticas:
+
+    -   Utilizar Projetos do RStudio. Quando usamos projetos do RStudio, o diretório de trabalho será a pasta principal do projeto.
+
+    -   Desabilitar o .Rhistory e .Rdata.
+
+    -   Utilizar caminhos relativos.
+    
+    -  Documentar os pacotes e versões utilizadas.

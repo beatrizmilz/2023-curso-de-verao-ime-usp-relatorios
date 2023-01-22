@@ -1,10 +1,10 @@
 ---
 title: "Slides"
-
 ---
 
-- [Slides aula 1](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/aula-1.html) - Introdução ao Curso
+-   [Slide 1 - Introdução ao Curso](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/01-intro-cursos.html)
 
+-   [Slide 2 - Introdução ao conceito de reprodutibilidade](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/01-intro-cursos.html)
 
 <!-- inicio font awesome -->
 
