@@ -4,7 +4,7 @@ title: "Slides e materiais por aula"
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(magrittr)
-googlesheets4::gs4_auth("milz.bea@gmail.com")
+googlesheets4::gs4_deauth()
 sheet_links <-
   googlesheets4::read_sheet("16-NokZ3NTaHfavyo77gSGdH_EtsAaeaCZWNBe9JfPMA", sheet = "links-extras")
 
