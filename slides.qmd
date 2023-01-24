@@ -1,21 +1,59 @@
 ---
-title: "Slides"
+title: "Slides e materiais por aula"
 ---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(magrittr)
+googlesheets4::gs4_auth("milz.bea@gmail.com")
+sheet_links <-
+  googlesheets4::read_sheet("16-NokZ3NTaHfavyo77gSGdH_EtsAaeaCZWNBe9JfPMA", sheet = "links-extras")
+
+criar_tabela_links_extras <- function(links_extras) {
+  if (nrow(links_extras) >= 1) {
+    links_extras |>
+      dplyr::mutate(link_completo = glue::glue("<a href='{link}' target='_blank'>{nome_link}</a>")) |>
+      dplyr::select(tema, idioma, link_completo) |>
+      knitr::kable(col.names = c("Tema", "Idioma", "Link"))
+  } else {
+    htmltools::strong("Em breve!")
+  }
+}
+```
+
+## Aula 1
+
+### Slides
 
 -   [Slide 1 - Introdução ao Curso](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/01-intro-curso.html)
 
-
 -   [Slide 2 - Introdução ao conceito de reprodutibilidade](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/02-reprodutibilidade.html)
 
+### Scripts/anotações
+
+-   [aula-1.R](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/pratica/aula-1.R)
+
+### Links úteis
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+sheet_links |>
+  dplyr::filter(numero_aula == 1) |>
+  criar_tabela_links_extras()
+```
+
+
+## Aula 2
+
+### Slides
 
 -   [Slide 3 - Introdução ao RMarkdown](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/03-intro-rmarkdown.html)
 
+-   [Slide 4 - Introdução ao Quarto](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/04-intro-quarto.html)
 
-<!-- -   [Slide 4 - Introdução ao Quarto](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/04-intro-quarto.html) -->
+### Links úteis
 
-<!-- inicio font awesome -->
-
-```{=html}
-<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+sheet_links |>
+  dplyr::filter(numero_aula == 2) |>
+  criar_tabela_links_extras()
 ```
-<!-- final font awesome -->
