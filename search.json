@@ -1,10 +1,17 @@
 [
   {
-    "objectID": "slides.html",
-    "href": "slides.html",
-    "title": "Slides",
-    "section": "",
-    "text": "Slide 1 - Introdução ao Curso\nSlide 2 - Introdução ao conceito de reprodutibilidade\nSlide 3 - Introdução ao RMarkdown"
+    "objectID": "slides.html#aula-1",
+    "href": "slides.html#aula-1",
+    "title": "Slides e materiais por aula",
+    "section": "Aula 1",
+    "text": "Aula 1\nSlides\n\nSlide 1 - Introdução ao Curso\nSlide 2 - Introdução ao conceito de reprodutibilidade\nScripts/anotações\n\naula-1.R\nLinks úteis\n\n\n\n\n\n\n\n\n\nTema\nIdioma\nLink\n\n\n\nPré-curso\nPortuguês\nPré-curso: Instalações necessárias\n\n\nIntrodução à reprodutibilidade\nPortuguês\nZen do R - .Rdata e .Rhistory\n\n\nIntrodução à reprodutibilidade\nPortuguês\nZen do R - Projetos no RStudio e diretórios\n\n\nIntrodução à reprodutibilidade\nInglês\nVideo: Apresentação da Jenny Bryan sobre como nomear arquivos (5 minutos)\n\n\nIntrodução à reprodutibilidade\nInglês\nIntroduction to bioinformatics - Chapter 8 Reproducible research (introdução)"
+  },
+  {
+    "objectID": "slides.html#aula-2",
+    "href": "slides.html#aula-2",
+    "title": "Slides e materiais por aula",
+    "section": "Aula 2",
+    "text": "Aula 2\nSlides\n\nSlide 3 - Introdução ao RMarkdown\nSlide 4 - Introdução ao Quarto\nLinks úteis\n\n\nEm breve!"
   },
   {
     "objectID": "licenca.html",
