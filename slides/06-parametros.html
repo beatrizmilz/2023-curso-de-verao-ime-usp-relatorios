@@ -28,70 +28,6 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -402,259 +338,36 @@ Ministrante: Beatriz Milz
 </section>
 <section>
 <section class="title-slide slide level1 center">
-<h1>Introdução ao conceito de reprodutibilidade</h1>
-<ul>
-<li><p>O que vamos aprender:</p>
-<ul>
-<li><p>O que é reprodutibilidade?</p></li>
-<li><p>O que são projetos no RStudio, e qual é a importância de usá-los?</p></li>
-<li><p>O que são caminhos relativos e absolutos?</p></li>
-<li><p>Como desabilitar a funcionalidade do RStudio que armazena automaticamente os objetos e o histórico?</p></li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>Reprodutibilidade</h2>
-<ul>
-<li><p>“É um conceito que não tem uma definição única e comum”. <a href="https://doi.org/10.1098/rsta.2020.0210">(Gundersen, 2021)</a></p></li>
-<li><p>“Para alguém fazer uma afirmação científica legítima, ele deve ser capaz de reproduzir totalmente seus resultados a partir de seus dados brutos (e de preferência outros devem ser capazes de reproduzi-los também)”. <a href="https://jhelvy.github.io/r4aPrimer/L6-reproducible-reporting.html">Dr.&nbsp;John Paul Helveston</a></p></li>
-</ul>
-</section>
-<section class="slide level2">
+<h1>Relatórios com parâmetros</h1>
 
-<h3>Reprodutibilidade</h3>
-<p>Quais fatores contribuem com pesquisa não reprodutível? Fonte: <a href="https://doi.org/10.1038/533452a">Baker (2016)</a></p>
-
-<img data-src="images/irreproducible.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section>
-<section class="slide level2">
-
-<h3>Reprodutibilidade</h3>
-<blockquote>
-<p>“Reprodutibilidade é como escovar os dentes. Isso é bom para você, mas leva tempo e esforço. Depois de aprender, torna-se um hábito.” - Irakli Loladze, Bryan College of Health Sciences em Lincoln, Nebraska.</p>
-</blockquote>
-<p>Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). <a href="https://doi.org/10.1038/533452a" class="uri">https://doi.org/10.1038/533452a</a></p>
 </section>
 <section class="slide level2">
-<h2>Exemplos</h2>
-<ul>
-<li><p>Boas práticas, como: não usar caracteres especiais nos caminhos, variáveis, nomes de coluna, etc; armazenar os arquivos de forma consistente.</p></li>
-<li><p>Registrar a versão do R e dos pacotes utilizados</p></li>
-<li><p>Documentar a análise</p></li>
-<li><p>Controlar a versão dos arquivos</p></li>
-</ul>
-<p>Outras referências interessantes:</p>
-<ul>
-<li><a href="https://uclouvain-cbio.github.io/WSBIM1207/sec-rr.html">Introduction to bioinformatics - Chapter 8 Reproducible research, - Laurent Gatto</a></li>
-</ul>
+<h2>Parâmetros com R</h2>
+<p>Devemos adicionar os parâmetros (e algum valor padrão) no YAML.</p>
+<p>Ex:</p>
+<pre><code>---
+title: "Relatório com Parâmetros"
+author: "Beatriz"
+date: "Janeiro de 2023"
+format: html
+params:
+  mes: 01
+  ano: 2023
+---</code></pre>
+<p>Referência: <a href="https://quarto.org/docs/computations/parameters.html" class="uri">https://quarto.org/docs/computations/parameters.html</a></p>
 </section>
 <section class="slide level2">
-<h2>Projetos do RStudio</h2>
-<ul>
-<li><p>O RStudio permite a criação de Projetos.</p></li>
-<li><p>O projeto é uma pasta no computador, onde devemos armazenar todos os arquivos usados ou criados em uma análise. Essa pasta irá conter também um arquivo com o nome do projeto e a extensão <code>.Rproj</code>.</p></li>
-<li><p>Para cada análise, lembre-se de criar um <code>.Rproj</code> correspondente.</p></li>
-</ul>
-<h3>Projetos do RStudio</h3>
-<ul>
-<li>Usar projetos no RStudio facilita a organização dos arquivos, posteriormente sincronizar com o GitHub, entre outros.</li>
-</ul>
-
-<img data-src="images/rprojs.png" style="width:50.0%" class="r-stretch quarto-figure-center"></section>
-<section class="slide level2">
-<h2>Criando um projeto</h2>
-<ul>
-<li><p>Criando um projeto em uma nova pasta:</p>
-<ul>
-<li><p>File &gt; New Project &gt; New Directory &gt; New Project</p></li>
-<li><p>Dê um nome para seu projeto (será o nome da pasta), escolha a pasta no seu computador, e clique em <code>Create Project</code>.</p></li>
-</ul></li>
-</ul>
+<h2>Parâmetros com R</h2>
+<p>Para acessar os parâmetros, usamos: <code>params$nome_parametro</code>.</p>
+<p>Ex: <code>params$mes</code> para acessar o mês, ou <code>params$ano</code>.</p>
+<p>Recomendação de leitura: <a href="https://bookdown.org/yihui/rmarkdown/parameterized-reports.html">R Markdown: The Definitive Guide - Chapter 15 Parameterized reports</a></p>
 </section>
 <section class="slide level2">
-<h2>Diretório de trabalho/Working Directory</h2>
+<h2>Dicas sobre parâmetros</h2>
 <ul>
-<li><p>O diretório de trabalho é a pasta em que o R irá:</p>
-<ul>
-<li>procurar arquivos na hora de ler informações;</li>
-<li>gravar arquivos na hora de salvar objetos.</li>
-</ul></li>
-<li><p>Quando usamos Projetos do RStudio, o nosso diretório de trabalho é a pasta principal do projeto.</p></li>
-<li><p>A função <code>getwd()</code> serve para conferir o diretório de trabalho:</p></li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="sc">&gt;</span> <span class="fu">getwd</span>()</span>
-<span id="cb1-2"><a href="#cb1-2"></a>[<span class="dv">1</span>] <span class="st">"/Users/beatrizmilz/GitHub/2023-curso-de-verao-ime-usp-relatorios"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>A função <code>setwd()</code> serve para alterar o diretório de trabalho. <strong>NÃO É RECOMENDADO O USO! Isso torna o código não reprodutível.</strong></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>Caminhos</h2>
-<ul>
-<li><p>Caminhos são textos que representam o endereço do arquivo no computador.</p></li>
-<li><p>É muito importante entender como funcionam! Caso contrário, ficará difícil fazer coisas como importar dados para o R.</p></li>
-<li><p>Caminhos podem ser relativos ou absolutos.</p></li>
-<li><p>Caminhos absolutos: tem início na pasta raiz do seu computador/usuário. <strong>NÃO É RECOMENDADO O USO! Isso torna o código não reprodutível.</strong></p></li>
-<li><p>Caminhos relativos: tem início no diretório de trabalho da sessão. Caso você esteja usando projetos, os caminhos relativos tem início na pasta inicial do projeto.</p></li>
-<li><p><strong>Utilize sempre que possível caminhos relativos.</strong></p></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>Exemplos de caminhos</h2>
-<p>Exemplos acessando o mesmo arquivo:</p>
-<ul>
-<li>Caminho absoluto:</li>
-</ul>
-<pre><code>"/Users/beatrizmilz/GitHub/2023-curso-de-verao-ime-usp-relatorios/docs/slides/images/rprojs.png"</code></pre>
-<ul>
-<li>Caminho relativo:</li>
-</ul>
-<pre><code>"docs/slides/images/rprojs.png"</code></pre>
-<p>O pacote <code>here</code> também possui funções úteis para escrever caminhos:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>here<span class="sc">::</span><span class="fu">here</span>()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "/home/runner/work/2023-curso-de-verao-ime-usp-relatorios/2023-curso-de-verao-ime-usp-relatorios"</code></pre>
-</div>
-</div>
-</section>
-<section class="slide level2">
-<h2>Os arquivos .RData e .Rhistory</h2>
-<ul>
-<li><p>Em sua configuração padrão, a IDE manterá na “memória” todos os últimos comandos executados, todos os dados utilizados e todos os objetos criados.</p></li>
-<li><p>Ao fechar e abrir o RStudio, essas informações serão recarregadas na memória como se o usuário nunca tivesse saído do programa. Esse recurso é tornado possível pela criação de dois arquivos ocultos: <code>.RData</code> e <code>.Rhistory</code>.</p></li>
-<li><p>O primeiro abriga absolutamente todos os objetos criados por uma sessão R, enquanto o segundo contém uma lista com os últimos comandos executados.</p></li>
-<li><p>Ao reabrir o RStudio, o conteúdo armazenados nestes arquivos será carregado no ambiente de trabalho atual como se nada tivesse acontecido.</p></li>
-<li><p>Leia mais <a href="https://curso-r.github.io/zen-do-r/rdata-rhistory.html">neste capítulo do livro Zen do R</a></p></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>Por que desistir do .RData e .Rhistory</h2>
-<ul>
-<li><p>Se todos os resultados parciais de uma análise estiverem disponíveis a qualquer momento, <strong>diminui o incentivo para a escrita de código reprodutível</strong></p></li>
-<li><p>Ao dependermos ativamente do <code>.Rdata</code>, <strong>se acidentalmente sobrescrevemos um objeto</strong> relevante e o código para recriá-lo não estiver mais acessível, <strong>não haverá nenhuma forma confiável de recuperá-lo</strong>.</p></li>
-<li><p>O R trata todos os objetos guardados na memória igualmente. Isso significa que ele também irá armazenar nos arquivos ocultos todas as bases de dados da sessão. Assim, o <code>.RData</code> <strong>pode ser um arquivo de múltiplos gigabytes</strong></p></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>Como desabilitar .RData e .Rhistory</h2>
-<ul>
-<li>Na barra superior: <strong>Tools &gt; Global Options…</strong></li>
-</ul>
-
-<img data-src="https://curso-r.github.io/zen-do-r/static/rdata-rhistory/config.png" style="width:40.0%" class="r-stretch quarto-figure-center"></section>
-<section class="slide level2">
-<h2>Colocar em prática</h2>
-<ol type="1">
-<li><p>Crie um projeto no RStudio para armazenar o que vamos criar durante o curso. Salve em algum lugar no seu computador que seja fácil de encontrar.</p></li>
-<li><p>Desabilite o .RData e .Rhistory no seu RStudio</p></li>
-<li><p>Execute o seguinte código no console, verifique o resultado: <code>devtools::session_info()</code></p></li>
-<li><p>Dentro do projeto criado, crie uma pasta chamada “dados”, e salve o seguinte arquivo na mesma: <a href="https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/dados/pinguins.csv">clique aqui para baixar o arquivo <code>pinguins.csv</code></a></p></li>
-</ol>
-<p>Dados originais: <a href="https://allisonhorst.github.io/palmerpenguins/" class="uri">https://allisonhorst.github.io/palmerpenguins/</a></p>
-<p>Dados traduzidos para Português: <a href="https://cienciadedatos.github.io/dados/" class="uri">https://cienciadedatos.github.io/dados/</a></p>
-</section>
-<section class="slide level2">
-<h2>Colocar em prática: Continuação</h2>
-<ol start="5" type="1">
-<li>Crie um R Script, copie e cole o código abaixo, e substitua o caminho correto para ler a base de pinguins. Aproveite que o RStudio nos ajuda a buscar caminhos: dentro das aspas, experimente clicar a tecla TAB.</li>
-</ol>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>caminho <span class="ot">&lt;-</span> <span class="st">"...."</span> </span>
-<span id="cb6-2"><a href="#cb6-2"></a>pinguins <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(caminho)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="6" type="1">
-<li>Verifique no painel Environment do RStudio se a base de Pinguins foi importada corretamente.</li>
-</ol>
-</section>
-<section class="slide level2">
-
-<h3>Exemplo do Session Info</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>devtools<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>─ Session info ───────────────────────────────────────────────────────────────
- setting  value
- version  R version 4.2.2 (2022-10-31)
- os       Ubuntu 22.04.1 LTS
- system   x86_64, linux-gnu
- ui       X11
- language (EN)
- collate  C.UTF-8
- ctype    C.UTF-8
- tz       UTC
- date     2023-01-26
- pandoc   2.9.2.1 @ /usr/bin/ (via rmarkdown)
-
-─ Packages ───────────────────────────────────────────────────────────────────
- package     * version date (UTC) lib source
- cachem        1.0.6   2021-08-19 [1] RSPM
- callr         3.7.3   2022-11-02 [1] RSPM
- cli           3.6.0   2023-01-09 [1] RSPM
- crayon        1.5.2   2022-09-29 [1] RSPM
- devtools      2.4.5   2022-10-11 [1] any (@2.4.5)
- digest        0.6.31  2022-12-11 [1] RSPM
- ellipsis      0.3.2   2021-04-29 [1] RSPM
- evaluate      0.20    2023-01-17 [1] RSPM
- fastmap       1.1.0   2021-01-25 [1] RSPM
- fs            1.6.0   2023-01-23 [1] RSPM
- glue          1.6.2   2022-02-24 [1] RSPM
- here          1.0.1   2020-12-13 [1] any (@1.0.1)
- htmltools     0.5.4   2022-12-07 [1] RSPM
- htmlwidgets   1.6.1   2023-01-07 [1] RSPM
- httpuv        1.6.8   2023-01-12 [1] RSPM
- jsonlite      1.8.4   2022-12-06 [1] RSPM
- knitr         1.42    2023-01-25 [1] any (@1.42)
- later         1.3.0   2021-08-18 [1] RSPM
- lifecycle     1.0.3   2022-10-07 [1] RSPM
- magrittr      2.0.3   2022-03-30 [1] RSPM
- memoise       2.0.1   2021-11-26 [1] RSPM
- mime          0.12    2021-09-28 [1] RSPM
- miniUI        0.1.1.1 2018-05-18 [1] RSPM
- pkgbuild      1.4.0   2022-11-27 [1] RSPM
- pkgload       1.3.2   2022-11-16 [1] RSPM
- prettyunits   1.1.1   2020-01-24 [1] RSPM
- processx      3.8.0   2022-10-26 [1] RSPM
- profvis       0.3.7   2020-11-02 [1] RSPM
- promises      1.2.0.1 2021-02-11 [1] RSPM
- ps            1.7.2   2022-10-26 [1] RSPM
- purrr         1.0.1   2023-01-10 [1] RSPM
- R6            2.5.1   2021-08-19 [1] RSPM
- Rcpp          1.0.10  2023-01-22 [1] RSPM
- remotes       2.4.2   2021-11-30 [1] RSPM
- rlang         1.0.6   2022-09-24 [1] RSPM
- rmarkdown     2.20    2023-01-19 [1] any (@2.20)
- rprojroot     2.0.3   2022-04-02 [1] RSPM
- sessioninfo   1.2.2   2021-12-06 [1] RSPM
- shiny         1.7.4   2022-12-15 [1] RSPM
- stringi       1.7.12  2023-01-11 [1] RSPM
- stringr       1.5.0   2022-12-02 [1] RSPM
- urlchecker    1.0.1   2021-11-30 [1] RSPM
- usethis       2.1.6   2022-05-25 [1] RSPM
- vctrs         0.5.2   2023-01-23 [1] RSPM
- xfun          0.36    2022-12-21 [1] RSPM
- xtable        1.8-4   2019-04-21 [1] RSPM
- yaml          2.3.7   2023-01-23 [1] RSPM
-
- [1] /home/runner/work/_temp/Library
- [2] /opt/R/4.2.2/lib/R/site-library
- [3] /opt/R/4.2.2/lib/R/library
-
-──────────────────────────────────────────────────────────────────────────────</code></pre>
-</div>
-</div>
-</section>
-<section class="slide level2">
-<h2>Revisão - Reprodutibilidade</h2>
-<ul>
-<li><p>Em um código reprodutível, devemos ser capazes de reproduzir totalmente os resultados a partir dos dados brutos, assim como outras pessoas (em computadores diferentes) também devem ser capazes de reproduzir esses mesmos resultados a partir dos dados brutos.</p></li>
-<li><p>Utilizar boas práticas aumentam as chances de escrever um código reprodutível.</p></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>Exemplos de boas práticas:</h2>
-<ul>
-<li><p>Utilizar Projetos do RStudio. Quando usamos projetos do RStudio, o diretório de trabalho será a pasta principal do projeto.</p></li>
-<li><p>Desabilitar o .Rhistory e .Rdata.</p></li>
-<li><p>Utilizar caminhos relativos.</p></li>
-<li><p>Documentar os pacotes e versões utilizadas.</p></li>
+<li><p>No RStudio, é possível acessar os parâmetros com o autocomplete de <code>params$</code>.</p></li>
+<li><p>Podemos usar o combo <code>purrr::walk() + quarto::quarto_render()</code> para criar relatórios de forma automatizada.</p></li>
+<li><p>Vamos para as práticas!</p></li>
 </ul>
 
 
@@ -873,44 +586,6 @@ Ministrante: Beatriz Milz
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

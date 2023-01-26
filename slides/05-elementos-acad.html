@@ -402,259 +402,176 @@ Ministrante: Beatriz Milz
 </section>
 <section>
 <section class="title-slide slide level1 center">
-<h1>Introdução ao conceito de reprodutibilidade</h1>
-<ul>
-<li><p>O que vamos aprender:</p>
-<ul>
-<li><p>O que é reprodutibilidade?</p></li>
-<li><p>O que são projetos no RStudio, e qual é a importância de usá-los?</p></li>
-<li><p>O que são caminhos relativos e absolutos?</p></li>
-<li><p>Como desabilitar a funcionalidade do RStudio que armazena automaticamente os objetos e o histórico?</p></li>
-</ul></li>
-</ul>
+<h1>Elementos úteis para relatórios acadêmicos</h1>
+
 </section>
 <section class="slide level2">
-<h2>Reprodutibilidade</h2>
+<h2>Adicionar equações</h2>
 <ul>
-<li><p>“É um conceito que não tem uma definição única e comum”. <a href="https://doi.org/10.1098/rsta.2020.0210">(Gundersen, 2021)</a></p></li>
-<li><p>“Para alguém fazer uma afirmação científica legítima, ele deve ser capaz de reproduzir totalmente seus resultados a partir de seus dados brutos (e de preferência outros devem ser capazes de reproduzi-los também)”. <a href="https://jhelvy.github.io/r4aPrimer/L6-reproducible-reporting.html">Dr.&nbsp;John Paul Helveston</a></p></li>
+<li><p>Podemos adicionar equações em LaTeX. Dica: <a href="https://app.mettzer.com/latex">Equações em LaTeX no Mettzer</a>, ou pesquise no google por “Equações em LaTeX”.</p></li>
+<li><p>Equação centralizada: Envolver a equação por dois <code>$</code>.</p></li>
 </ul>
+<p><span class="math display">\[{\text{Média}=\frac {a_{1}+a_{2}+\cdots +a_{n}}{n}}\]</span></p>
+<p><strong>Código Markdown:</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a>$${\text{Média}=\frac {a_{1}+a_{2}+\cdots +a_{n}}{n}}$$</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
-
-<h3>Reprodutibilidade</h3>
-<p>Quais fatores contribuem com pesquisa não reprodutível? Fonte: <a href="https://doi.org/10.1038/533452a">Baker (2016)</a></p>
-
-<img data-src="images/irreproducible.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section>
-<section class="slide level2">
-
-<h3>Reprodutibilidade</h3>
+<h2>Adicionar equações</h2>
+<ul>
+<li>Equação junto ao texto: Envolver a equação por um <code>$</code>.</li>
+</ul>
 <blockquote>
-<p>“Reprodutibilidade é como escovar os dentes. Isso é bom para você, mas leva tempo e esforço. Depois de aprender, torna-se um hábito.” - Irakli Loladze, Bryan College of Health Sciences em Lincoln, Nebraska.</p>
+<p>Ou também na linha <span class="math inline">\({\text{Média}=\frac {a_{1}+a_{2}+\cdots +a_{n}}{n}}\)</span>, junto ao texto!</p>
 </blockquote>
-<p>Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). <a href="https://doi.org/10.1038/533452a" class="uri">https://doi.org/10.1038/533452a</a></p>
+<p><strong>Código Markdown:</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a>Ou também na linha ${\text{Média}=\frac {a_{1}+a_{2}+\cdots +a_{n}}{n}}$, junto ao texto!</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
-<h2>Exemplos</h2>
+<h2>Adicionar referências</h2>
 <ul>
-<li><p>Boas práticas, como: não usar caracteres especiais nos caminhos, variáveis, nomes de coluna, etc; armazenar os arquivos de forma consistente.</p></li>
-<li><p>Registrar a versão do R e dos pacotes utilizados</p></li>
-<li><p>Documentar a análise</p></li>
-<li><p>Controlar a versão dos arquivos</p></li>
+<li><p>Podemos adicionar referências no texto usando um arquivo <code>.bib</code>.</p></li>
+<li><p>Podemos gerar um arquivo <code>.bib</code> usando um gerenciador de referências. Eu utilizo o <a href="https://www.zotero.org/">Zotero</a>, a extensão <a href="https://retorque.re/zotero-better-bibtex/installation/">Better Bibtex for Zotero</a> e a extensão do Zotero para o navegador.</p></li>
+<li><p>No arquivo <code>.bib</code>, cada referência deverá ter um rótulo, que usaremos para citar dentro do arquivo <code>.qmd</code>, precedido de <code>@</code>.</p></li>
+<li><p>Devemos indicar os arquivos <code>.bib</code> no YAML do relatório. Exemplo em um caso com 2 arquivos diferentes:</p></li>
 </ul>
-<p>Outras referências interessantes:</p>
-<ul>
-<li><a href="https://uclouvain-cbio.github.io/WSBIM1207/sec-rr.html">Introduction to bioinformatics - Chapter 8 Reproducible research, - Laurent Gatto</a></li>
-</ul>
+<pre><code>bibliography: 
+  - references.bib
+  - packages.bib</code></pre>
 </section>
 <section class="slide level2">
-<h2>Projetos do RStudio</h2>
-<ul>
-<li><p>O RStudio permite a criação de Projetos.</p></li>
-<li><p>O projeto é uma pasta no computador, onde devemos armazenar todos os arquivos usados ou criados em uma análise. Essa pasta irá conter também um arquivo com o nome do projeto e a extensão <code>.Rproj</code>.</p></li>
-<li><p>Para cada análise, lembre-se de criar um <code>.Rproj</code> correspondente.</p></li>
-</ul>
-<h3>Projetos do RStudio</h3>
-<ul>
-<li>Usar projetos no RStudio facilita a organização dos arquivos, posteriormente sincronizar com o GitHub, entre outros.</li>
-</ul>
+<h2>Citar o R - Função citation()</h2>
+<pre><code>&gt; citation() 
 
-<img data-src="images/rprojs.png" style="width:50.0%" class="r-stretch quarto-figure-center"></section>
+To cite R in publications use:
+
+  R Core Team (2021). R: A language and environment for
+  statistical computing. R Foundation for Statistical
+  Computing, Vienna, Austria. URL https://www.R-project.org/.
+
+A BibTeX entry for LaTeX users is
+
+  @Manual{,
+    title = {R: A Language and Environment for Statistical Computing},
+    author = {{R Core Team}},
+    organization = {R Foundation for Statistical Computing},
+    address = {Vienna, Austria},
+    year = {2021},
+    url = {https://www.R-project.org/},
+  }
+
+We have invested a lot of time and effort in creating R,
+please cite it when using it for data analysis. See also
+‘citation("pkgname")’ for citing R packages.</code></pre>
+</section>
 <section class="slide level2">
-<h2>Criando um projeto</h2>
+<h2>Citar pacotes</h2>
 <ul>
-<li><p>Criando um projeto em uma nova pasta:</p>
+<li>Podemos gerar um <code>.bib</code> com as referências de pacotes utilizados usando a função <code>knitr::write_bib()</code>:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>pacotes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2"></a>knitr<span class="sc">::</span><span class="fu">write_bib</span>(pacotes, <span class="co"># pacotes para gerar a referencia</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>                 <span class="co"># local para salvar o arquivo</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a>                 <span class="st">'packages.bib'</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section class="slide level2">
+<h2></h2>
+<pre><code>@Manual{R-tidyverse,
+  title = {tidyverse: Easily Install and Load the Tidyverse},
+  author = {Hadley Wickham},
+  year = {2021},
+  note = {R package version 1.3.1},
+  url = {https://CRAN.R-project.org/package=tidyverse},
+}
+
+@Article{tidyverse2019,
+  title = {Welcome to the {tidyverse}},
+  author = {Hadley Wickham and Mara Averick and Jennifer Bryan and Winston Chang and Lucy D'Agostino McGowan and Romain François and Garrett Grolemund and Alex Hayes and Lionel Henry and Jim Hester and Max Kuhn and Thomas Lin Pedersen and Evan Miller and Stephan Milton Bache and Kirill Müller and Jeroen Ooms and David Robinson and Dana Paige Seidel and Vitalie Spinu and Kohske Takahashi and Davis Vaughan and Claus Wilke and Kara Woo and Hiroaki Yutani},
+  year = {2019},
+  journal = {Journal of Open Source Software},
+  volume = {4},
+  number = {43},
+  pages = {1686},
+  doi = {10.21105/joss.01686},
+}</code></pre>
+</section>
+<section class="slide level2">
+<h2>Como citar no .qmd</h2>
 <ul>
-<li><p>File &gt; New Project &gt; New Directory &gt; New Project</p></li>
-<li><p>Dê um nome para seu projeto (será o nome da pasta), escolha a pasta no seu computador, e clique em <code>Create Project</code>.</p></li>
+<li>Formas de usar os rótulos gerados no arquivo <code>.qmd</code>:</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<table>
+<colgroup>
+<col style="width: 55%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">forma_de_citar</th>
+<th style="text-align: left;">resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="citation" data-cites="tidyverse2019">@tidyverse2019</span></td>
+<td style="text-align: left;">Wickham et al.&nbsp;(2019)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="citation" data-cites="tidyverse2019 R-tidyverse">[@tidyverse2019; @R-tidyverse]</span></td>
+<td style="text-align: left;">(Wickham et al.&nbsp;2019; Wickham 2021)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Em -<span class="citation" data-cites="tidyverse2019">@tidyverse2019</span>, Hadley e colaboradores…</td>
+<td style="text-align: left;">Em 2019, Hadley e colaboradores…</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Segundo Hadley Wickham e colaboradores <span class="citation" data-cites="tidyverse2019">[-@tidyverse2019]</span></td>
+<td style="text-align: left;">Segundo Hadley Wickham e colaboradores (2019)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="slide level2">
+<h2>Formatação das referências</h2>
+<ul>
+<li><p>O conteúdo do arquivo <code>.bib</code> é formatado a partir de um arquivo <code>.csl</code> (Citation Style Language).</p></li>
+<li><p>Devemos informar caminho até o arquivo CSL no YAML, por exemplo:</p></li>
+</ul>
+<pre><code>csl: template/abnt.csl</code></pre>
+<ul>
+<li><p>Lugares para baixar arquivos CSL:</p>
+<ul>
+<li><a href="https://github.com/citation-style-language/styles" class="uri">https://github.com/citation-style-language/styles</a></li>
+<li><a href="https://citationstyles.org/" class="uri">https://citationstyles.org/</a></li>
 </ul></li>
 </ul>
 </section>
 <section class="slide level2">
-<h2>Diretório de trabalho/Working Directory</h2>
+<h2>Referências cruzadas</h2>
 <ul>
-<li><p>O diretório de trabalho é a pasta em que o R irá:</p>
+<li><strong>Figuras, tabelas, equações, seções:</strong>
 <ul>
-<li>procurar arquivos na hora de ler informações;</li>
-<li>gravar arquivos na hora de salvar objetos.</li>
+<li>Usamos o rótulo do chunk (ou nome) onde a tabela ou imagem foi criada para fazer a referência cruzada.
+<ul>
+<li>Ex: <code>@fig-rotulo-da-imagem</code> , <code>@tab-rotulo-da-tabela</code>, <code>@eq-rotulo-da-equacao</code>, <code>@sec-rotulo-da-secao</code>.</li>
 </ul></li>
-<li><p>Quando usamos Projetos do RStudio, o nosso diretório de trabalho é a pasta principal do projeto.</p></li>
-<li><p>A função <code>getwd()</code> serve para conferir o diretório de trabalho:</p></li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="sc">&gt;</span> <span class="fu">getwd</span>()</span>
-<span id="cb1-2"><a href="#cb1-2"></a>[<span class="dv">1</span>] <span class="st">"/Users/beatrizmilz/GitHub/2023-curso-de-verao-ime-usp-relatorios"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>A função <code>setwd()</code> serve para alterar o diretório de trabalho. <strong>NÃO É RECOMENDADO O USO! Isso torna o código não reprodutível.</strong></li>
+</ul></li>
 </ul>
 </section>
 <section class="slide level2">
-<h2>Caminhos</h2>
+<h2>Referências cruzadas de capítulos</h2>
 <ul>
-<li><p>Caminhos são textos que representam o endereço do arquivo no computador.</p></li>
-<li><p>É muito importante entender como funcionam! Caso contrário, ficará difícil fazer coisas como importar dados para o R.</p></li>
-<li><p>Caminhos podem ser relativos ou absolutos.</p></li>
-<li><p>Caminhos absolutos: tem início na pasta raiz do seu computador/usuário. <strong>NÃO É RECOMENDADO O USO! Isso torna o código não reprodutível.</strong></p></li>
-<li><p>Caminhos relativos: tem início no diretório de trabalho da sessão. Caso você esteja usando projetos, os caminhos relativos tem início na pasta inicial do projeto.</p></li>
-<li><p><strong>Utilize sempre que possível caminhos relativos.</strong></p></li>
+<li><p>Para fazer referência cruzada em capítulos/seções, devemos adicionar um rótulo para o capítulo, que deverá ser escrito logo após a cabeçalho (que delimitamos com <code>#</code>, <code>##</code>, etc).</p></li>
+<li><p>No RMarkdown, funciona com outputs que são derivados do pacote <code>{bookdown}</code>.</p></li>
 </ul>
-</section>
-<section class="slide level2">
-<h2>Exemplos de caminhos</h2>
-<p>Exemplos acessando o mesmo arquivo:</p>
+<p>Ex: <code>bookdown::html_document2</code>, <code>bookdown::word_document2</code></p>
 <ul>
-<li>Caminho absoluto:</li>
-</ul>
-<pre><code>"/Users/beatrizmilz/GitHub/2023-curso-de-verao-ime-usp-relatorios/docs/slides/images/rprojs.png"</code></pre>
-<ul>
-<li>Caminho relativo:</li>
-</ul>
-<pre><code>"docs/slides/images/rprojs.png"</code></pre>
-<p>O pacote <code>here</code> também possui funções úteis para escrever caminhos:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>here<span class="sc">::</span><span class="fu">here</span>()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "/home/runner/work/2023-curso-de-verao-ime-usp-relatorios/2023-curso-de-verao-ime-usp-relatorios"</code></pre>
-</div>
-</div>
-</section>
-<section class="slide level2">
-<h2>Os arquivos .RData e .Rhistory</h2>
-<ul>
-<li><p>Em sua configuração padrão, a IDE manterá na “memória” todos os últimos comandos executados, todos os dados utilizados e todos os objetos criados.</p></li>
-<li><p>Ao fechar e abrir o RStudio, essas informações serão recarregadas na memória como se o usuário nunca tivesse saído do programa. Esse recurso é tornado possível pela criação de dois arquivos ocultos: <code>.RData</code> e <code>.Rhistory</code>.</p></li>
-<li><p>O primeiro abriga absolutamente todos os objetos criados por uma sessão R, enquanto o segundo contém uma lista com os últimos comandos executados.</p></li>
-<li><p>Ao reabrir o RStudio, o conteúdo armazenados nestes arquivos será carregado no ambiente de trabalho atual como se nada tivesse acontecido.</p></li>
-<li><p>Leia mais <a href="https://curso-r.github.io/zen-do-r/rdata-rhistory.html">neste capítulo do livro Zen do R</a></p></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>Por que desistir do .RData e .Rhistory</h2>
-<ul>
-<li><p>Se todos os resultados parciais de uma análise estiverem disponíveis a qualquer momento, <strong>diminui o incentivo para a escrita de código reprodutível</strong></p></li>
-<li><p>Ao dependermos ativamente do <code>.Rdata</code>, <strong>se acidentalmente sobrescrevemos um objeto</strong> relevante e o código para recriá-lo não estiver mais acessível, <strong>não haverá nenhuma forma confiável de recuperá-lo</strong>.</p></li>
-<li><p>O R trata todos os objetos guardados na memória igualmente. Isso significa que ele também irá armazenar nos arquivos ocultos todas as bases de dados da sessão. Assim, o <code>.RData</code> <strong>pode ser um arquivo de múltiplos gigabytes</strong></p></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>Como desabilitar .RData e .Rhistory</h2>
-<ul>
-<li>Na barra superior: <strong>Tools &gt; Global Options…</strong></li>
-</ul>
-
-<img data-src="https://curso-r.github.io/zen-do-r/static/rdata-rhistory/config.png" style="width:40.0%" class="r-stretch quarto-figure-center"></section>
-<section class="slide level2">
-<h2>Colocar em prática</h2>
-<ol type="1">
-<li><p>Crie um projeto no RStudio para armazenar o que vamos criar durante o curso. Salve em algum lugar no seu computador que seja fácil de encontrar.</p></li>
-<li><p>Desabilite o .RData e .Rhistory no seu RStudio</p></li>
-<li><p>Execute o seguinte código no console, verifique o resultado: <code>devtools::session_info()</code></p></li>
-<li><p>Dentro do projeto criado, crie uma pasta chamada “dados”, e salve o seguinte arquivo na mesma: <a href="https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/dados/pinguins.csv">clique aqui para baixar o arquivo <code>pinguins.csv</code></a></p></li>
-</ol>
-<p>Dados originais: <a href="https://allisonhorst.github.io/palmerpenguins/" class="uri">https://allisonhorst.github.io/palmerpenguins/</a></p>
-<p>Dados traduzidos para Português: <a href="https://cienciadedatos.github.io/dados/" class="uri">https://cienciadedatos.github.io/dados/</a></p>
-</section>
-<section class="slide level2">
-<h2>Colocar em prática: Continuação</h2>
-<ol start="5" type="1">
-<li>Crie um R Script, copie e cole o código abaixo, e substitua o caminho correto para ler a base de pinguins. Aproveite que o RStudio nos ajuda a buscar caminhos: dentro das aspas, experimente clicar a tecla TAB.</li>
-</ol>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>caminho <span class="ot">&lt;-</span> <span class="st">"...."</span> </span>
-<span id="cb6-2"><a href="#cb6-2"></a>pinguins <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(caminho)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="6" type="1">
-<li>Verifique no painel Environment do RStudio se a base de Pinguins foi importada corretamente.</li>
-</ol>
-</section>
-<section class="slide level2">
-
-<h3>Exemplo do Session Info</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>devtools<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>─ Session info ───────────────────────────────────────────────────────────────
- setting  value
- version  R version 4.2.2 (2022-10-31)
- os       Ubuntu 22.04.1 LTS
- system   x86_64, linux-gnu
- ui       X11
- language (EN)
- collate  C.UTF-8
- ctype    C.UTF-8
- tz       UTC
- date     2023-01-26
- pandoc   2.9.2.1 @ /usr/bin/ (via rmarkdown)
-
-─ Packages ───────────────────────────────────────────────────────────────────
- package     * version date (UTC) lib source
- cachem        1.0.6   2021-08-19 [1] RSPM
- callr         3.7.3   2022-11-02 [1] RSPM
- cli           3.6.0   2023-01-09 [1] RSPM
- crayon        1.5.2   2022-09-29 [1] RSPM
- devtools      2.4.5   2022-10-11 [1] any (@2.4.5)
- digest        0.6.31  2022-12-11 [1] RSPM
- ellipsis      0.3.2   2021-04-29 [1] RSPM
- evaluate      0.20    2023-01-17 [1] RSPM
- fastmap       1.1.0   2021-01-25 [1] RSPM
- fs            1.6.0   2023-01-23 [1] RSPM
- glue          1.6.2   2022-02-24 [1] RSPM
- here          1.0.1   2020-12-13 [1] any (@1.0.1)
- htmltools     0.5.4   2022-12-07 [1] RSPM
- htmlwidgets   1.6.1   2023-01-07 [1] RSPM
- httpuv        1.6.8   2023-01-12 [1] RSPM
- jsonlite      1.8.4   2022-12-06 [1] RSPM
- knitr         1.42    2023-01-25 [1] any (@1.42)
- later         1.3.0   2021-08-18 [1] RSPM
- lifecycle     1.0.3   2022-10-07 [1] RSPM
- magrittr      2.0.3   2022-03-30 [1] RSPM
- memoise       2.0.1   2021-11-26 [1] RSPM
- mime          0.12    2021-09-28 [1] RSPM
- miniUI        0.1.1.1 2018-05-18 [1] RSPM
- pkgbuild      1.4.0   2022-11-27 [1] RSPM
- pkgload       1.3.2   2022-11-16 [1] RSPM
- prettyunits   1.1.1   2020-01-24 [1] RSPM
- processx      3.8.0   2022-10-26 [1] RSPM
- profvis       0.3.7   2020-11-02 [1] RSPM
- promises      1.2.0.1 2021-02-11 [1] RSPM
- ps            1.7.2   2022-10-26 [1] RSPM
- purrr         1.0.1   2023-01-10 [1] RSPM
- R6            2.5.1   2021-08-19 [1] RSPM
- Rcpp          1.0.10  2023-01-22 [1] RSPM
- remotes       2.4.2   2021-11-30 [1] RSPM
- rlang         1.0.6   2022-09-24 [1] RSPM
- rmarkdown     2.20    2023-01-19 [1] any (@2.20)
- rprojroot     2.0.3   2022-04-02 [1] RSPM
- sessioninfo   1.2.2   2021-12-06 [1] RSPM
- shiny         1.7.4   2022-12-15 [1] RSPM
- stringi       1.7.12  2023-01-11 [1] RSPM
- stringr       1.5.0   2022-12-02 [1] RSPM
- urlchecker    1.0.1   2021-11-30 [1] RSPM
- usethis       2.1.6   2022-05-25 [1] RSPM
- vctrs         0.5.2   2023-01-23 [1] RSPM
- xfun          0.36    2022-12-21 [1] RSPM
- xtable        1.8-4   2019-04-21 [1] RSPM
- yaml          2.3.7   2023-01-23 [1] RSPM
-
- [1] /home/runner/work/_temp/Library
- [2] /opt/R/4.2.2/lib/R/site-library
- [3] /opt/R/4.2.2/lib/R/library
-
-──────────────────────────────────────────────────────────────────────────────</code></pre>
-</div>
-</div>
-</section>
-<section class="slide level2">
-<h2>Revisão - Reprodutibilidade</h2>
-<ul>
-<li><p>Em um código reprodutível, devemos ser capazes de reproduzir totalmente os resultados a partir dos dados brutos, assim como outras pessoas (em computadores diferentes) também devem ser capazes de reproduzir esses mesmos resultados a partir dos dados brutos.</p></li>
-<li><p>Utilizar boas práticas aumentam as chances de escrever um código reprodutível.</p></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>Exemplos de boas práticas:</h2>
-<ul>
-<li><p>Utilizar Projetos do RStudio. Quando usamos projetos do RStudio, o diretório de trabalho será a pasta principal do projeto.</p></li>
-<li><p>Desabilitar o .Rhistory e .Rdata.</p></li>
-<li><p>Utilizar caminhos relativos.</p></li>
-<li><p>Documentar os pacotes e versões utilizadas.</p></li>
+<li>Referência: <a href="https://bookdown.org/yihui/rmarkdown-cookbook/cross-ref.html" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/cross-ref.html</a></li>
 </ul>
 
 
