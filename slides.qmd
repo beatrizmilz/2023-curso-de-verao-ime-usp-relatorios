@@ -34,13 +34,11 @@ criar_tabela_links_extras <- function(links_extras) {
 
 ### Links úteis
 
-
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 sheet_links |>
   dplyr::filter(numero_aula == 1) |>
   criar_tabela_links_extras()
 ```
-
 
 ## Aula 2
 
@@ -55,5 +53,22 @@ sheet_links |>
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 sheet_links |>
   dplyr::filter(numero_aula == 2) |>
+  criar_tabela_links_extras()
+```
+
+## Aula 3
+
+### Slides
+
+-   [Slide 5 - Elementos úteis para relatórios acadêmicos](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/05-elementos-acad.html)
+
+
+-   [Slide 6 - Relatórios em R com parâmetros](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/06-parametros.html)
+
+### Links úteis
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+sheet_links |>
+  dplyr::filter(numero_aula == 3) |>
   criar_tabela_links_extras()
 ```
