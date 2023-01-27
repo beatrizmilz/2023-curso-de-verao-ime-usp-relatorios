@@ -13,6 +13,7 @@ criar_tabela_links_extras <- function(links_extras) {
     links_extras |>
       dplyr::mutate(link_completo = glue::glue("<a href='{link}' target='_blank'>{nome_link}</a>")) |>
       dplyr::select(tema, idioma, link_completo) |>
+      dplyr::arrange(tema) |> 
       knitr::kable(col.names = c("Tema", "Idioma", "Link"))
   } else {
     htmltools::strong("Em breve!")
@@ -30,7 +31,7 @@ criar_tabela_links_extras <- function(links_extras) {
 
 ### Scripts/anotações
 
--   [aula-1.R](https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/blob/main/pratica/aula-1.R)
+-   [aula-1.R](https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/blob/main/pratica/aula-1.R) - anotações.
 
 ### Links úteis
 
@@ -46,7 +47,11 @@ sheet_links |>
 
 -   [Slide 3 - Introdução ao RMarkdown](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/03-intro-rmarkdown.html)
 
--   [Slide 4 - Introdução ao Quarto](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/04-intro-quarto.html)
+### Scripts/anotações
+
+-   [aula-2.R](https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/blob/main/pratica/aula-2.R) - anotações.
+
+-   [aula-2-rmarkdown.Rmd](https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/blob/main/pratica/aula-2-rmarkdown.Rmd) - experimentando algumas funcionalidades de relatório. 
 
 ### Links úteis
 
@@ -60,15 +65,45 @@ sheet_links |>
 
 ### Slides
 
+-   [Slide 4 - Introdução ao Quarto](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/04-intro-quarto.html)
+
 -   [Slide 5 - Elementos úteis para relatórios acadêmicos](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/05-elementos-acad.html)
-
-
--   [Slide 6 - Relatórios em R com parâmetros](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/06-parametros.html)
 
 ### Links úteis
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 sheet_links |>
   dplyr::filter(numero_aula == 3) |>
+  criar_tabela_links_extras()
+```
+
+
+## Aula 4
+
+### Slides
+
+-   [Slide 6 - Relatórios em R com parâmetros](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/06-parametros.html)
+
+- Slide 7 - Introdução ao Git e GitHub no RStudio (em breve)
+
+### Links úteis
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+sheet_links |>
+  dplyr::filter(numero_aula == 4) |>
+  criar_tabela_links_extras()
+```
+
+## Aula 5
+
+### Slides
+
+Em breve
+
+### Links úteis
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+sheet_links |>
+  dplyr::filter(numero_aula == 5) |>
   criar_tabela_links_extras()
 ```
