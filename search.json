@@ -4,21 +4,35 @@
     "href": "slides.html#aula-1",
     "title": "Slides e materiais por aula",
     "section": "Aula 1",
-    "text": "Aula 1\nSlides\n\nSlide 1 - Introdução ao Curso\nSlide 2 - Introdução ao conceito de reprodutibilidade\nScripts/anotações\n\naula-1.R\nLinks úteis\n\n\n\n\n\n\n\n\n\nTema\nIdioma\nLink\n\n\n\nPré-curso\nPortuguês\nPré-curso: Instalações necessárias\n\n\nIntrodução à reprodutibilidade\nPortuguês\nZen do R - .Rdata e .Rhistory\n\n\nIntrodução à reprodutibilidade\nPortuguês\nZen do R - Projetos no RStudio e diretórios\n\n\nIntrodução à reprodutibilidade\nInglês\nVideo: Apresentação da Jenny Bryan sobre como nomear arquivos (5 minutos)\n\n\nIntrodução à reprodutibilidade\nInglês\nIntroduction to bioinformatics - Chapter 8 Reproducible research (introdução)"
+    "text": "Aula 1\nSlides\n\nSlide 1 - Introdução ao Curso\nSlide 2 - Introdução ao conceito de reprodutibilidade\nScripts/anotações\n\n\naula-1.R - anotações.\nLinks úteis\n\n\n\n\n\n\n\n\n\nTema\nIdioma\nLink\n\n\n\nIntrodução à reprodutibilidade\nPortuguês\nZen do R - .Rdata e .Rhistory\n\n\nIntrodução à reprodutibilidade\nPortuguês\nZen do R - Projetos no RStudio e diretórios\n\n\nIntrodução à reprodutibilidade\nInglês\nVideo: Apresentação da Jenny Bryan sobre como nomear arquivos (5 minutos)\n\n\nIntrodução à reprodutibilidade\nInglês\nIntroduction to bioinformatics - Chapter 8 Reproducible research (introdução)\n\n\nPré-curso\nPortuguês\nPré-curso: Instalações necessárias"
   },
   {
     "objectID": "slides.html#aula-2",
     "href": "slides.html#aula-2",
     "title": "Slides e materiais por aula",
     "section": "Aula 2",
-    "text": "Aula 2\nSlides\n\nSlide 3 - Introdução ao RMarkdown\nSlide 4 - Introdução ao Quarto\nLinks úteis\n\n\nEm breve!"
+    "text": "Aula 2\nSlides\n\nSlide 3 - Introdução ao RMarkdown\nScripts/anotações\n\naula-2.R - anotações.\naula-2-rmarkdown.Rmd - experimentando algumas funcionalidades de relatório.\nLinks úteis\n\n\n\n\n\n\n\n\n\nTema\nIdioma\nLink\n\n\n\nDicas\nPortuguês\nDicas para relatórios: gráficos, tabelas, e dicas gerais\n\n\nDicas\nPortuguês\nDicas para desvendar erros\n\n\nDocumentação\nInglês\nDocumentação da base Palmer Penguins\n\n\nDocumentação\nInglês\nCheatsheets RStudio\n\n\nRMarkdown\nInglês\nPacote R Markdown\n\n\nRMarkdown\nInglês\nCheatsheet do RMarkdown\n\n\nRMarkdown\nInglês\nReference Guide do RMarkdown\n\n\nTabelas\nInglês\nPacote para fazer tabelas - reactable\n\n\nTabelas\nInglês\nPacote kableExtra: deixar as tabelas com kable() mais bonitas\n\n\nTabelas\nInglês\nCheat sheet do pacote flextable (tabelas para o word)\n\n\nTabelas\nInglês\nLivro do pacote flextable (tabelas para o word)"
   },
   {
     "objectID": "slides.html#aula-3",
     "href": "slides.html#aula-3",
     "title": "Slides e materiais por aula",
     "section": "Aula 3",
-    "text": "Aula 3\nSlides\n\nSlide 5 - Elementos úteis para relatórios acadêmicos\nSlide 6 - Relatórios em R com parâmetros\nLinks úteis\n\n\nEm breve!"
+    "text": "Aula 3\nSlides\n\nSlide 4 - Introdução ao Quarto\nSlide 5 - Elementos úteis para relatórios acadêmicos\nLinks úteis\n\n\n\n\n\n\n\n\n\nTema\nIdioma\nLink\n\n\n\nInstalações\nInglês\nZotero - ferramenta para organizar referências\n\n\nInstalações\nInglês\nBetter bibtex for Zotero\n\n\nQuarto\nPortuguês\nExemplo de relatório com Quarto e Python\n\n\nQuarto\nInglês\nQuarto - Nova geração do RMarkdown"
+  },
+  {
+    "objectID": "slides.html#aula-4",
+    "href": "slides.html#aula-4",
+    "title": "Slides e materiais por aula",
+    "section": "Aula 4",
+    "text": "Aula 4\nSlides\n\nSlide 6 - Relatórios em R com parâmetros\nSlide 7 - Introdução ao Git e GitHub no RStudio (em breve)\nLinks úteis\n\n\n\n\n\n\n\n\n\nTema\nIdioma\nLink\n\n\nGit/GitHub\nPortuguês\nCheatsheet sobre Git e Github em português"
+  },
+  {
+    "objectID": "slides.html#aula-5",
+    "href": "slides.html#aula-5",
+    "title": "Slides e materiais por aula",
+    "section": "Aula 5",
+    "text": "Aula 5\nSlides\nEm breve\nLinks úteis\n\n\nEm breve!"
   },
   {
     "objectID": "licenca.html",
@@ -60,7 +74,7 @@
     "href": "index.html",
     "title": "Relatórios reprodutíveis com R",
     "section": "",
-    "text": "Atenção!\n\n\n\nInscrições abertas exclusivamente no site do Programa de Verão IME-USP."
+    "text": "Atenção!\n\n\n\nCurso iniciado. Para turmas futuras, acompanhe no site do Programa de Verão IME-USP."
   },
   {
     "objectID": "index.html#sobre-o-curso",
@@ -138,6 +152,13 @@
     "title": "Perguntas Frequentes (FAQ)",
     "section": "",
     "text": "O curso será online ou presencial?\n\nO curso será oferecido de forma online.\n\nApenas estudantes da USP podem participar do curso?\n\nAs inscrições serão abertas para todas as pessoas interessadas.\n\nComo posso me inscrever?\n\nA inscrição será realizada através do IME-USP. Acompanhe as informações na página do Programa de Verão do IME-USP.\n\nO curso é gratuito?\n\nNão, o curso é pago. Acompanhe as informações na página do Programa de Verão do IME-USP.\n\nAs aulas serão gravadas?\n\nSim."
+  },
+  {
+    "objectID": "pratica/aula-2-rmarkdown.html",
+    "href": "pratica/aula-2-rmarkdown.html",
+    "title": "Primeiro relatório",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.4.0      ✔ purrr   1.0.1 \n✔ tibble  3.1.8      ✔ dplyr   1.0.10\n✔ tidyr   1.3.0      ✔ stringr 1.5.0 \n✔ readr   2.1.3      ✔ forcats 0.5.2 \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\n\n\n# devtools::session_info()\n\n\npinguins <- read_csv('dados/pinguins.csv')\n\nRows: 344 Columns: 8\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (3): especie, ilha, sexo\ndbl (5): comprimento_bico, profundidade_bico, comprimento_nadadeira, massa_c...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nglimpse(pinguins)\n\nRows: 344\nColumns: 8\n$ especie               <chr> \"Pinguim-de-adélia\", \"Pinguim-de-adélia\", \"Pingu…\n$ ilha                  <chr> \"Torgersen\", \"Torgersen\", \"Torgersen\", \"Torgerse…\n$ comprimento_bico      <dbl> 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34…\n$ profundidade_bico     <dbl> 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18…\n$ comprimento_nadadeira <dbl> 181, 186, 195, NA, 193, 190, 181, 195, 193, 190,…\n$ massa_corporal        <dbl> 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 34…\n$ sexo                  <chr> \"macho\", \"fêmea\", \"fêmea\", NA, \"fêmea\", \"macho\",…\n$ ano                   <dbl> 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, …\n\n\n\n# names(pinguins)\n\n# paste0(names(pinguins), collapse = \", \")\n\nnome_colunas <- knitr::combine_words(\n  names(pinguins),\n  and = \" e \", \n  oxford_comma = FALSE\n)\n\n\nnome_especies <- knitr::combine_words(\n  unique(pinguins$especie),\n  and = \" e \", \n  oxford_comma = FALSE\n)\n\n# knitr::combine_words(unique(names(pinguins$ano)))\n# \n# min(pinguins$ano)\n# max(pinguins$ano)\n\n\n# knitr::combine_words(unique(pinguins$especie), and = \" e \", oxford_comma = FALSE)\n\n\nmedia_massa_arredondada <- round(mean(pinguins$massa_corporal, na.rm = TRUE))\nmedia_massa_arredondada_kg <- round(mean(pinguins$massa_corporal, na.rm = TRUE) / 1000, 1)\n\nA base de pinguins apresenta 344 pinguins, e as seguintes colunas: especie, ilha, comprimento_bico, profundidade_bico, comprimento_nadadeira, massa_corporal, sexo e ano. Os pinguins estudados são Pinguim-de-adélia, Pinguim-gentoo e Pinguim-de-barbicha.\nA base de dados pinguins apresenta dados referente à 344 pinguins, das seguintes espécies: Pinguim-de-adélia, Pinguim-gentoo e Pinguim-de-barbicha. Os dados foram coletados entre os anos 2007 e 2009, nas seguintes ilhas: Torgersen, BiscoeeDream. O peso médio dos pinguins amostrados foi de 4202 gramas. Os dados foram obtidos através do pacote Palmer Penguins.\n\n# ctrl shift M\npinguins |> \n # count(especie) |> \n  # knitr::kable()\n  # flextable::flextable()\n  reactable::reactable(filterable = TRUE,\n                       columnGroups = list(reactable::colGroup(\n                         name = \"Bico\",\n                         columns = c(\"comprimento_bico\", \"profundidade_bico\")\n                       )))\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nMateriais do curso\n\narroz\nfeijao\nmacarrão\n\n\nBea\nAndressa\nVitor\nGabi\nDani\n\n\nSegundo\n\n\nexemplo\n\nCol1\nCol2\nCol3"
   },
   {
     "objectID": "instrucoes-de-instalacao.html#contas-em-serviços",
