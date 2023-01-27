@@ -5,9 +5,8 @@ title: "Relatórios reprodutíveis com R"
 ::: callout-warning
 ## Atenção!
 
-**Inscrições** abertas exclusivamente no site do [Programa de Verão IME-USP](https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php).
+**Curso iniciado.** Para turmas futuras, acompanhe no site do [Programa de Verão IME-USP](https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php).
 :::
-
 
 ## Sobre o curso
 
@@ -19,16 +18,15 @@ Além disso, o conceito de controle de versão com Git será apresentado. També
 
 ## Temas abordados
 
-- O que é reprodutibilidade;
+-   O que é reprodutibilidade;
 
-- O que é o RMarkdown e o Quarto, e quais são as diferenças;
+-   O que é o RMarkdown e o Quarto, e quais são as diferenças;
 
-- Como criar um documento reprodutível com Quarto usando R ou Python;
+-   Como criar um documento reprodutível com Quarto usando R ou Python;
 
-- Como versionar os arquivos no Git e GitHub;
+-   Como versionar os arquivos no Git e GitHub;
 
-- Como disponibilizar estes documentos HTML criados com Quarto na internet para que outras pessoas consigam acessar.
-
+-   Como disponibilizar estes documentos HTML criados com Quarto na internet para que outras pessoas consigam acessar.
 
 ## Edição passada
 
