@@ -37,6 +37,9 @@ jobs:
             any::ggplot2
             any::readr
             any::htmltools
+            any::tidyverse
+            any::reactable
+            any::dados
             
             
 
