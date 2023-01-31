@@ -1,0 +1,35 @@
+---
+title: "Conteúdo Acadêmico"
+format: html
+editor: visual
+lang: pt
+bibliography: 
+  - pacotes.bib
+  - artigo-mestrado.bib
+  - references.bib
+---
+
+# Equações
+
+A equação $\lim_{x \to \infty} x^2 = \infty$ fala que..
+
+Veja a equação a seguir:
+
+$$\lim_{x \to \infty} x^2 = \infty$$
+
+$${\text{Média}=\frac {a_{1}+a_{2}+\cdots +a_{n}}{n}}$$
+
+Ou também na linha ${\text{Média}=\frac {a_{1}+a_{2}+\cdots +a_{n}}{n}}$, junto ao texto!
+
+# Adicionar referências
+
+Utilizamos neste trabalho o pacote tidyverse [@tidyverse2019; @R-tidyverse].
+
+@wengratSpatialEvaluationWater2011
+
+[@paz2022]
+
+```{r}
+#| echo: false
+knitr::write_bib(x = c("tidyverse"), file = "pacotes.bib")
+```

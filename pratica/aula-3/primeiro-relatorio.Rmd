@@ -1,0 +1,180 @@
+---
+title: "Primeiro relatório"
+author: "Beatriz"
+date: "2023-01-26"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r message=FALSE}
+library(tidyverse)
+```
+
+
+```{r}
+# devtools::session_info()
+```
+
+```{r message=FALSE}
+pinguins <- read_csv('dados/pinguins.csv')
+# glimpse(pinguins)
+```
+
+```{r}
+# names(pinguins)
+
+# paste0(names(pinguins), collapse = ", ")
+
+nome_colunas <- knitr::combine_words(
+  names(pinguins),
+  and = " e ", 
+  oxford_comma = FALSE
+)
+
+
+nome_especies <- knitr::combine_words(
+  unique(pinguins$especie),
+  and = " e ", 
+  oxford_comma = FALSE
+)
+
+# knitr::combine_words(unique(names(pinguins$ano)))
+# 
+# min(pinguins$ano)
+# max(pinguins$ano)
+
+
+# knitr::combine_words(unique(pinguins$especie), and = " e ", oxford_comma = FALSE)
+
+
+media_massa_arredondada <- round(mean(pinguins$massa_corporal, na.rm = TRUE))
+media_massa_arredondada_kg <- round(mean(pinguins$massa_corporal, na.rm = TRUE) / 1000, 1)
+```
+
+
+A base de pinguins apresenta `r nrow(pinguins)` pinguins, e as seguintes colunas: `r nome_colunas`. Os pinguins estudados são `r nome_especies`.
+
+
+
+A base de dados pinguins apresenta dados referente à `r nrow(pinguins)` pinguins, das seguintes espécies: `r knitr::combine_words(unique(pinguins$especie), and = " e ", oxford_comma = FALSE)`. Os dados foram coletados entre os anos `r min(pinguins$ano)` e `r max(pinguins$ano)`, nas seguintes ilhas: `r knitr::combine_words(unique(pinguins$ilha), and = "e", oxford_comma = FALSE)`. O peso médio dos pinguins amostrados foi de `r media_massa_arredondada` gramas. Os dados foram obtidos através do pacote Palmer Penguins.
+
+
+```{r}
+# ctrl shift M
+pinguins |> 
+ # count(especie) |> 
+  # knitr::kable()
+  # flextable::flextable()
+  reactable::reactable(filterable = TRUE,
+                       columnGroups = list(reactable::colGroup(
+                         name = "Bico",
+                         columns = c("comprimento_bico", "profundidade_bico")
+                       )))
+```
+
+
+
+
+
+[![Palmer Penguins](images/paste-BDCA07A0.png){width="50%"}](https://allisonhorst.github.io/palmerpenguins/)
+
+[Materiais do curso](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides.html)
+
+-   arroz
+
+-   feijao
+
+-   macarrão
+
+1.  Bea
+
+2.  Andressa
+
+3.  Vitor
+
+4.  Gabi
+
+5.  Dani
+
+> Segundo
+
+| Col1 | Col2 | Col3 |
+|------|------|------|
+|      |      |      |
+|      |      |      |
+|      |      |      |
+
+: exemplo
+
+
+
+```{r}
+quantidade_de_especies <- pinguins |>
+  dplyr::count(especie, sort = TRUE) |>
+  janitor::adorn_totals()
+
+quantidade_de_especies |> 
+  knitr::kable(col.names = c("Espécie", "Quantidade"))
+
+```
+
+
+```{r}
+pinguins |> 
+  dplyr::count(especie, ilha) |> 
+  dplyr::mutate(exemplo = sample(1:10, 5)) |> 
+  janitor::adorn_totals(where = c("row", "col")) |> 
+  knitr::kable()
+  
+```
+
+```{r}
+# iris |> 
+#   janitor::clean_names()
+```
+
+
+```{r, out.width="80%", fig.align="center", dpi = 300, fig.cap="Gráfico de quantidade de pinguins por espécie", fig.alt="A imagem apresenta um gráfico de barras onde temos no eixo x a quantidade de pinguins, e no eixo y as espécies de pinguins. A espécie com mais pinguins na base é Pinguin de adélia."}
+library(ggplot2)
+pinguins |> 
+  dplyr::count(especie) |> 
+  ggplot() +
+  geom_col(aes(x = n, y = especie, fill = especie), show.legend = FALSE) +
+  theme_light() +
+  scale_fill_viridis_d() +
+  labs(x = "Quantidade de pinguins", y = "Espécies")
+```
+
+
+
+
+```{r}
+#| out-width: "80%"
+#| fig-align: "center"
+#| dpi: 300
+#| fig-cap: "Gráfico de quantidade de pinguins por espécie"
+#| fig-alt: "A imagem apresenta um gráfico de barras onde temos no eixo x a quantidade de pinguins, e no eixo y as espécies de pinguins. A espécie com mais pinguins na base é Pinguin de adélia."
+#| 
+
+library(ggplot2)
+pinguins |> 
+  dplyr::count(especie) |> 
+  ggplot() +
+  geom_col(aes(x = n, y = especie, fill = especie), show.legend = FALSE) +
+  theme_light() +
+  scale_fill_viridis_d() +
+  labs(x = "Quantidade de pinguins", y = "Espécies")
+
+
+```
+
+
+```{css}
+body{
+  color: blue;
+}
+```
+

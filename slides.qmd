@@ -51,7 +51,7 @@ sheet_links |>
 
 -   [aula-2.R](https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/blob/main/pratica/aula-2.R) - anotações.
 
--   [aula-2-rmarkdown.Rmd](https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/blob/main/pratica/aula-2-rmarkdown.Rmd) - experimentando algumas funcionalidades de relatório. 
+-   [Pasta com arquivos da aula 2](https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/blob/main/pratica/aula-2/) - experimentando algumas funcionalidades de relatório.
 
 ### Links úteis
 
@@ -69,6 +69,10 @@ sheet_links |>
 
 -   [Slide 5 - Elementos úteis para relatórios acadêmicos](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/05-elementos-acad.html)
 
+### Scripts/anotações
+
+-   [Pasta com arquivos da aula 3](https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/blob/main/pratica/aula-3/).
+
 ### Links úteis
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
@@ -77,14 +81,13 @@ sheet_links |>
   criar_tabela_links_extras()
 ```
 
-
 ## Aula 4
 
 ### Slides
 
 -   [Slide 6 - Relatórios em R com parâmetros](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/06-parametros.html)
 
-- Slide 7 - Introdução ao Git e GitHub no RStudio (em breve)
+-   Slide 7 - Introdução ao Git e GitHub no RStudio (em breve)
 
 ### Links úteis
 
