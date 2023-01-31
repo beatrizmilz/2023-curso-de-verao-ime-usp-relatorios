@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Beatriz">
+<title>Relatórios reprodutíveis com R - Primeiro relatório</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar"
+  }
+}</script><script src="../../site_libs/core-js-2.5.3/shim.min.js"></script><script src="../../site_libs/react-17.0.0/react.min.js"></script><script src="../../site_libs/react-17.0.0/react-dom.min.js"></script><script src="../../site_libs/reactwidget-1.0.0/react-tools.js"></script><script src="../../site_libs/htmlwidgets-1.6.1/htmlwidgets.js"></script><link href="../../site_libs/reactable-0.4.3/reactable.css" rel="stylesheet">
+<script src="../../site_libs/reactable-binding-0.4.3/reactable.js"></script><link rel="stylesheet" href="../../styles.scss">
+</head>
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }"><div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Primeiro relatório</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="https://www.ime.usp.br/verao/assets/images/logo_verao.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Relatórios reprodutíveis com R <br></a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios" title="Repositório no GitHub" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="https://www.ime.usp.br/~verao/" title="Inscrições" class="sidebar-tool px-1"><i class="bi bi-book-half"></i></a>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://cursosextensao.usp.br/course/view.php?id=3449" class="sidebar-item-text sidebar-link">Plataforma USP</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">Sobre o curso</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../informacoes-gerais.html" class="sidebar-item-text sidebar-link">Informações gerais</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../profs.html" class="sidebar-item-text sidebar-link">Docentes</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../faq.html" class="sidebar-item-text sidebar-link">Perguntas Frequentes (FAQ)</a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">Materias</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../instrucoes-de-instalacao.html" class="sidebar-item-text sidebar-link">Pré-curso: Instalações necessárias</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides.html" class="sidebar-item-text sidebar-link">Slides e materiais por aula</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../trabalho_final.html" class="sidebar-item-text sidebar-link">Trabalho final</a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">Edições anteriores</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/programacao-do-curso.html" class="sidebar-item-text sidebar-link">Edição 2022</a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../licenca.html" class="sidebar-item-text sidebar-link">Licença de uso</a>
+  </div>
+</li>
+    </ul>
+</div>
+</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title d-none d-lg-block">Primeiro relatório</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Beatriz </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">26 de janeiro de 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header><div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+✔ ggplot2 3.4.0     ✔ purrr   1.0.1
+✔ tibble  3.1.8     ✔ dplyr   1.1.0
+✔ tidyr   1.3.0     ✔ stringr 1.5.0
+✔ readr   2.1.3     ✔ forcats 1.0.0
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># devtools::session_info()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pinguins</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">'dados/pinguins.csv'</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 344 Columns: 8
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (3): especie, ilha, sexo
+dbl (5): comprimento_bico, profundidade_bico, comprimento_nadadeira, massa_c...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">pinguins</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 344
+Columns: 8
+$ especie               &lt;chr&gt; "Pinguim-de-adélia", "Pinguim-de-adélia", "Pingu…
+$ ilha                  &lt;chr&gt; "Torgersen", "Torgersen", "Torgersen", "Torgerse…
+$ comprimento_bico      &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34…
+$ profundidade_bico     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18…
+$ comprimento_nadadeira &lt;dbl&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190,…
+$ massa_corporal        &lt;dbl&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 34…
+$ sexo                  &lt;chr&gt; "macho", "fêmea", "fêmea", NA, "fêmea", "macho",…
+$ ano                   &lt;dbl&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, …</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># names(pinguins)</span></span>
+<span></span>
+<span><span class="co"># paste0(names(pinguins), collapse = ", ")</span></span>
+<span></span>
+<span><span class="va">nome_colunas</span> <span class="op">&lt;-</span> <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/combine_words.html">combine_words</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">pinguins</span><span class="op">)</span>,</span>
+<span>  and <span class="op">=</span> <span class="st">" e "</span>, </span>
+<span>  oxford_comma <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="va">nome_especies</span> <span class="op">&lt;-</span> <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/combine_words.html">combine_words</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">pinguins</span><span class="op">$</span><span class="va">especie</span><span class="op">)</span>,</span>
+<span>  and <span class="op">=</span> <span class="st">" e "</span>, </span>
+<span>  oxford_comma <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># knitr::combine_words(unique(names(pinguins$ano)))</span></span>
+<span><span class="co"># </span></span>
+<span><span class="co"># min(pinguins$ano)</span></span>
+<span><span class="co"># max(pinguins$ano)</span></span>
+<span></span>
+<span></span>
+<span><span class="co"># knitr::combine_words(unique(pinguins$especie), and = " e ", oxford_comma = FALSE)</span></span>
+<span></span>
+<span></span>
+<span><span class="va">media_massa_arredondada</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">pinguins</span><span class="op">$</span><span class="va">massa_corporal</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">media_massa_arredondada_kg</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">pinguins</span><span class="op">$</span><span class="va">massa_corporal</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">/</span> <span class="fl">1000</span>, <span class="fl">1</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A base de pinguins apresenta 344 pinguins, e as seguintes colunas: especie, ilha, comprimento_bico, profundidade_bico, comprimento_nadadeira, massa_corporal, sexo e ano. Os pinguins estudados são Pinguim-de-adélia, Pinguim-gentoo e Pinguim-de-barbicha.</p>
+<p>A base de dados pinguins apresenta dados referente à 344 pinguins, das seguintes espécies: Pinguim-de-adélia, Pinguim-gentoo e Pinguim-de-barbicha. Os dados foram coletados entre os anos 2007 e 2009, nas seguintes ilhas: Torgersen, BiscoeeDream. O peso médio dos pinguins amostrados foi de 4202 gramas. Os dados foram obtidos através do pacote Palmer Penguins.</p>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># ctrl shift M</span></span>
+<span><span class="va">pinguins</span> <span class="op">|&gt;</span> </span>
+<span> <span class="co"># count(especie) |&gt; </span></span>
+<span>  <span class="co"># knitr::kable()</span></span>
+<span>  <span class="co"># flextable::flextable()</span></span>
+<span>  <span class="fu">reactable</span><span class="fu">::</span><span class="fu"><a href="https://glin.github.io/reactable/reference/reactable.html">reactable</a></span><span class="op">(</span>filterable <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>                       columnGroups <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fu">reactable</span><span class="fu">::</span><span class="fu"><a href="https://glin.github.io/reactable/reference/colGroup.html">colGroup</a></span><span class="op">(</span></span>
+<span>                         name <span class="op">=</span> <span class="st">"Bico"</span>,</span>
+<span>                         columns <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"comprimento_bico"</span>, <span class="st">"profundidade_bico"</span><span class="op">)</span></span>
+<span>                       <span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-c7db311340f67096a332" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-c7db311340f67096a332">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"especie":["Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-gentoo","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha","Pinguim-de-barbicha"],"ilha":["Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream"],"comprimento_bico":[39.1,39.5,40.3,"NA",36.7,39.3,38.9,39.2,34.1,42,37.8,37.8,41.1,38.6,34.6,36.6,38.7,42.5,34.4,46,37.8,37.7,35.9,38.2,38.8,35.3,40.6,40.5,37.9,40.5,39.5,37.2,39.5,40.9,36.4,39.2,38.8,42.2,37.6,39.8,36.5,40.8,36,44.1,37,39.6,41.1,37.5,36,42.3,39.6,40.1,35,42,34.5,41.4,39,40.6,36.5,37.6,35.7,41.3,37.6,41.1,36.4,41.6,35.5,41.1,35.9,41.8,33.5,39.7,39.6,45.8,35.5,42.8,40.9,37.2,36.2,42.1,34.6,42.9,36.7,35.1,37.3,41.3,36.3,36.9,38.3,38.9,35.7,41.1,34,39.6,36.2,40.8,38.1,40.3,33.1,43.2,35,41,37.7,37.8,37.9,39.7,38.6,38.2,38.1,43.2,38.1,45.6,39.7,42.2,39.6,42.7,38.6,37.3,35.7,41.1,36.2,37.7,40.2,41.4,35.2,40.6,38.8,41.5,39,44.1,38.5,43.1,36.8,37.5,38.1,41.1,35.6,40.2,37,39.7,40.2,40.6,32.1,40.7,37.3,39,39.2,36.6,36,37.8,36,41.5,46.1,50,48.7,50,47.6,46.5,45.4,46.7,43.3,46.8,40.9,49,45.5,48.4,45.8,49.3,42,49.2,46.2,48.7,50.2,45.1,46.5,46.3,42.9,46.1,44.5,47.8,48.2,50,47.3,42.8,45.1,59.6,49.1,48.4,42.6,44.4,44,48.7,42.7,49.6,45.3,49.6,50.5,43.6,45.5,50.5,44.9,45.2,46.6,48.5,45.1,50.1,46.5,45,43.8,45.5,43.2,50.4,45.3,46.2,45.7,54.3,45.8,49.8,46.2,49.5,43.5,50.7,47.7,46.4,48.2,46.5,46.4,48.6,47.5,51.1,45.2,45.2,49.1,52.5,47.4,50,44.9,50.8,43.4,51.3,47.5,52.1,47.5,52.2,45.5,49.5,44.5,50.8,49.4,46.9,48.4,51.1,48.5,55.9,47.2,49.1,47.3,46.8,41.7,53.4,43.3,48.1,50.5,49.8,43.5,51.5,46.2,55.1,44.5,48.8,47.2,"NA",46.8,50.4,45.2,49.9,46.5,50,51.3,45.4,52.7,45.2,46.1,51.3,46,51.3,46.6,51.7,47,52,45.9,50.5,50.3,58,46.4,49.2,42.4,48.5,43.2,50.6,46.7,52,50.5,49.5,46.4,52.8,40.9,54.2,42.5,51,49.7,47.5,47.6,52,46.9,53.5,49,46.2,50.9,45.5,50.9,50.8,50.1,49,51.5,49.8,48.1,51.4,45.7,50.7,42.5,52.2,45.2,49.3,50.2,45.6,51.9,46.8,45.7,55.8,43.5,49.6,50.8,50.2],"profundidade_bico":[18.7,17.4,18,"NA",19.3,20.6,17.8,19.6,18.1,20.2,17.1,17.3,17.6,21.2,21.1,17.8,19,20.7,18.4,21.5,18.3,18.7,19.2,18.1,17.2,18.9,18.6,17.9,18.6,18.9,16.7,18.1,17.8,18.9,17,21.1,20,18.5,19.3,19.1,18,18.4,18.5,19.7,16.9,18.8,19,18.9,17.9,21.2,17.7,18.9,17.9,19.5,18.1,18.6,17.5,18.8,16.6,19.1,16.9,21.1,17,18.2,17.1,18,16.2,19.1,16.6,19.4,19,18.4,17.2,18.9,17.5,18.5,16.8,19.4,16.1,19.1,17.2,17.6,18.8,19.4,17.8,20.3,19.5,18.6,19.2,18.8,18,18.1,17.1,18.1,17.3,18.9,18.6,18.5,16.1,18.5,17.9,20,16,20,18.6,18.9,17.2,20,17,19,16.5,20.3,17.7,19.5,20.7,18.3,17,20.5,17,18.6,17.2,19.8,17,18.5,15.9,19,17.6,18.3,17.1,18,17.9,19.2,18.5,18.5,17.6,17.5,17.5,20.1,16.5,17.9,17.1,17.2,15.5,17,16.8,18.7,18.6,18.4,17.8,18.1,17.1,18.5,13.2,16.3,14.1,15.2,14.5,13.5,14.6,15.3,13.4,15.4,13.7,16.1,13.7,14.6,14.6,15.7,13.5,15.2,14.5,15.1,14.3,14.5,14.5,15.8,13.1,15.1,14.3,15,14.3,15.3,15.3,14.2,14.5,17,14.8,16.3,13.7,17.3,13.6,15.7,13.7,16,13.7,15,15.9,13.9,13.9,15.9,13.3,15.8,14.2,14.1,14.4,15,14.4,15.4,13.9,15,14.5,15.3,13.8,14.9,13.9,15.7,14.2,16.8,14.4,16.2,14.2,15,15,15.6,15.6,14.8,15,16,14.2,16.3,13.8,16.4,14.5,15.6,14.6,15.9,13.8,17.3,14.4,14.2,14,17,15,17.1,14.5,16.1,14.7,15.7,15.8,14.6,14.4,16.5,15,17,15.5,15,13.8,16.1,14.7,15.8,14,15.1,15.2,15.9,15.2,16.3,14.1,16,15.7,16.2,13.7,"NA",14.3,15.7,14.8,16.1,17.9,19.5,19.2,18.7,19.8,17.8,18.2,18.2,18.9,19.9,17.8,20.3,17.3,18.1,17.1,19.6,20,17.8,18.6,18.2,17.3,17.5,16.6,19.4,17.9,19,18.4,19,17.8,20,16.6,20.8,16.7,18.8,18.6,16.8,18.3,20.7,16.6,19.9,19.5,17.5,19.1,17,17.9,18.5,17.9,19.6,18.7,17.3,16.4,19,17.3,19.7,17.3,18.8,16.6,19.9,18.8,19.4,19.5,16.5,17,19.8,18.1,18.2,19,18.7],"comprimento_nadadeira":[181,186,195,"NA",193,190,181,195,193,190,186,180,182,191,198,185,195,197,184,194,174,180,189,185,180,187,183,187,172,180,178,178,188,184,195,196,190,180,181,184,182,195,186,196,185,190,182,179,190,191,186,188,190,200,187,191,186,193,181,194,185,195,185,192,184,192,195,188,190,198,190,190,196,197,190,195,191,184,187,195,189,196,187,193,191,194,190,189,189,190,202,205,185,186,187,208,190,196,178,192,192,203,183,190,193,184,199,190,181,197,198,191,193,197,191,196,188,199,189,189,187,198,176,202,186,199,191,195,191,210,190,197,193,199,187,190,191,200,185,193,193,187,188,190,192,185,190,184,195,193,187,201,211,230,210,218,215,210,211,219,209,215,214,216,214,213,210,217,210,221,209,222,218,215,213,215,215,215,216,215,210,220,222,209,207,230,220,220,213,219,208,208,208,225,210,216,222,217,210,225,213,215,210,220,210,225,217,220,208,220,208,224,208,221,214,231,219,230,214,229,220,223,216,221,221,217,216,230,209,220,215,223,212,221,212,224,212,228,218,218,212,230,218,228,212,224,214,226,216,222,203,225,219,228,215,228,216,215,210,219,208,209,216,229,213,230,217,230,217,222,214,"NA",215,222,212,213,192,196,193,188,197,198,178,197,195,198,193,194,185,201,190,201,197,181,190,195,181,191,187,193,195,197,200,200,191,205,187,201,187,203,195,199,195,210,192,205,210,187,196,196,196,201,190,212,187,198,199,201,193,203,187,197,191,203,202,194,206,189,195,207,202,193,210,198],"massa_corporal":[3750,3800,3250,"NA",3450,3650,3625,4675,3475,4250,3300,3700,3200,3800,4400,3700,3450,4500,3325,4200,3400,3600,3800,3950,3800,3800,3550,3200,3150,3950,3250,3900,3300,3900,3325,4150,3950,3550,3300,4650,3150,3900,3100,4400,3000,4600,3425,2975,3450,4150,3500,4300,3450,4050,2900,3700,3550,3800,2850,3750,3150,4400,3600,4050,2850,3950,3350,4100,3050,4450,3600,3900,3550,4150,3700,4250,3700,3900,3550,4000,3200,4700,3800,4200,3350,3550,3800,3500,3950,3600,3550,4300,3400,4450,3300,4300,3700,4350,2900,4100,3725,4725,3075,4250,2925,3550,3750,3900,3175,4775,3825,4600,3200,4275,3900,4075,2900,3775,3350,3325,3150,3500,3450,3875,3050,4000,3275,4300,3050,4000,3325,3500,3500,4475,3425,3900,3175,3975,3400,4250,3400,3475,3050,3725,3000,3650,4250,3475,3450,3750,3700,4000,4500,5700,4450,5700,5400,4550,4800,5200,4400,5150,4650,5550,4650,5850,4200,5850,4150,6300,4800,5350,5700,5000,4400,5050,5000,5100,4100,5650,4600,5550,5250,4700,5050,6050,5150,5400,4950,5250,4350,5350,3950,5700,4300,4750,5550,4900,4200,5400,5100,5300,4850,5300,4400,5000,4900,5050,4300,5000,4450,5550,4200,5300,4400,5650,4700,5700,4650,5800,4700,5550,4750,5000,5100,5200,4700,5800,4600,6000,4750,5950,4625,5450,4725,5350,4750,5600,4600,5300,4875,5550,4950,5400,4750,5650,4850,5200,4925,4875,4625,5250,4850,5600,4975,5500,4725,5500,4700,5500,4575,5500,5000,5950,4650,5500,4375,5850,4875,6000,4925,"NA",4850,5750,5200,5400,3500,3900,3650,3525,3725,3950,3250,3750,4150,3700,3800,3775,3700,4050,3575,4050,3300,3700,3450,4400,3600,3400,2900,3800,3300,4150,3400,3800,3700,4550,3200,4300,3350,4100,3600,3900,3850,4800,2700,4500,3950,3650,3550,3500,3675,4450,3400,4300,3250,3675,3325,3950,3600,4050,3350,3450,3250,4050,3800,3525,3950,3650,3650,4000,3400,3775,4100,3775],"sexo":["macho","fêmea","fêmea",null,"fêmea","macho","fêmea","macho",null,null,null,null,"fêmea","macho","macho","fêmea","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","macho","fêmea","macho","fêmea","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","macho","fêmea","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","macho",null,"fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","macho","fêmea","macho","fêmea","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","macho","fêmea","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","macho","fêmea","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","macho","fêmea","fêmea","macho","fêmea","macho",null,"macho","fêmea","macho","macho","fêmea","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","macho","fêmea","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho",null,"macho","fêmea","macho","fêmea","macho","macho","fêmea","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","macho","fêmea","fêmea","macho","fêmea","macho","fêmea","macho",null,"macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho",null,"macho","fêmea",null,"fêmea","macho","fêmea","macho","fêmea","macho","macho","fêmea","macho","fêmea","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","macho","fêmea","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","macho","fêmea","fêmea","macho","fêmea","macho","macho","fêmea","macho","fêmea","fêmea","macho","fêmea","macho","macho","fêmea","fêmea","macho","fêmea","macho","fêmea","macho","fêmea","macho","macho","fêmea","macho","fêmea","fêmea","macho","fêmea","macho","macho","fêmea"],"ano":[2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2008,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009,2009]},"columns":[{"id":"especie","name":"especie","type":"character"},{"id":"ilha","name":"ilha","type":"character"},{"id":"comprimento_bico","name":"comprimento_bico","type":"numeric"},{"id":"profundidade_bico","name":"profundidade_bico","type":"numeric"},{"id":"comprimento_nadadeira","name":"comprimento_nadadeira","type":"numeric"},{"id":"massa_corporal","name":"massa_corporal","type":"numeric"},{"id":"sexo","name":"sexo","type":"character"},{"id":"ano","name":"ano","type":"numeric"}],"columnGroups":[{"name":"Bico","columns":["comprimento_bico","profundidade_bico"]}],"filterable":true,"dataKey":"e2e5c00b3686dfcbe4a86515d86d4979"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://allisonhorst.github.io/palmerpenguins/"><img src="images/paste-BDCA07A0.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
+<p></p><figcaption class="figure-caption">Palmer Penguins</figcaption><p></p>
+</figure>
+</div>
+<p><a href="https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides.html">Materiais do curso</a></p>
+<ul>
+<li><p>arroz</p></li>
+<li><p>feijao</p></li>
+<li><p>macarrão</p></li>
+</ul>
+<ol type="1">
+<li><p>Bea</p></li>
+<li><p>Andressa</p></li>
+<li><p>Vitor</p></li>
+<li><p>Gabi</p></li>
+<li><p>Dani</p></li>
+</ol>
+<blockquote class="blockquote">
+<p>Segundo</p>
+</blockquote>
+<table class="table">
+<caption>exemplo</caption>
+<thead><tr class="header">
+<th>Col1</th>
+<th>Col2</th>
+<th>Col3</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiada");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiada");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">© Copyright 2022-2023, <a href="https://beamilz.com">Beatriz Milz</a></div>   
+    <div class="nav-footer-right">Página criada usando <a href="https://quarto.org/">Quarto</a>. Licença de uso: <a href="licenca.qmd">Creative Commons Atribuição-Compartilha Igual (CC BY-SA)</a>.</div>
+  </div>
+</footer>
+
+
+</body></html>

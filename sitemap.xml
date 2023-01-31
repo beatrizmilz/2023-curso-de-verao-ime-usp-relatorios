@@ -2,66 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/slides.html</loc>
-    <lastmod>2023-01-27T16:50:25.910Z</lastmod>
+    <lastmod>2023-01-31T11:14:00.088Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/licenca.html</loc>
-    <lastmod>2023-01-27T16:50:26.866Z</lastmod>
+    <lastmod>2023-01-31T11:14:00.780Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/trabalho_final.html</loc>
-    <lastmod>2023-01-27T16:50:27.658Z</lastmod>
+    <lastmod>2023-01-31T11:14:01.360Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/index.html</loc>
-    <lastmod>2023-01-27T16:50:28.142Z</lastmod>
+    <lastmod>2023-01-31T11:14:01.728Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/profs.html</loc>
-    <lastmod>2023-01-27T16:50:31.994Z</lastmod>
+    <lastmod>2023-01-31T11:14:04.764Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/informacoes-gerais.html</loc>
-    <lastmod>2023-01-27T16:50:32.458Z</lastmod>
+    <lastmod>2023-01-31T11:14:05.120Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/faq.html</loc>
-    <lastmod>2023-01-27T16:50:34.434Z</lastmod>
+    <lastmod>2023-01-31T11:14:06.548Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/pratica/aula-2-rmarkdown.html</loc>
-    <lastmod>2023-01-27T16:50:42.658Z</lastmod>
+    <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/pratica/aula-2/aula-2-rmarkdown.html</loc>
+    <lastmod>2023-01-31T11:14:12.445Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/pratica/aula-3/Quarto-academico.html</loc>
+    <lastmod>2023-01-31T11:14:14.053Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/pratica/aula-3/primeiro-quarto.html</loc>
+    <lastmod>2023-01-31T11:14:20.953Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/pratica/aula-3/primeiro-relatorio.html</loc>
+    <lastmod>2023-01-31T11:14:26.882Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/pratica/aula-3/segundo-quarto.html</loc>
+    <lastmod>2023-01-31T11:14:30.630Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/slides/03-intro-rmarkdown.html</loc>
-    <lastmod>2023-01-27T16:50:47.762Z</lastmod>
+    <lastmod>2023-01-31T11:14:34.174Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/slides/05-elementos-acad.html</loc>
-    <lastmod>2023-01-27T16:50:50.139Z</lastmod>
+    <lastmod>2023-01-31T11:14:35.798Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/slides/06-parametros.html</loc>
-    <lastmod>2023-01-27T16:50:50.567Z</lastmod>
+    <lastmod>2023-01-31T11:14:36.118Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/slides/01-intro-curso.html</loc>
-    <lastmod>2023-01-27T16:50:53.411Z</lastmod>
+    <lastmod>2023-01-31T11:14:38.390Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/slides/04-intro-quarto.html</loc>
-    <lastmod>2023-01-27T16:50:55.099Z</lastmod>
+    <lastmod>2023-01-31T11:14:39.570Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/slides/02-reprodutibilidade.html</loc>
-    <lastmod>2023-01-27T16:50:58.503Z</lastmod>
+    <lastmod>2023-01-31T11:14:41.782Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/instrucoes-de-instalacao.html</loc>
-    <lastmod>2023-01-27T16:51:01.515Z</lastmod>
+    <lastmod>2023-01-31T11:14:43.943Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/bibliografia.html</loc>
-    <lastmod>2023-01-27T16:51:01.975Z</lastmod>
+    <lastmod>2023-01-31T11:14:44.291Z</lastmod>
   </url>
 </urlset>
