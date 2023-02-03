@@ -1,5 +1,11 @@
 project:
   type: website
+  render: 
+    - "*.qmd"
+    - "!materiais/"
+    - "!planejamento_pratica/"
+    - "!pratica/"
+     
 
 lang: "pt"
 

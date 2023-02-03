@@ -91,7 +91,11 @@ sheet_links |>
 
 ### Materiais
 
-- [Baixar para a aula - zip com materiais para as práticas](https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/raw/main/materiais/pratica-aula-4.zip)
+-   [Baixar para a aula - zip com materiais para as práticas](https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/raw/main/materiais/pratica-aula-4.zip)
+
+### Scripts/anotações
+
+-   [Pasta com arquivos da aula 4](https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/blob/main/pratica/aula-4/).
 
 ### Links úteis
 
@@ -105,7 +109,8 @@ sheet_links |>
 
 ### Slides
 
-Em breve
+-   [Slide 7 - Introdução ao Git e GitHub no RStudio](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/slides/#80)
+
 
 ### Links úteis
 
