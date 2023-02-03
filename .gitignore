@@ -3,5 +3,6 @@
 .Rdata
 .httr-oauth
 .DS_Store
-
 /.quarto/
+presenca_python.csv
+presenca_python.xlsx
