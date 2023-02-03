@@ -1,73 +1,31 @@
 [
   {
-    "objectID": "slides.html#aula-1",
-    "href": "slides.html#aula-1",
-    "title": "Slides e materiais por aula",
-    "section": "Aula 1",
-    "text": "Aula 1\nSlides\n\nSlide 1 - Introdução ao Curso\nSlide 2 - Introdução ao conceito de reprodutibilidade\nScripts/anotações\n\n\naula-1.R - anotações.\nLinks úteis\n\n\n\n\n\n\n\n\n\nTema\nIdioma\nLink\n\n\n\nIntrodução à reprodutibilidade\nPortuguês\nZen do R - .Rdata e .Rhistory\n\n\nIntrodução à reprodutibilidade\nPortuguês\nZen do R - Projetos no RStudio e diretórios\n\n\nIntrodução à reprodutibilidade\nInglês\nVideo: Apresentação da Jenny Bryan sobre como nomear arquivos (5 minutos)\n\n\nIntrodução à reprodutibilidade\nInglês\nIntroduction to bioinformatics - Chapter 8 Reproducible research (introdução)\n\n\nPré-curso\nPortuguês\nPré-curso: Instalações necessárias"
-  },
-  {
-    "objectID": "slides.html#aula-2",
-    "href": "slides.html#aula-2",
-    "title": "Slides e materiais por aula",
-    "section": "Aula 2",
-    "text": "Aula 2\nSlides\n\nSlide 3 - Introdução ao RMarkdown\nScripts/anotações\n\naula-2.R - anotações.\nPasta com arquivos da aula 2 - experimentando algumas funcionalidades de relatório.\nLinks úteis\n\n\n\n\n\n\n\n\n\nTema\nIdioma\nLink\n\n\n\nDicas\nPortuguês\nDicas para relatórios: gráficos, tabelas, e dicas gerais\n\n\nDicas\nPortuguês\nDicas para desvendar erros\n\n\nDocumentação\nInglês\nDocumentação da base Palmer Penguins\n\n\nDocumentação\nInglês\nCheatsheets RStudio\n\n\nRMarkdown\nInglês\nPacote R Markdown\n\n\nRMarkdown\nInglês\nCheatsheet do RMarkdown\n\n\nRMarkdown\nInglês\nReference Guide do RMarkdown\n\n\nTabelas\nInglês\nPacote para fazer tabelas - reactable\n\n\nTabelas\nInglês\nPacote kableExtra: deixar as tabelas com kable() mais bonitas\n\n\nTabelas\nInglês\nCheat sheet do pacote flextable (tabelas para o word)\n\n\nTabelas\nInglês\nLivro do pacote flextable (tabelas para o word)"
-  },
-  {
-    "objectID": "slides.html#aula-3",
-    "href": "slides.html#aula-3",
-    "title": "Slides e materiais por aula",
-    "section": "Aula 3",
-    "text": "Aula 3\nSlides\n\nSlide 4 - Introdução ao Quarto\nSlide 5 - Elementos úteis para relatórios acadêmicos\nScripts/anotações\n\n\nPasta com arquivos da aula 3.\nLinks úteis\n\n\n\n\n\n\n\n\n\nTema\nIdioma\nLink\n\n\n\nEscrita científica\nInglês\nEquações com Latex\n\n\nInstalações\nInglês\nZotero - ferramenta para organizar referências\n\n\nInstalações\nInglês\nBetter bibtex for Zotero\n\n\nInstalações\nInglês\nUsar o RStudio no navegador - Posit Cloud\n\n\nQuarto\nPortuguês\nExemplo de relatório com Quarto e Python\n\n\nQuarto\nInglês\nQuarto - Nova geração do RMarkdown\n\n\nQuarto\nInglês\nFórum do Quarto\n\n\nQuarto\nInglês\nExtensões do Quarto\n\n\nQuarto\nInglês\nMiniconda - Instalação mais leve que tem Jupyter e Python\n\n\nQuarto\nInglês\nDocumentação do Quarto\n\n\nQuarto\nInglês\nTemas prontos para Quarto\n\n\nQuarto\nInglês\nLista de materiais sobre Quarto\n\n\nTabelas\nInglês\nPacote Janitor e a função adorn_totals()\n\n\nVisual Markdown Editor\nInglês\nVisual Markdown Editor\n\n\nVisual Markdown Editor\nInglês\nCitações com Quarto - Manual\n\n\nVisual Markdown Editor\nInglês\nEscrita científica com Quarto - Manual\n\n\nWord\nPortuguês\nUsando template do word com rmarkdown ou quarto"
-  },
-  {
-    "objectID": "slides.html#aula-4",
-    "href": "slides.html#aula-4",
-    "title": "Slides e materiais por aula",
-    "section": "Aula 4",
-    "text": "Aula 4\nSlides\n\nSlide 6 - Relatórios em R com parâmetros\nSlide 7 - Introdução ao Git e GitHub no RStudio\nMateriais\n\nBaixar para a aula - zip com materiais para as práticas\nLinks úteis\n\n\n\n\n\n\n\n\n\nTema\nIdioma\nLink\n\n\n\nAntes da aula\nInglês\nInstalar o Git\n\n\nAntes da aula\nInglês\nCriar conta no GitHub\n\n\nGit/GitHub\nPortuguês\nCheatsheet sobre Git e Github em português"
-  },
-  {
-    "objectID": "slides.html#aula-5",
-    "href": "slides.html#aula-5",
-    "title": "Slides e materiais por aula",
-    "section": "Aula 5",
-    "text": "Aula 5\nSlides\nEm breve\nLinks úteis\n\n\nEm breve!"
-  },
-  {
-    "objectID": "licenca.html",
-    "href": "licenca.html",
-    "title": "Licença de uso",
+    "objectID": "bibliografia.html",
+    "href": "bibliografia.html",
+    "title": "Bibliografia",
     "section": "",
-    "text": "Estes materiais são disponibilizados com a licença Creative Commons Atribuição-Compartilha Igual (CC BY-SA), ou seja, você pode compartilhar e adaptar este material, porém deve atribuir os créditos para as pessoas autoras, adicionando um link para o material original, e o seu material também deve ter este mesmo tipo de licença.\nSaiba mais em: Creative Commons\nVisual da página inspirado em: STA 210: Regression Analysis, por Mine Çetinkaya-Rundel."
+    "text": "Atenção!\n\n\n\nConteúdo em atualização."
   },
   {
-    "objectID": "trabalho_final.html",
-    "href": "trabalho_final.html",
-    "title": "Trabalho final",
+    "objectID": "bibliografia.html#em-português",
+    "href": "bibliografia.html#em-português",
+    "title": "Bibliografia",
+    "section": "Em Português",
+    "text": "Em Português\nCaio Lente, Athos Damiani, Beatriz Milz, Daniel Falbel, Fernando Correa, Julio Trecenti, Tereza Lacerda, William Amorim. Zen do R. Disponível em: https://curso-r.github.io/zen-do-r/git-github.html\nAthos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Correa, Julio Tricenti, Nicole Luduvice, William Amorim. Ciência de Dados em R. Disponível em: https://livro.curso-r.com/9-relatorios.html"
+  },
+  {
+    "objectID": "bibliografia.html#em-inglês",
+    "href": "bibliografia.html#em-inglês",
+    "title": "Bibliografia",
+    "section": "Em Inglês",
+    "text": "Em Inglês\nYihui Xie, J. J. Allaire, Garrett Grolemund. R Markdown: The Definitive Guide. 2019. Chapman & Hall/CRC. Disponível em: https://bookdown.org/yihui/rmarkdown/\nYihui Xie, Christophe Dervieux, Emily Riederer. R Markdown Cookbook. 2021. Chapman & Hall/CRC. Disponível em: https://bookdown.org/yihui/rmarkdown-cookbook/\nJenny Bryan, the STAT 545 TAs, Jim Hester. Happy Git and GitHub for the useR. Disponível em: https://happygitwithr.com/\nThe Carpentries & Data Carpentry. Reproducible Research Introduction. Disponível em: https://datacarpentry.org/rr-intro/\nNational Center for Ecological Analysis and Synthesis (NCEAS). Reproducible Analysis With R. Disponível em: https://nceas.github.io/sasap-training/materials/reproducible_research_in_r_fairbanks/"
+  },
+  {
+    "objectID": "faq.html",
+    "href": "faq.html",
+    "title": "Perguntas Frequentes (FAQ)",
     "section": "",
-    "text": "Objetivo: Você deverá criar um documento com Quarto, versionar no GitHub e disponibilizar na internet. Esse trabalho final oferece orientações para que você pratique o que foi apresentado no curso.\nRECOMENDAÇÃO: Faça as etapas sugeridas após cada aula.\nATENÇÃO: O recebimento do certificado está vinculado à entrega e aprovação deste trabalho final, além de ter frequência mínima de 75%."
-  },
-  {
-    "objectID": "trabalho_final.html#etapas-pré-codigo",
-    "href": "trabalho_final.html#etapas-pré-codigo",
-    "title": "Trabalho final",
-    "section": "Etapas pré-codigo",
-    "text": "Etapas pré-codigo\n\nPense no tipo de relatório que quer criar, qual é o objetivo do mesmo e o público-alvo. Por exemplo:\n\nUma análise de dados da pesquisa, a ser apresentada para outras pessoas pesquisadoras.\nUm tutorial com código em R ou Python.\nUma página pessoal de divulgação.\n\nEscolha uma base de dados para utilizar! Segue algumas ideias:\n\nPacote dados\nRepositório tidytuesday (em inglês)\nMais pacotes da comunidade BR: mananciais, reservatoriosBR, qualR, Outros\nAlguma que você tenha interesse!"
-  },
-  {
-    "objectID": "trabalho_final.html#passo-a-passo-com-r",
-    "href": "trabalho_final.html#passo-a-passo-com-r",
-    "title": "Trabalho final",
-    "section": "Passo a passo com R",
-    "text": "Passo a passo com R\n\nAula 1\n\nCrie um Projeto do RStudio para realizar a tarefa. Lembre-se de boas práticas para nomear o projeto: não utilize espaços, caracteres especiais, acentuação. O seu projeto deverá chamar “trabalho_relatorios_nome_sobrenome” (tudo minúsculo, separado por _). Ex: trabalho_relatorios_beatriz_milz\n\nA função usethis::create_project() será útil neste passo:\nusethis::create_project(\"caminho/trabalho_relatorios_nome_sobrenome\")\nTodos os passos seguintes serão realizados neste projeto criado.\n\nCrie a estrutura do seu projeto: uma pasta dados, onde adicionará bases de dados (se necessário), e uma pasta img para imagens (se necessário). Você pode criar manualmente, ou utilizando a função fs::dir_create():\n\nfs::dir_create(\"dados\")\nfs::dir_create(\"img\")\n\n\nAulas 2\n\nCrie o arquivo que será utilizado.\n\n\nFile -> New File -> Quarto document.\n\nVocê deve salvar o arquivo com o nome index.qmd. Clique em Render assim que o arquivo for criado, e confira se o arquivo index.html foi gerado sem erros.\n\n\nAula 3\n\nAgora você pode usar sua criatividade e adicionar conteúdo no relatório.\n\nIsso depende do objetivo do relatório e o público-alvo.\nPense em quais opções de chunk utilizar em cada caso: você pretende mostrar o código ou escondê-lo? Faz sentido apra o seu público alvo ler o seu código?\nAdicione pelo menos:\n\nUm parágrafo de texto, com marcações.\nUm link para uma página da internet.\nUma imagem.\nUma tabela.\nCaso saiba usar ggplot, tente adicionar um gráfico.\nCaso seja uma análise de pesquisa, tente adicionar referências usando .bib.\n\n\n\nAula 4\n\nInicie o versionamento com a seguinte função:\n\nusethis::use_git()\nSiga os passos até que o RStudio reinicie.\n\nCrie um repositório no GitHub que esteja vinculado à este projeto:\n\nusethis::use_github()\nSiga os passos até que uma janela do GitHub seja aberta e você possa ver o repositório criado. Guarde o link deste repositório!\n\n\nAula 5\n\nNo painel Git do RStudio, selecione os arquivos criados e faça um Commit. Clique no botão de Push (seta verde apontada para cima). Confira no repositório do GitHub se as suas mudanças aparecem por lá.\nAtive o GitHub Pages para disponibilizar na internet. Isso deverá ser feito no GitHub, na aba Settings, e então na opção Pages. Siga as instruções neste slide, usando a opção root/.\n\nAnote o link que é fornecido pelo GitHub. Espere alguns minutos, e então veja se algum conteúdo aparece na página.\n\nQuando estiver feliz com o resultado, lembre-se de fazer o Commit com as mudanças, e enviá-las para o GitHub clicando no botão de Push (seta verde apontada para cima).\n\nConfira no repositório do GitHub se as suas mudanças aparecem por lá. Confira na página da internet se as mudanças estão lá."
-  },
-  {
-    "objectID": "trabalho_final.html#pós-curso",
-    "href": "trabalho_final.html#pós-curso",
-    "title": "Trabalho final",
-    "section": "Pós curso",
-    "text": "Pós curso\n\nEnvie o link do relatório online e também do repositório do GitHub no formulário."
+    "text": "O curso será online ou presencial?\n\nO curso será oferecido de forma online.\n\nApenas estudantes da USP podem participar do curso?\n\nAs inscrições serão abertas para todas as pessoas interessadas.\n\nComo posso me inscrever?\n\nA inscrição será realizada através do IME-USP. Acompanhe as informações na página do Programa de Verão do IME-USP.\n\nO curso é gratuito?\n\nNão, o curso é pago. Acompanhe as informações na página do Programa de Verão do IME-USP.\n\nAs aulas serão gravadas?\n\nSim."
   },
   {
     "objectID": "index.html",
@@ -96,13 +54,6 @@
     "title": "Relatórios reprodutíveis com R",
     "section": "Edição passada",
     "text": "Edição passada\nConfira a página do curso de 2022 e os trabalhos finais criados pelas pessoas participantes da edição."
-  },
-  {
-    "objectID": "profs.html#monitoria-em-ordem-alfabética",
-    "href": "profs.html#monitoria-em-ordem-alfabética",
-    "title": "Docentes",
-    "section": "Monitoria (em ordem alfabética)",
-    "text": "Monitoria (em ordem alfabética)"
   },
   {
     "objectID": "informacoes-gerais.html",
@@ -147,55 +98,6 @@
     "text": "Política de isenção de taxa de inscrição\nSegue abaixo a política de Isenção que está no sistema para os cursos de verão:\n\n\nPolítica de Isenções ISENÇÃO O aluno deverá fazer sua inscrição on-line no curso que desejar e efetuar o pagamento, para assegurar sua vaga. Após dois dias úteis solicitar isenção (via Sistema Web do Verão). O sorteio das isenções, bem como, a divulgação dos contemplados ocorrerá no mês de dezembro. Aqueles que NÃO forem sorteados e desistirem de realizar o curso deverão solicitar a devolução da taxa de inscrição, na Secretaria do Programa de Verão.  No caso de ausência de interessados em alguma categoria, as vagas serão remanejadas de acordo com a procura ou será substituído por isenção para alunos indicados por docentes. A devolução da taxa, referente a isenção será feita via depósito em conta bancária."
   },
   {
-    "objectID": "faq.html",
-    "href": "faq.html",
-    "title": "Perguntas Frequentes (FAQ)",
-    "section": "",
-    "text": "O curso será online ou presencial?\n\nO curso será oferecido de forma online.\n\nApenas estudantes da USP podem participar do curso?\n\nAs inscrições serão abertas para todas as pessoas interessadas.\n\nComo posso me inscrever?\n\nA inscrição será realizada através do IME-USP. Acompanhe as informações na página do Programa de Verão do IME-USP.\n\nO curso é gratuito?\n\nNão, o curso é pago. Acompanhe as informações na página do Programa de Verão do IME-USP.\n\nAs aulas serão gravadas?\n\nSim."
-  },
-  {
-    "objectID": "pratica/aula-2/aula-2-rmarkdown.html",
-    "href": "pratica/aula-2/aula-2-rmarkdown.html",
-    "title": "Primeiro relatório",
-    "section": "",
-    "text": "library(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.4.0     ✔ purrr   1.0.1\n✔ tibble  3.1.8     ✔ dplyr   1.1.0\n✔ tidyr   1.3.0     ✔ stringr 1.5.0\n✔ readr   2.1.3     ✔ forcats 1.0.0\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\n\n\n# devtools::session_info()\n\n\npinguins <- read_csv('dados/pinguins.csv')\n\nRows: 344 Columns: 8\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (3): especie, ilha, sexo\ndbl (5): comprimento_bico, profundidade_bico, comprimento_nadadeira, massa_c...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nglimpse(pinguins)\n\nRows: 344\nColumns: 8\n$ especie               <chr> \"Pinguim-de-adélia\", \"Pinguim-de-adélia\", \"Pingu…\n$ ilha                  <chr> \"Torgersen\", \"Torgersen\", \"Torgersen\", \"Torgerse…\n$ comprimento_bico      <dbl> 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34…\n$ profundidade_bico     <dbl> 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18…\n$ comprimento_nadadeira <dbl> 181, 186, 195, NA, 193, 190, 181, 195, 193, 190,…\n$ massa_corporal        <dbl> 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 34…\n$ sexo                  <chr> \"macho\", \"fêmea\", \"fêmea\", NA, \"fêmea\", \"macho\",…\n$ ano                   <dbl> 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, …\n\n\n\n# names(pinguins)\n\n# paste0(names(pinguins), collapse = \", \")\n\nnome_colunas <- knitr::combine_words(\n  names(pinguins),\n  and = \" e \", \n  oxford_comma = FALSE\n)\n\n\nnome_especies <- knitr::combine_words(\n  unique(pinguins$especie),\n  and = \" e \", \n  oxford_comma = FALSE\n)\n\n# knitr::combine_words(unique(names(pinguins$ano)))\n# \n# min(pinguins$ano)\n# max(pinguins$ano)\n\n\n# knitr::combine_words(unique(pinguins$especie), and = \" e \", oxford_comma = FALSE)\n\n\nmedia_massa_arredondada <- round(mean(pinguins$massa_corporal, na.rm = TRUE))\nmedia_massa_arredondada_kg <- round(mean(pinguins$massa_corporal, na.rm = TRUE) / 1000, 1)\n\nA base de pinguins apresenta 344 pinguins, e as seguintes colunas: especie, ilha, comprimento_bico, profundidade_bico, comprimento_nadadeira, massa_corporal, sexo e ano. Os pinguins estudados são Pinguim-de-adélia, Pinguim-gentoo e Pinguim-de-barbicha.\nA base de dados pinguins apresenta dados referente à 344 pinguins, das seguintes espécies: Pinguim-de-adélia, Pinguim-gentoo e Pinguim-de-barbicha. Os dados foram coletados entre os anos 2007 e 2009, nas seguintes ilhas: Torgersen, BiscoeeDream. O peso médio dos pinguins amostrados foi de 4202 gramas. Os dados foram obtidos através do pacote Palmer Penguins.\n\n# ctrl shift M\npinguins |> \n # count(especie) |> \n  # knitr::kable()\n  # flextable::flextable()\n  reactable::reactable(filterable = TRUE,\n                       columnGroups = list(reactable::colGroup(\n                         name = \"Bico\",\n                         columns = c(\"comprimento_bico\", \"profundidade_bico\")\n                       )))\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nMateriais do curso\n\narroz\nfeijao\nmacarrão\n\n\nBea\nAndressa\nVitor\nGabi\nDani\n\n\nSegundo\n\n\nexemplo\n\nCol1\nCol2\nCol3"
-  },
-  {
-    "objectID": "pratica/aula-3/Quarto-academico.html",
-    "href": "pratica/aula-3/Quarto-academico.html",
-    "title": "Conteúdo Acadêmico",
-    "section": "",
-    "text": "Equações\nA equação \\(\\lim_{x \\to \\infty} x^2 = \\infty\\) fala que..\nVeja a equação a seguir:\n\\[\\lim_{x \\to \\infty} x^2 = \\infty\\]\n\\[{\\text{Média}=\\frac {a_{1}+a_{2}+\\cdots +a_{n}}{n}}\\]\nOu também na linha \\({\\text{Média}=\\frac {a_{1}+a_{2}+\\cdots +a_{n}}{n}}\\), junto ao texto!\nAdicionar referências\nUtilizamos neste trabalho o pacote tidyverse (Wickham et al. 2019; Wickham 2022).\nWengrat e Bicudo (2011)\n(Paz et al. 2022)\n\n\n\n\n\n\nReferências\n\nPaz, Mariana Gutierres Arteiro da, Roberto Donato da Silva Júnior, Pedro Roberto Jacobi, Zenaida Lauda-Rodriguez, e Beatriz Milz. 2022. \"Guia para o desmonte da política ambiental brasileira\". Ambiente & Sociedade 25. https://doi.org/10.1590/1809-4422asoceditorialvu2022l5edpt.\n\n\nWengrat, Simone, e Denise de Campos Bicudo. 2011. \"Spatial Evaluation of Water Quality in an Urban Reservoir (Billings Complex, Southeastern Brazil)\". Acta Limnologica Brasiliensia 23 (junho): 200–216. https://doi.org/10.1590/S2179-975X2011000200010.\n\n\nWickham, Hadley. 2022. tidyverse: Easily Install and Load the Tidyverse. https://CRAN.R-project.org/package=tidyverse.\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. \"Welcome to the tidyverse\". Journal of Open Source Software 4 (43): 1686. https://doi.org/10.21105/joss.01686."
-  },
-  {
-    "objectID": "pratica/aula-3/primeiro-quarto.html",
-    "href": "pratica/aula-3/primeiro-quarto.html",
-    "title": "Primeiro relatório",
-    "section": "",
-    "text": "library(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.4.0     ✔ purrr   1.0.1\n✔ tibble  3.1.8     ✔ dplyr   1.1.0\n✔ tidyr   1.3.0     ✔ stringr 1.5.0\n✔ readr   2.1.3     ✔ forcats 1.0.0\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\n\n\n# devtools::session_info()\n\n\npinguins <- read_csv('dados/pinguins.csv')\n\nRows: 344 Columns: 8\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (3): especie, ilha, sexo\ndbl (5): comprimento_bico, profundidade_bico, comprimento_nadadeira, massa_c...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nglimpse(pinguins)\n\nRows: 344\nColumns: 8\n$ especie               <chr> \"Pinguim-de-adélia\", \"Pinguim-de-adélia\", \"Pingu…\n$ ilha                  <chr> \"Torgersen\", \"Torgersen\", \"Torgersen\", \"Torgerse…\n$ comprimento_bico      <dbl> 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34…\n$ profundidade_bico     <dbl> 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18…\n$ comprimento_nadadeira <dbl> 181, 186, 195, NA, 193, 190, 181, 195, 193, 190,…\n$ massa_corporal        <dbl> 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 34…\n$ sexo                  <chr> \"macho\", \"fêmea\", \"fêmea\", NA, \"fêmea\", \"macho\",…\n$ ano                   <dbl> 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, …\n\n\n\n# names(pinguins)\n\n# paste0(names(pinguins), collapse = \", \")\n\nnome_colunas <- knitr::combine_words(\n  names(pinguins),\n  and = \" e \", \n  oxford_comma = FALSE\n)\n\n\nnome_especies <- knitr::combine_words(\n  unique(pinguins$especie),\n  and = \" e \", \n  oxford_comma = FALSE\n)\n\n# knitr::combine_words(unique(names(pinguins$ano)))\n# \n# min(pinguins$ano)\n# max(pinguins$ano)\n\n\n# knitr::combine_words(unique(pinguins$especie), and = \" e \", oxford_comma = FALSE)\n\n\nmedia_massa_arredondada <- round(mean(pinguins$massa_corporal, na.rm = TRUE))\nmedia_massa_arredondada_kg <- round(mean(pinguins$massa_corporal, na.rm = TRUE) / 1000, 1)\n\nA base de pinguins apresenta 344 pinguins, e as seguintes colunas: especie, ilha, comprimento_bico, profundidade_bico, comprimento_nadadeira, massa_corporal, sexo e ano. Os pinguins estudados são Pinguim-de-adélia, Pinguim-gentoo e Pinguim-de-barbicha.\nA base de dados pinguins apresenta dados referente à 344 pinguins, das seguintes espécies: Pinguim-de-adélia, Pinguim-gentoo e Pinguim-de-barbicha. Os dados foram coletados entre os anos 2007 e 2009, nas seguintes ilhas: Torgersen, BiscoeeDream. O peso médio dos pinguins amostrados foi de 4202 gramas. Os dados foram obtidos através do pacote Palmer Penguins.\n\n# ctrl shift M\npinguins |> \n # count(especie) |> \n  # knitr::kable()\n  # flextable::flextable()\n  reactable::reactable(filterable = TRUE,\n                       columnGroups = list(reactable::colGroup(\n                         name = \"Bico\",\n                         columns = c(\"comprimento_bico\", \"profundidade_bico\")\n                       )))\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nMateriais do curso\n\narroz\nfeijao\nmacarrão\n\n\nBea\nAndressa\nVitor\nGabi\nDani\n\n\nSegundo\n\n\nexemplo\n\nCol1\nCol2\nCol3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nquantidade_de_especies <- pinguins |>\n  dplyr::count(especie, sort = TRUE) |>\n  janitor::adorn_totals()\n\nquantidade_de_especies |> \n  knitr::kable(col.names = c(\"Espécie\", \"Quantidade\"))\n\n\n\nEspécie\nQuantidade\n\n\n\nPinguim-de-adélia\n152\n\n\nPinguim-gentoo\n124\n\n\nPinguim-de-barbicha\n68\n\n\nTotal\n344\n\n\n\n\n\n\npinguins |> \n  dplyr::count(especie, ilha) |> \n  dplyr::mutate(exemplo = sample(1:10, 5)) |> \n  janitor::adorn_totals(where = c(\"row\", \"col\")) |> \n  knitr::kable()\n\n\n\nespecie\nilha\nn\nexemplo\nTotal\n\n\n\nPinguim-de-adélia\nBiscoe\n44\n5\n49\n\n\nPinguim-de-adélia\nDream\n56\n1\n57\n\n\nPinguim-de-adélia\nTorgersen\n52\n2\n54\n\n\nPinguim-de-barbicha\nDream\n68\n4\n72\n\n\nPinguim-gentoo\nBiscoe\n124\n7\n131\n\n\nTotal\n-\n344\n19\n363\n\n\n\n\n\n\n# iris |> \n#   janitor::clean_names()\n\n\nlibrary(ggplot2)\npinguins |> \n  dplyr::count(especie) |> \n  ggplot() +\n  geom_col(aes(x = n, y = especie, fill = especie), show.legend = FALSE) +\n  theme_light() +\n  scale_fill_viridis_d() +\n  labs(x = \"Quantidade de pinguins\", y = \"Espécies\")"
-  },
-  {
-    "objectID": "pratica/aula-3/primeiro-relatorio.html",
-    "href": "pratica/aula-3/primeiro-relatorio.html",
-    "title": "Primeiro relatório",
-    "section": "",
-    "text": "A base de pinguins apresenta 344 pinguins, e as seguintes colunas: especie, ilha, comprimento_bico, profundidade_bico, comprimento_nadadeira, massa_corporal, sexo e ano. Os pinguins estudados são Pinguim-de-adélia, Pinguim-gentoo e Pinguim-de-barbicha.\nA base de dados pinguins apresenta dados referente à 344 pinguins, das seguintes espécies: Pinguim-de-adélia, Pinguim-gentoo e Pinguim-de-barbicha. Os dados foram coletados entre os anos 2007 e 2009, nas seguintes ilhas: Torgersen, BiscoeeDream. O peso médio dos pinguins amostrados foi de 4202 gramas. Os dados foram obtidos através do pacote Palmer Penguins.\n\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nMateriais do curso\n\narroz\nfeijao\nmacarrão\n\n\nBea\nAndressa\nVitor\nGabi\nDani\n\n\nSegundo\n\n\nexemplo\n\nCol1\nCol2\nCol3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEspécie\nQuantidade\n\n\n\nPinguim-de-adélia\n152\n\n\nPinguim-gentoo\n124\n\n\nPinguim-de-barbicha\n68\n\n\nTotal\n344\n\n\n\n\n\n\n\n\n\nespecie\nilha\nn\nexemplo\nTotal\n\n\n\nPinguim-de-adélia\nBiscoe\n44\n10\n54\n\n\nPinguim-de-adélia\nDream\n56\n6\n62\n\n\nPinguim-de-adélia\nTorgersen\n52\n8\n60\n\n\nPinguim-de-barbicha\nDream\n68\n5\n73\n\n\nPinguim-gentoo\nBiscoe\n124\n7\n131\n\n\nTotal\n-\n344\n36\n380\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico de quantidade de pinguins por espécie\n\n\n\n\n\n\n\n\nGráfico de quantidade de pinguins por espécie"
-  },
-  {
-    "objectID": "pratica/aula-3/segundo-quarto.html#quarto",
-    "href": "pratica/aula-3/segundo-quarto.html#quarto",
-    "title": "Relatório com Quarto",
-    "section": "Quarto",
-    "text": "Quarto\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
-  },
-  {
-    "objectID": "pratica/aula-3/segundo-quarto.html#running-code",
-    "href": "pratica/aula-3/segundo-quarto.html#running-code",
-    "title": "Relatório com Quarto",
-    "section": "Running Code",
-    "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n\n[1] 2\n\n\nYou can add options to executable code like this\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
-  },
-  {
     "objectID": "instrucoes-de-instalacao.html#contas-em-serviços",
     "href": "instrucoes-de-instalacao.html#contas-em-serviços",
     "title": "Pré-curso: Instalações necessárias",
@@ -217,24 +119,80 @@
     "text": "Instalações recomendadas\n\n\nGoogle Chrome. Para exportar os relatórios em formato PDF, utilizaremos uma função que depende do uso do navegador Google Chrome.\n\n\nDownload direto: https://www.google.com/intl/pt-BR/chrome/\nCaso você utilize Linux, uma alternativa é instalar o Chromium: https://www.chromium.org/getting-involved/download-chromium/\nMais informações em: https://livro.curso-r.com/1-3-instalacao-adicionais.html#pagedown-e-chrome\n\n\n\nLibreOffice. Para abrir documentos do Office, como .pptx e .docx, é necessário ter o Office ou alguma alternativa gratuita instalados. Caso não tenha nenhum software para abertura destes arquivos instalado, recomendo instalar o LibreOffice, pois é um software gratuito:\n\n\nDownload direto: https://pt-br.libreoffice.org/baixe-ja/libreoffice-novo/\nTutorial de instalação: https://livro.curso-r.com/1-3-instalacao-adicionais.html#office"
   },
   {
-    "objectID": "bibliografia.html",
-    "href": "bibliografia.html",
-    "title": "Bibliografia",
+    "objectID": "licenca.html",
+    "href": "licenca.html",
+    "title": "Licença de uso",
     "section": "",
-    "text": "Atenção!\n\n\n\nConteúdo em atualização."
+    "text": "Estes materiais são disponibilizados com a licença Creative Commons Atribuição-Compartilha Igual (CC BY-SA), ou seja, você pode compartilhar e adaptar este material, porém deve atribuir os créditos para as pessoas autoras, adicionando um link para o material original, e o seu material também deve ter este mesmo tipo de licença.\nSaiba mais em: Creative Commons\nVisual da página inspirado em: STA 210: Regression Analysis, por Mine Çetinkaya-Rundel."
   },
   {
-    "objectID": "bibliografia.html#em-português",
-    "href": "bibliografia.html#em-português",
-    "title": "Bibliografia",
-    "section": "Em Português",
-    "text": "Em Português\nCaio Lente, Athos Damiani, Beatriz Milz, Daniel Falbel, Fernando Correa, Julio Trecenti, Tereza Lacerda, William Amorim. Zen do R. Disponível em: https://curso-r.github.io/zen-do-r/git-github.html\nAthos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Correa, Julio Tricenti, Nicole Luduvice, William Amorim. Ciência de Dados em R. Disponível em: https://livro.curso-r.com/9-relatorios.html"
+    "objectID": "profs.html#monitoria-em-ordem-alfabética",
+    "href": "profs.html#monitoria-em-ordem-alfabética",
+    "title": "Docentes",
+    "section": "Monitoria (em ordem alfabética)",
+    "text": "Monitoria (em ordem alfabética)"
   },
   {
-    "objectID": "bibliografia.html#em-inglês",
-    "href": "bibliografia.html#em-inglês",
-    "title": "Bibliografia",
-    "section": "Em Inglês",
-    "text": "Em Inglês\nYihui Xie, J. J. Allaire, Garrett Grolemund. R Markdown: The Definitive Guide. 2019. Chapman & Hall/CRC. Disponível em: https://bookdown.org/yihui/rmarkdown/\nYihui Xie, Christophe Dervieux, Emily Riederer. R Markdown Cookbook. 2021. Chapman & Hall/CRC. Disponível em: https://bookdown.org/yihui/rmarkdown-cookbook/\nJenny Bryan, the STAT 545 TAs, Jim Hester. Happy Git and GitHub for the useR. Disponível em: https://happygitwithr.com/\nThe Carpentries & Data Carpentry. Reproducible Research Introduction. Disponível em: https://datacarpentry.org/rr-intro/\nNational Center for Ecological Analysis and Synthesis (NCEAS). Reproducible Analysis With R. Disponível em: https://nceas.github.io/sasap-training/materials/reproducible_research_in_r_fairbanks/"
+    "objectID": "slides.html#aula-1",
+    "href": "slides.html#aula-1",
+    "title": "Slides e materiais por aula",
+    "section": "Aula 1",
+    "text": "Aula 1\nSlides\n\nSlide 1 - Introdução ao Curso\nSlide 2 - Introdução ao conceito de reprodutibilidade\nScripts/anotações\n\n\naula-1.R - anotações.\nLinks úteis\n\n\n\n\n\n\n\n\n\nTema\nIdioma\nLink\n\n\n\nIntrodução à reprodutibilidade\nPortuguês\nZen do R - .Rdata e .Rhistory\n\n\nIntrodução à reprodutibilidade\nPortuguês\nZen do R - Projetos no RStudio e diretórios\n\n\nIntrodução à reprodutibilidade\nInglês\nVideo: Apresentação da Jenny Bryan sobre como nomear arquivos (5 minutos)\n\n\nIntrodução à reprodutibilidade\nInglês\nIntroduction to bioinformatics - Chapter 8 Reproducible research (introdução)\n\n\nPré-curso\nPortuguês\nPré-curso: Instalações necessárias"
+  },
+  {
+    "objectID": "slides.html#aula-2",
+    "href": "slides.html#aula-2",
+    "title": "Slides e materiais por aula",
+    "section": "Aula 2",
+    "text": "Aula 2\nSlides\n\nSlide 3 - Introdução ao RMarkdown\nScripts/anotações\n\naula-2.R - anotações.\nPasta com arquivos da aula 2 - experimentando algumas funcionalidades de relatório.\nLinks úteis\n\n\n\n\n\n\n\n\n\nTema\nIdioma\nLink\n\n\n\nDicas\nPortuguês\nDicas para relatórios: gráficos, tabelas, e dicas gerais\n\n\nDicas\nPortuguês\nDicas para desvendar erros\n\n\nDocumentação\nInglês\nDocumentação da base Palmer Penguins\n\n\nDocumentação\nInglês\nCheatsheets RStudio\n\n\nRMarkdown\nInglês\nPacote R Markdown\n\n\nRMarkdown\nInglês\nCheatsheet do RMarkdown\n\n\nRMarkdown\nInglês\nReference Guide do RMarkdown\n\n\nTabelas\nInglês\nPacote para fazer tabelas - reactable\n\n\nTabelas\nInglês\nPacote kableExtra: deixar as tabelas com kable() mais bonitas\n\n\nTabelas\nInglês\nCheat sheet do pacote flextable (tabelas para o word)\n\n\nTabelas\nInglês\nLivro do pacote flextable (tabelas para o word)"
+  },
+  {
+    "objectID": "slides.html#aula-3",
+    "href": "slides.html#aula-3",
+    "title": "Slides e materiais por aula",
+    "section": "Aula 3",
+    "text": "Aula 3\nSlides\n\nSlide 4 - Introdução ao Quarto\nSlide 5 - Elementos úteis para relatórios acadêmicos\nScripts/anotações\n\n\nPasta com arquivos da aula 3.\nLinks úteis\n\n\n\n\n\n\n\n\n\nTema\nIdioma\nLink\n\n\n\nEscrita científica\nInglês\nEquações com Latex\n\n\nInstalações\nInglês\nZotero - ferramenta para organizar referências\n\n\nInstalações\nInglês\nBetter bibtex for Zotero\n\n\nInstalações\nInglês\nUsar o RStudio no navegador - Posit Cloud\n\n\nQuarto\nPortuguês\nExemplo de relatório com Quarto e Python\n\n\nQuarto\nInglês\nQuarto - Nova geração do RMarkdown\n\n\nQuarto\nInglês\nFórum do Quarto\n\n\nQuarto\nInglês\nExtensões do Quarto\n\n\nQuarto\nInglês\nMiniconda - Instalação mais leve que tem Jupyter e Python\n\n\nQuarto\nInglês\nDocumentação do Quarto\n\n\nQuarto\nInglês\nTemas prontos para Quarto\n\n\nQuarto\nInglês\nLista de materiais sobre Quarto\n\n\nTabelas\nInglês\nPacote Janitor e a função adorn_totals()\n\n\nVisual Markdown Editor\nInglês\nVisual Markdown Editor\n\n\nVisual Markdown Editor\nInglês\nCitações com Quarto - Manual\n\n\nVisual Markdown Editor\nInglês\nEscrita científica com Quarto - Manual\n\n\nWord\nPortuguês\nUsando template do word com rmarkdown ou quarto"
+  },
+  {
+    "objectID": "slides.html#aula-4",
+    "href": "slides.html#aula-4",
+    "title": "Slides e materiais por aula",
+    "section": "Aula 4",
+    "text": "Aula 4\nSlides\n\nSlide 6 - Relatórios em R com parâmetros\nSlide 7 - Introdução ao Git e GitHub no RStudio\nMateriais\n\nBaixar para a aula - zip com materiais para as práticas\nScripts/anotações\n\n\nPasta com arquivos da aula 4.\nLinks úteis\n\n\n\n\n\n\n\n\n\nTema\nIdioma\nLink\n\n\n\nAntes da aula\nInglês\nInstalar o Git\n\n\nAntes da aula\nInglês\nCriar conta no GitHub\n\n\nEscrita científica\nPortuguês\nExemplo de tese com Quarto - formato PDF\n\n\nEscrita científica\nPortuguês\nExemplo de tese com Quarto - formato livro\n\n\nEscrita científica\nInglês\nArquivos CSL com padrões de citação\n\n\nEscrita científica\nInglês\nArquivos CSL com padrões de citação - ABNT\n\n\nEscrita científica\nInglês\nReferências cruzadas com Quarto\n\n\nEscrita científica\nInglês\nQuarto - como escrever gerando o bib do seu texto\n\n\nEscrita científica\nPortuguês\nExemplo de template de word\n\n\nGit/GitHub\nPortuguês\nCheatsheet sobre Git e Github em português\n\n\nMapas\nInglês\nPacote parzer - converter coordenadas\n\n\nMapas\nInglês\nPacote leaflet - mapas interativos\n\n\nParâmetros\nInglês\nRelatórios com parâmetros\n\n\nParâmetros\nPortuguês\nIntrodução à programação funcional com purrr\n\n\nParâmetros\nPortuguês\nLive de introdução ao purrr\n\n\nQuarto\nPortuguês\nExemplo de livro feito com Quarto"
+  },
+  {
+    "objectID": "slides.html#aula-5",
+    "href": "slides.html#aula-5",
+    "title": "Slides e materiais por aula",
+    "section": "Aula 5",
+    "text": "Aula 5\nSlides\n\nSlide 7 - Introdução ao Git e GitHub no RStudio\nLinks úteis\n\n\nEm breve!"
+  },
+  {
+    "objectID": "trabalho_final.html",
+    "href": "trabalho_final.html",
+    "title": "Trabalho final",
+    "section": "",
+    "text": "Objetivo: Você deverá criar um documento com Quarto, versionar no GitHub e disponibilizar na internet. Esse trabalho final oferece orientações para que você pratique o que foi apresentado no curso.\nRECOMENDAÇÃO: Faça as etapas sugeridas após cada aula.\nATENÇÃO: O recebimento do certificado está vinculado à entrega e aprovação deste trabalho final, além de ter frequência mínima de 75%."
+  },
+  {
+    "objectID": "trabalho_final.html#etapas-pré-codigo",
+    "href": "trabalho_final.html#etapas-pré-codigo",
+    "title": "Trabalho final",
+    "section": "Etapas pré-codigo",
+    "text": "Etapas pré-codigo\n\nPense no tipo de relatório que quer criar, qual é o objetivo do mesmo e o público-alvo. Por exemplo:\n\nUma análise de dados da pesquisa, a ser apresentada para outras pessoas pesquisadoras.\nUm tutorial com código em R ou Python.\nUma página pessoal de divulgação.\n\nEscolha uma base de dados para utilizar! Segue algumas ideias:\n\nPacote dados\nRepositório tidytuesday (em inglês)\nMais pacotes da comunidade BR: mananciais, reservatoriosBR, qualR, Outros\nAlguma que você tenha interesse!"
+  },
+  {
+    "objectID": "trabalho_final.html#passo-a-passo-com-r",
+    "href": "trabalho_final.html#passo-a-passo-com-r",
+    "title": "Trabalho final",
+    "section": "Passo a passo com R",
+    "text": "Passo a passo com R\n\nAula 1\n\nCrie um Projeto do RStudio para realizar a tarefa. Lembre-se de boas práticas para nomear o projeto: não utilize espaços, caracteres especiais, acentuação. O seu projeto deverá chamar “trabalho_relatorios_nome_sobrenome” (tudo minúsculo, separado por _). Ex: trabalho_relatorios_beatriz_milz\n\nA função usethis::create_project() será útil neste passo:\nusethis::create_project(\"caminho/trabalho_relatorios_nome_sobrenome\")\nTodos os passos seguintes serão realizados neste projeto criado.\n\nCrie a estrutura do seu projeto: uma pasta dados, onde adicionará bases de dados (se necessário), e uma pasta img para imagens (se necessário). Você pode criar manualmente, ou utilizando a função fs::dir_create():\n\nfs::dir_create(\"dados\")\nfs::dir_create(\"img\")\n\n\nAulas 2\n\nCrie o arquivo que será utilizado.\n\n\nFile -> New File -> Quarto document.\n\nVocê deve salvar o arquivo com o nome index.qmd. Clique em Render assim que o arquivo for criado, e confira se o arquivo index.html foi gerado sem erros.\n\n\nAula 3\n\nAgora você pode usar sua criatividade e adicionar conteúdo no relatório.\n\nIsso depende do objetivo do relatório e o público-alvo.\nPense em quais opções de chunk utilizar em cada caso: você pretende mostrar o código ou escondê-lo? Faz sentido apra o seu público alvo ler o seu código?\nAdicione pelo menos:\n\nUm parágrafo de texto, com marcações.\nUm link para uma página da internet.\nUma imagem.\nUma tabela.\nCaso saiba usar ggplot, tente adicionar um gráfico.\nCaso seja uma análise de pesquisa, tente adicionar referências usando .bib.\n\n\n\nAula 4\n\nInicie o versionamento com a seguinte função:\n\nusethis::use_git()\nSiga os passos até que o RStudio reinicie.\n\nCrie um repositório no GitHub que esteja vinculado à este projeto:\n\nusethis::use_github()\nSiga os passos até que uma janela do GitHub seja aberta e você possa ver o repositório criado. Guarde o link deste repositório!\n\n\nAula 5\n\nNo painel Git do RStudio, selecione os arquivos criados e faça um Commit. Clique no botão de Push (seta verde apontada para cima). Confira no repositório do GitHub se as suas mudanças aparecem por lá.\nAtive o GitHub Pages para disponibilizar na internet. Isso deverá ser feito no GitHub, na aba Settings, e então na opção Pages. Siga as instruções neste slide, usando a opção root/.\n\nAnote o link que é fornecido pelo GitHub. Espere alguns minutos, e então veja se algum conteúdo aparece na página.\n\nQuando estiver feliz com o resultado, lembre-se de fazer o Commit com as mudanças, e enviá-las para o GitHub clicando no botão de Push (seta verde apontada para cima).\n\nConfira no repositório do GitHub se as suas mudanças aparecem por lá. Confira na página da internet se as mudanças estão lá."
+  },
+  {
+    "objectID": "trabalho_final.html#pós-curso",
+    "href": "trabalho_final.html#pós-curso",
+    "title": "Trabalho final",
+    "section": "Pós curso",
+    "text": "Pós curso\n\nEnvie o link do relatório online e também do repositório do GitHub no formulário."
   }
 ]
