@@ -1,0 +1,195 @@
+---
+title: "Informações sobre as barragens"
+format: html
+date: today
+knitr: 
+  opts_chunk: 
+    fig.align: "center"
+    message: false
+bibliography: 
+  - references.bib
+  - packages.bib
+csl: abnt.csl 
+lang: pt
+params:
+  estado: "MG"
+---
+
+
+## ABSTRACT
+
+Exemplo...
+
+
+## Objetivos {#sec-objetivos}
+
+Este relatório tem como objetivo apresentar funcionalidades do *R Markdown* e do *Quarto*, utilizando dados públicos sobre barragens de mineração no Brasil.
+
+Os objetivos específicos da análise são:
+
+-   fazer uma tabela das barragens por estado;
+-   fazer um gráfico do número de barragens por categoria de dano potencial associado;
+
+## Materiais e métodos
+
+A base de dados disponibilizada pelo [SIGBM - Sistema de Gestão de Segurança de Barragem de Mineração](https://app.anm.gov.br/SIGBM/Publico/ClassificacaoNacionalDaBarragem) apresenta dados referentes à Barragens de Mineração no território brasileiro.
+
+<center>![](https://app.anm.gov.br/SIGBM/Content/images/anm315x66azul_r.png)</center>
+
+<br>
+
+## Carregando os pacotes
+
+```{r}
+# Carregar pacotes:
+library(janitor)
+library(tidyverse)
+library(readxl)
+
+```
+
+## Download e leitura da base
+
+### Download
+
+```{r}
+#| eval: false
+## ----download-data------------------
+## # Fazer download da base de dados do dia atual:
+## # url para baixar os dados
+url_request <- "https://app.anm.gov.br/SIGBM/Publico/ClassificacaoNacionalDaBarragem/ExportarExcel"
+##
+## # cria a pasta dados (se não existir)
+fs::dir_create("dados")
+##
+## # funcão que baixa os dados
+httr::POST(url_request, httr::write_disk("dados/sigbm.xlsx", overwrite = TRUE))
+
+```
+
+### Leitura
+
+```{r}
+## ----load-data-----------------
+# Importar a base de dados:
+# ler os dados baixados
+sigbm <- read_xlsx("dados/sigbm.xlsx", skip = 4) |>
+  clean_names()
+
+```
+
+Data de atualização da base:
+
+```{r}
+# ----- data de atualização -----
+data_atualizacao_sigbm <- read_xlsx("dados/sigbm.xlsx",
+                                    col_names = FALSE,
+                                    n_max = 1) |>
+  pull() |>
+  str_extract(":.*-") |>
+  str_remove(":") |>
+  str_remove("-") |>
+  str_trim()
+
+```
+
+## Barragens de mineração no Brasil
+
+A base do SIGBM foi obtida no dia `r data_atualizacao_sigbm`, e apresentou informações referentes a `r nrow(sigbm)` barragens.
+
+## Tabela
+
+```{r}
+## ----tabela-top-10-------------------------
+sigbm |>
+  count(uf, sort = TRUE) |>
+  slice(1:10) |>
+  select(`Estado` = uf, `Número de barragens` = n) |>
+  knitr::kable(caption = "Dez estados brasileiros com mais barragens cadastradas no SIG-BM")
+
+```
+
+## Gráfico
+
+```{r}
+#| fig-cap: "Gráfico do número de barragens segundo o Dano Potencial Associado"
+#| dpi: 300
+#| out-width: 95%
+#| label: fig-grafico-dpa
+## ----plot-dpa---------------------------
+sigbm |>
+  count(dano_potencial_associado) |>
+    mutate(
+    dano_potencial_associado = if_else(
+      dano_potencial_associado == "N/A",
+      "Não se aplica",
+      dano_potencial_associado
+    ),
+    dano_potencial_associado = factor(
+      dano_potencial_associado,
+      levels = c("Não se aplica", "Baixo", "Médio", "Alto")
+    )
+  ) |>
+  ggplot() +
+  aes(x = dano_potencial_associado, y = n) +
+  geom_col(fill = "lightblue") +
+  theme_bw() +
+  labs(x = "Dano potencial associado (DPA)", y = "Quantidade de barragens",
+       title = "Dano potencial associado de barragens de mineração no Brasil")
+```
+
+### Tabelas
+
+```{r}
+sigbm |>
+  count(uf, sort = TRUE) |>
+  slice(1:10) |>
+  select(`Estado` = uf, `Número de barragens` = n) |> 
+  knitr::kable()
+```
+
+
+### Adicionar referências
+
+Outros estudos utilizaram dados do SIGBM, como @leao2022.
+
+Esse relatório foi feito usando R [@rstats] e os pacotes tidyverse [@wickham2019], janitor [@R-janitor], ggplot2 [@ggplot22016].
+
+```{r}
+knitr::write_bib(x = c("tidyverse", "janitor", "ggplot2"), file = "packages.bib")
+```
+
+### Referência cruzada
+
+Na @sec-objetivos , descrevemos os objetivos deste documento.
+
+Nos [objetivos @sec-objetivos], descrevemos os objetivos deste documento.
+
+Na @fig-grafico-dpa, vemos que a maior quantidade de barragens ...
+
+
+# Informações para `r params$estado`
+
+```{r}
+#| echo: false
+# params$estado
+```
+
+```{r}
+sigbm_filtrado <- sigbm |> 
+  filter(uf == params$estado)
+```
+
+```{r}
+sigbm_filtrado_mapa <- sigbm_filtrado |> 
+  dplyr::mutate(lat = parzer::parse_lat(latitude),
+                lon = parzer::parse_lon(longitude))
+```
+
+```{r}
+leaflet::leaflet(data = sigbm_filtrado_mapa) |> 
+  leaflet::addAwesomeMarkers(lng = ~lon, lat = ~lat) |> 
+  leaflet::addProviderTiles(provider = "Esri.WorldImagery")
+  
+```
+
