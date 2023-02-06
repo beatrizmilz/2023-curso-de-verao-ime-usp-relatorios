@@ -5,6 +5,7 @@ project:
     - "!materiais/"
     - "!planejamento_pratica/"
     - "!pratica/"
+    - "!duvidas/exemplo-iteracao-child/"
      
 
 lang: "pt"
@@ -44,6 +45,7 @@ website:
         contents:
            - informacoes-gerais.qmd
            - profs.qmd
+           - turma.qmd           
            - faq.qmd
       - section: "Materias"
         contents:
