@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Relatórios reprodutíveis com R - Dúvidas</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../licenca.html" rel="next">
+<link href="../trabalho_final.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar"
+  }
+}</script><script src="../site_libs/htmlwidgets-1.6.1/htmlwidgets.js"></script><link href="../site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+<script src="../site_libs/datatables-binding-0.27/datatables.js"></script><script src="../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><link href="../site_libs/dt-core-1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="../site_libs/dt-core-1.12.1/css/jquery.dataTables.extra.css" rel="stylesheet">
+<script src="../site_libs/dt-core-1.12.1/js/jquery.dataTables.min.js"></script><link href="../site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
+<script src="../site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script><link rel="stylesheet" href="../styles.scss">
+</head>
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }"><div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Dúvidas</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="https://www.ime.usp.br/verao/assets/images/logo_verao.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Relatórios reprodutíveis com R <br></a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios" title="Repositório no GitHub" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="https://www.ime.usp.br/~verao/" title="Inscrições" class="sidebar-tool px-1"><i class="bi bi-book-half"></i></a>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://cursosextensao.usp.br/course/view.php?id=3449" class="sidebar-item-text sidebar-link">Plataforma USP</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">Sobre o curso</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../informacoes-gerais.html" class="sidebar-item-text sidebar-link">Informações gerais</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../profs.html" class="sidebar-item-text sidebar-link">Docentes</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../faq.html" class="sidebar-item-text sidebar-link">Perguntas Frequentes (FAQ)</a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Materias</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../instrucoes-de-instalacao.html" class="sidebar-item-text sidebar-link">Pré-curso: Instalações necessárias</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides.html" class="sidebar-item-text sidebar-link">Slides e materiais por aula</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../trabalho_final.html" class="sidebar-item-text sidebar-link">Trabalho final</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../duvidas/index.html" class="sidebar-item-text sidebar-link active">Dúvidas</a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">Edições anteriores</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/programacao-do-curso.html" class="sidebar-item-text sidebar-link">Edição 2022</a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../licenca.html" class="sidebar-item-text sidebar-link">Licença de uso</a>
+  </div>
+</li>
+    </ul>
+</div>
+</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+<li>
+<a href="#na-em-tabelas" id="toc-na-em-tabelas" class="nav-link active" data-scroll-target="#na-em-tabelas">NA em tabelas</a>
+  <ul class="collapse">
+<li><a href="#preparando-uma-tabela-de-exemplo" id="toc-preparando-uma-tabela-de-exemplo" class="nav-link" data-scroll-target="#preparando-uma-tabela-de-exemplo">Preparando uma tabela de exemplo</a></li>
+  <li><a href="#usando-knitr" id="toc-usando-knitr" class="nav-link" data-scroll-target="#usando-knitr">Usando knitr</a></li>
+  <li><a href="#usando-outras-fun%C3%A7%C3%B5es-para-gerar-tabelas" id="toc-usando-outras-funções-para-gerar-tabelas" class="nav-link" data-scroll-target="#usando-outras-fun%C3%A7%C3%B5es-para-gerar-tabelas">Usando outras funções para gerar tabelas</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#formata%C3%A7%C3%A3o-num%C3%A9rica-brasileira" id="toc-formatação-numérica-brasileira" class="nav-link" data-scroll-target="#formata%C3%A7%C3%A3o-num%C3%A9rica-brasileira">Formatação numérica brasileira</a>
+  <ul class="collapse">
+<li><a href="#preparando-uma-tabela-de-exemplo-1" id="toc-preparando-uma-tabela-de-exemplo-1" class="nav-link" data-scroll-target="#preparando-uma-tabela-de-exemplo-1">Preparando uma tabela de exemplo</a></li>
+  <li><a href="#em-textos" id="toc-em-textos" class="nav-link" data-scroll-target="#em-textos">Em textos</a></li>
+  <li><a href="#em-tabelas-knitr" id="toc-em-tabelas-knitr" class="nav-link" data-scroll-target="#em-tabelas-knitr">Em tabelas (knitr)</a></li>
+  <li><a href="#em-tabelas-outras" id="toc-em-tabelas-outras" class="nav-link" data-scroll-target="#em-tabelas-outras">Em tabelas (outras)</a></li>
+  <li><a href="#em-gr%C3%A1ficos" id="toc-em-gráficos" class="nav-link" data-scroll-target="#em-gr%C3%A1ficos">Em gráficos</a></li>
+  </ul>
+</li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title d-none d-lg-block">Dúvidas</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header><p>Dúvidas enviadas por alunas e alunos do curso e não deu tempo de responder durante a aula!</p>
+<hr>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/cienciadedatos/dados">dados</a></span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="na-em-tabelas" class="level2"><h2 class="anchored" data-anchor-id="na-em-tabelas">NA em tabelas</h2>
+<blockquote class="blockquote">
+<p>“Como substituir NA com “-” em tabelas? Existe uma forma geral de fazer isso ou o jeito é trabalhar cada tabela mesmo?”</p>
+</blockquote>
+<section id="preparando-uma-tabela-de-exemplo" class="level3"><h3 class="anchored" data-anchor-id="preparando-uma-tabela-de-exemplo">Preparando uma tabela de exemplo</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tabela_com_NA</span> <span class="op">&lt;-</span> <span class="va">dados_starwars</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">nome</span><span class="op">:</span><span class="va">cor_do_cabelo</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">altura</span><span class="op">)</span> <span class="op">|</span> <span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">cor_do_cabelo</span><span class="op">)</span><span class="op">)</span> </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="usando-knitr" class="level3"><h3 class="anchored" data-anchor-id="usando-knitr">Usando knitr</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># essa opcão do knitr deixa você escolher o que aparece onde tem NA</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>knitr.kable.NA <span class="op">=</span> <span class="st">'-'</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">tabela_com_NA</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead><tr class="header">
+<th style="text-align: left;">nome</th>
+<th style="text-align: right;">altura</th>
+<th style="text-align: right;">massa</th>
+<th style="text-align: left;">cor_do_cabelo</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">C-3PO</td>
+<td style="text-align: right;">167</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">R2-D2</td>
+<td style="text-align: right;">96</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">R5-D4</td>
+<td style="text-align: right;">97</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Greedo</td>
+<td style="text-align: right;">173</td>
+<td style="text-align: right;">74</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Jabba Desilijic Tiure</td>
+<td style="text-align: right;">175</td>
+<td style="text-align: right;">1358</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Arvel Crynyd</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: left;">Castanho</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Finn</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: left;">Preto</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rey</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: left;">Castanho</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Poe Dameron</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: left;">Castanho</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BB8</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: left;">Nenhum</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Captain Phasma</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: left;">Desconhecido</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="usando-outras-funções-para-gerar-tabelas" class="level3"><h3 class="anchored" data-anchor-id="usando-outras-funções-para-gerar-tabelas">Usando outras funções para gerar tabelas</h3>
+<ul>
+<li><p>Pesquisar na documentação se existe algum argumento para isso, ou..</p></li>
+<li><p>substituir nas colunas:</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tabela_com_NA_tratado</span> <span class="op">&lt;-</span> <span class="va">tabela_com_NA</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/across.html">across</a></span><span class="op">(</span>.fns <span class="op">=</span> <span class="op">~</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">.x</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu">tidyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/replace_na.html">replace_na</a></span><span class="op">(</span><span class="st">"-"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tabela_com_NA_tratado</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 11
+Columns: 4
+$ nome          &lt;chr&gt; "C-3PO", "R2-D2", "R5-D4", "Greedo", "Jabba Desilijic Ti…
+$ altura        &lt;chr&gt; "167", "96", "97", "173", "175", "-", "-", "-", "-", "-"…
+$ massa         &lt;chr&gt; "75", "32", "32", "74", "1358", "-", "-", "-", "-", "-",…
+$ cor_do_cabelo &lt;chr&gt; "-", "-", "-", "-", "-", "Castanho", "Preto", "Castanho"…</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tabela_com_NA_tratado</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">DT</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/DT/man/datatable.html">datatable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-49bb20c95e56ca9fafa4" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-49bb20c95e56ca9fafa4">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11"],["C-3PO","R2-D2","R5-D4","Greedo","Jabba Desilijic Tiure","Arvel Crynyd","Finn","Rey","Poe Dameron","BB8","Captain Phasma"],["167","96","97","173","175","-","-","-","-","-","-"],["75","32","32","74","1358","-","-","-","-","-","-"],["-","-","-","-","-","Castanho","Preto","Castanho","Castanho","Nenhum","Desconhecido"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>nome<\/th>\n      <th>altura<\/th>\n      <th>massa<\/th>\n      <th>cor_do_cabelo<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section></section><section id="formatação-numérica-brasileira" class="level2"><h2 class="anchored" data-anchor-id="formatação-numérica-brasileira">Formatação numérica brasileira</h2>
+<blockquote class="blockquote">
+<p>Como utilizar vírgula decimal e ponto de milhar? Esse não testei depois de aprender lang= pt, sabem me dizer se a alteração é automática colocando lang ou se precisa fazer outra coisa?</p>
+</blockquote>
+<ul>
+<li>Não, <code>lang=pt</code> não altera isso :(</li>
+</ul>
+<section id="preparando-uma-tabela-de-exemplo-1" class="level3"><h3 class="anchored" data-anchor-id="preparando-uma-tabela-de-exemplo-1">Preparando uma tabela de exemplo</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pinguins_selecionada</span> <span class="op">&lt;-</span> <span class="va">pinguins</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">especie</span><span class="op">:</span><span class="va">profundidade_bico</span>, <span class="va">massa_corporal</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="em-textos" class="level3"><h3 class="anchored" data-anchor-id="em-textos">Em textos</h3>
+<p>A função format é útil!</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/format.html">format</a></span><span class="op">(</span></span>
+<span>  <span class="va">pinguins_selecionada</span><span class="op">$</span><span class="va">massa_corporal</span>,</span>
+<span>  decimal.mark <span class="op">=</span> <span class="st">","</span>,</span>
+<span>  big.mark <span class="op">=</span> <span class="st">"."</span></span>
+<span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "3.750" "3.800" "3.250" "   NA" "3.450" "3.650"</code></pre>
+</div>
+</div>
+</section><section id="em-tabelas-knitr" class="level3"><h3 class="anchored" data-anchor-id="em-tabelas-knitr">Em tabelas (knitr)</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pinguins_selecionada</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>format.args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>decimal.mark <span class="op">=</span> <span class="st">","</span>, big.mark <span class="op">=</span> <span class="st">"."</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 12%">
+<col style="width: 21%">
+<col style="width: 23%">
+<col style="width: 19%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">especie</th>
+<th style="text-align: left;">ilha</th>
+<th style="text-align: right;">comprimento_bico</th>
+<th style="text-align: right;">profundidade_bico</th>
+<th style="text-align: right;">massa_corporal</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Pinguim-de-adélia</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">39,1</td>
+<td style="text-align: right;">18,7</td>
+<td style="text-align: right;">3.750</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Pinguim-de-adélia</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">39,5</td>
+<td style="text-align: right;">17,4</td>
+<td style="text-align: right;">3.800</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Pinguim-de-adélia</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">40,3</td>
+<td style="text-align: right;">18,0</td>
+<td style="text-align: right;">3.250</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Pinguim-de-adélia</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Pinguim-de-adélia</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">36,7</td>
+<td style="text-align: right;">19,3</td>
+<td style="text-align: right;">3.450</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Pinguim-de-adélia</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">39,3</td>
+<td style="text-align: right;">20,6</td>
+<td style="text-align: right;">3.650</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="em-tabelas-outras" class="level3"><h3 class="anchored" data-anchor-id="em-tabelas-outras">Em tabelas (outras)</h3>
+<ul>
+<li><p>Pesquisar na documentação se existe algum argumento para isso, ou..</p></li>
+<li><p>substituir nas colunas:</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pinguins_selecionado_formatado</span> <span class="op">&lt;-</span> <span class="va">pinguins_selecionada</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/across.html">across</a></span><span class="op">(</span>.cols <span class="op">=</span> <span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span>,</span>
+<span>                .fns <span class="op">=</span> <span class="op">~</span><span class="fu"><a href="https://rdrr.io/r/base/format.html">format</a></span><span class="op">(</span><span class="va">.x</span>, decimal.mark <span class="op">=</span> <span class="st">","</span>, big.mark <span class="op">=</span> <span class="st">"."</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pinguins_selecionado_formatado</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 6
+Columns: 5
+$ especie           &lt;fct&gt; Pinguim-de-adélia, Pinguim-de-adélia, Pinguim-de-adé…
+$ ilha              &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…
+$ comprimento_bico  &lt;chr&gt; "39,1", "39,5", "40,3", "  NA", "36,7", "39,3"
+$ profundidade_bico &lt;chr&gt; "18,7", "17,4", "18,0", "  NA", "19,3", "20,6"
+$ massa_corporal    &lt;chr&gt; "3.750", "3.800", "3.250", "   NA", "3.450", "3.650"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pinguins_selecionado_formatado</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">DT</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/DT/man/datatable.html">datatable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-50f10a25185eb96ff974" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-50f10a25185eb96ff974">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6"],["Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia","Pinguim-de-adélia"],["Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen"],["39,1","39,5","40,3","  NA","36,7","39,3"],["18,7","17,4","18,0","  NA","19,3","20,6"],["3.750","3.800","3.250","   NA","3.450","3.650"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>especie<\/th>\n      <th>ilha<\/th>\n      <th>comprimento_bico<\/th>\n      <th>profundidade_bico<\/th>\n      <th>massa_corporal<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section><section id="em-gráficos" class="level3"><h3 class="anchored" data-anchor-id="em-gráficos">Em gráficos</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">pinguins</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">comprimento_bico</span>, y <span class="op">=</span> <span class="va">massa_corporal</span>, color <span class="op">=</span> <span class="va">especie</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_light</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># AQUI EMBAIXO FORMATAMOS, NO SCALE_Y_CONTINUOUS</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="op">~</span><span class="fu"><a href="https://rdrr.io/r/base/format.html">format</a></span><span class="op">(</span><span class="va">.x</span>, decimal.mark <span class="op">=</span> <span class="st">","</span>, big.mark <span class="op">=</span> <span class="st">"."</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="st">"Comprimento do bico (cm)"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"Massa corporal (g)"</span>,</span>
+<span>    color <span class="op">=</span> <span class="st">"Espécie"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"top"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_viridis.html">scale_color_viridis_d</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="index_files/figure-html/grafico-pinguins-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiada");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiada");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="../trabalho_final.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Trabalho final</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../licenca.html" class="pagination-link">
+        <span class="nav-page-text">Licença de uso</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">© Copyright 2022-2023, <a href="https://beamilz.com">Beatriz Milz</a></div>   
+    <div class="nav-footer-right">Página criada usando <a href="https://quarto.org/">Quarto</a>. Licença de uso: <a href="licenca.qmd">Creative Commons Atribuição-Compartilha Igual (CC BY-SA)</a>.</div>
+  </div>
+</footer>
+
+
+</body></html>
