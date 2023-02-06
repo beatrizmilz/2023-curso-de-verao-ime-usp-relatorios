@@ -1,0 +1,147 @@
+---
+title: "Dúvidas"
+editor: visual
+knitr:
+  opts_chunk: 
+    echo: true
+    message: false
+    warning: false
+    fig.align: "center"
+---
+
+Dúvidas enviadas por alunas e alunos do curso e não deu tempo de responder durante a aula!
+
+---
+
+```{r}
+library(tidyverse)
+library(dados)
+```
+
+
+## NA em tabelas
+
+> "Como substituir NA com “-” em tabelas? Existe uma forma geral de fazer isso ou o jeito é trabalhar cada tabela mesmo?"
+
+
+### Preparando uma tabela de exemplo
+
+```{r}
+tabela_com_NA <- dados_starwars |> 
+  select(nome:cor_do_cabelo) |> 
+  dplyr::filter(is.na(altura) | is.na(cor_do_cabelo)) 
+```
+
+### Usando knitr
+
+```{r}
+# essa opcão do knitr deixa você escolher o que aparece onde tem NA
+options(knitr.kable.NA = '-')
+
+tabela_com_NA |> 
+  knitr::kable()
+```
+
+### Usando outras funções para gerar tabelas
+
+- Pesquisar na documentação se existe algum argumento para isso, ou..
+
+- substituir nas colunas: 
+
+```{r}
+tabela_com_NA_tratado <- tabela_com_NA |>
+  mutate(across(.fns = ~ as.character(.x) |> tidyr::replace_na("-")))
+```
+
+```{r}
+tabela_com_NA_tratado |> glimpse()
+```
+
+
+```{r}
+tabela_com_NA_tratado |> 
+  DT::datatable()
+```
+
+
+## Formatação numérica brasileira
+
+> Como utilizar vírgula decimal e ponto de milhar? Esse não testei depois de aprender lang= pt, sabem me dizer se a alteração é automática colocando lang ou se precisa fazer outra coisa?
+
+
+- Não, `lang=pt` não altera isso :(
+
+
+### Preparando uma tabela de exemplo
+
+```{r}
+pinguins_selecionada <- pinguins |> 
+  select(especie:profundidade_bico, massa_corporal) |> 
+  head()
+```
+
+### Em textos
+
+A função format é útil!
+
+```{r}
+format(
+  pinguins_selecionada$massa_corporal,
+  decimal.mark = ",",
+  big.mark = "."
+)
+```
+
+
+
+### Em tabelas (knitr)
+
+
+```{r}
+pinguins_selecionada |> 
+  knitr::kable(format.args = list(decimal.mark = ",", big.mark = "."))
+```
+
+
+### Em tabelas (outras)
+
+- Pesquisar na documentação se existe algum argumento para isso, ou..
+
+- substituir nas colunas: 
+
+```{r}
+pinguins_selecionado_formatado <- pinguins_selecionada |> 
+  mutate(across(.cols = where(is.numeric),
+                .fns = ~format(.x, decimal.mark = ",", big.mark = ".")))
+```
+
+```{r}
+pinguins_selecionado_formatado |> glimpse()
+```
+
+
+```{r}
+pinguins_selecionado_formatado |> 
+  DT::datatable()
+```
+
+
+### Em gráficos
+
+```{r}
+#| label: grafico-pinguins
+ggplot(pinguins) +
+  geom_point(aes(x = comprimento_bico, y = massa_corporal, color = especie)) +
+  theme_light() +
+  # AQUI EMBAIXO FORMATAMOS, NO SCALE_Y_CONTINUOUS
+  scale_y_continuous(labels = ~format(.x, decimal.mark = ",", big.mark = ".")) +
+  labs(
+    x = "Comprimento do bico (cm)",
+    y = "Massa corporal (g)",
+    color = "Espécie"
+  ) +
+  theme(legend.position = "top") +
+  scale_color_viridis_d()
+  
+```
+
