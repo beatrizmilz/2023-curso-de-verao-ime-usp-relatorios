@@ -6,7 +6,8 @@ title: "Slides e materiais por aula"
 library(magrittr)
 googlesheets4::gs4_deauth()
 sheet_links <-
-  googlesheets4::read_sheet("16-NokZ3NTaHfavyo77gSGdH_EtsAaeaCZWNBe9JfPMA", sheet = "links-extras")
+  googlesheets4::read_sheet("16-NokZ3NTaHfavyo77gSGdH_EtsAaeaCZWNBe9JfPMA", sheet = "links-extras") |> 
+  dplyr::mutate(numero_aula = as.character(numero_aula))
 
 criar_tabela_links_extras <- function(links_extras) {
   if (nrow(links_extras) >= 1) {
@@ -112,10 +113,26 @@ sheet_links |>
 -   [Slide 7 - Introdução ao Git e GitHub no RStudio](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/slides/#80)
 
 
+### Scripts/anotações
+
+-   [Pasta com arquivos da aula 5](https://github.com/beatrizmilz/2023-curso-de-verao-ime-usp-relatorios/blob/main/pratica/aula-5/).
+
 ### Links úteis
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 sheet_links |>
   dplyr::filter(numero_aula == 5) |>
+  criar_tabela_links_extras()
+```
+
+
+
+## Extra
+
+### Links úteis
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+sheet_links |>
+  dplyr::filter(numero_aula == "Extra") |>
   criar_tabela_links_extras()
 ```
