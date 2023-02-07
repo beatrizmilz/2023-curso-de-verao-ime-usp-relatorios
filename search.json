@@ -179,14 +179,21 @@
     "href": "slides.html#aula-4",
     "title": "Slides e materiais por aula",
     "section": "Aula 4",
-    "text": "Aula 4\nSlides\n\nSlide 6 - Relatórios em R com parâmetros\nSlide 7 - Introdução ao Git e GitHub no RStudio\nMateriais\n\nBaixar para a aula - zip com materiais para as práticas\nScripts/anotações\n\n\nPasta com arquivos da aula 4.\nLinks úteis\n\n\n\n\n\n\n\n\n\nTema\nIdioma\nLink\n\n\n\nAntes da aula\nInglês\nInstalar o Git\n\n\nAntes da aula\nInglês\nCriar conta no GitHub\n\n\nEscrita científica\nPortuguês\nExemplo de tese com Quarto - formato PDF\n\n\nEscrita científica\nPortuguês\nExemplo de tese com Quarto - formato livro\n\n\nEscrita científica\nInglês\nArquivos CSL com padrões de citação\n\n\nEscrita científica\nInglês\nArquivos CSL com padrões de citação - ABNT\n\n\nEscrita científica\nInglês\nReferências cruzadas com Quarto\n\n\nEscrita científica\nInglês\nQuarto - como escrever gerando o bib do seu texto\n\n\nEscrita científica\nPortuguês\nExemplo de template de word\n\n\nGit/GitHub\nPortuguês\nCheatsheet sobre Git e Github em português\n\n\nMapas\nInglês\nPacote parzer - converter coordenadas\n\n\nMapas\nInglês\nPacote leaflet - mapas interativos\n\n\nParâmetros\nInglês\nRelatórios com parâmetros\n\n\nParâmetros\nPortuguês\nIntrodução à programação funcional com purrr\n\n\nParâmetros\nPortuguês\nLive de introdução ao purrr\n\n\nQuarto\nPortuguês\nExemplo de livro feito com Quarto"
+    "text": "Aula 4\nSlides\n\nSlide 6 - Relatórios em R com parâmetros\nSlide 7 - Introdução ao Git e GitHub no RStudio\nMateriais\n\nBaixar para a aula - zip com materiais para as práticas\nScripts/anotações\n\n\nPasta com arquivos da aula 4.\nLinks úteis\n\n\n\n\n\n\n\n\n\nTema\nIdioma\nLink\n\n\n\nAntes da aula\nInglês\nInstalar o Git\n\n\nAntes da aula\nInglês\nCriar conta no GitHub\n\n\nEscrita científica\nPortuguês\nExemplo de tese com Quarto - formato PDF\n\n\nEscrita científica\nPortuguês\nExemplo de tese com Quarto - formato livro\n\n\nEscrita científica\nInglês\nArquivos CSL com padrões de citação\n\n\nEscrita científica\nInglês\nArquivos CSL com padrões de citação - ABNT\n\n\nEscrita científica\nInglês\nReferências cruzadas com Quarto\n\n\nEscrita científica\nInglês\nQuarto - como escrever gerando o bib do seu texto\n\n\nEscrita científica\nPortuguês\nExemplo de template de word\n\n\nMapas\nInglês\nPacote parzer - converter coordenadas\n\n\nMapas\nInglês\nPacote leaflet - mapas interativos\n\n\nParâmetros\nInglês\nRelatórios com parâmetros\n\n\nParâmetros\nPortuguês\nIntrodução à programação funcional com purrr\n\n\nParâmetros\nPortuguês\nLive de introdução ao purrr\n\n\nQuarto\nPortuguês\nExemplo de livro feito com Quarto"
   },
   {
     "objectID": "slides.html#aula-5",
     "href": "slides.html#aula-5",
     "title": "Slides e materiais por aula",
     "section": "Aula 5",
-    "text": "Aula 5\nSlides\n\nSlide 7 - Introdução ao Git e GitHub no RStudio\nLinks úteis\n\n\nEm breve!"
+    "text": "Aula 5\nSlides\n\nSlide 7 - Introdução ao Git e GitHub no RStudio\nScripts/anotações\n\n\nPasta com arquivos da aula 5.\nLinks úteis\n\n\n\n\n\n\n\n\n\nTema\nIdioma\nLink\n\n\n\nDúvidas\nInglês\nTemas do Quarto\n\n\nGit/GitHub\nPortuguês\nCheatsheet sobre Git e Github em português\n\n\nGit/GitHub\nInglês\nGitHub Desktop\n\n\nGit/GitHub\nPortuguês\nSenhas - post sobre como guardar senhas"
+  },
+  {
+    "objectID": "slides.html#extra",
+    "href": "slides.html#extra",
+    "title": "Slides e materiais por aula",
+    "section": "Extra",
+    "text": "Extra\nLinks úteis\n\n\n\n\n\n\n\n\n\nTema\nIdioma\nLink\n\n\n\nQuarto e Python\nInglês\nPython Made Easy With Posit Part 1: Reporting\n\n\nQuarto e Python\nInglês\nBuilding a reporting infrastructure with Quarto\n\n\nQuarto e Python\nPortuguês\nRepositório de exemplo: Quarto e Python (UTILIZAR GITHUB CODESPACE!)"
   },
   {
     "objectID": "trabalho_final.html",
@@ -215,5 +222,12 @@
     "title": "Trabalho final",
     "section": "Pós curso",
     "text": "Pós curso\n\nEnvie o link do relatório online e também do repositório do GitHub no formulário."
+  },
+  {
+    "objectID": "turma.html",
+    "href": "turma.html",
+    "title": "Turma",
+    "section": "",
+    "text": "Participantes\n\n\n\nAlan Ferreira dos Santos\n\n\nAna Beatriz Moreira Martinelli\n\n\nAnderson José de Oliveira Fontes Filho\n\n\nBruna Santos da Paixão\n\n\nCaroline Ferguson\n\n\nEduardo Astorino\n\n\nEduardo Schirmer Finn\n\n\nGabriel Graciano Dias\n\n\nGuilherme Ribeiro Batistuti\n\n\nIuri Cardoso\n\n\nJONAS PEREIRA ARAUJO\n\n\nJéssica Thais Corsso\n\n\nKarla de Araujo Ferreira\n\n\nLeonardo da Silva barbosa\n\n\nLucas da Silva Esteves de Souza\n\n\nLuigi Bruno Dias Martinelli\n\n\nMajory Araci Rodrigues Melo\n\n\nPaulo Augusto Pieretti\n\n\nRafael Rodisanski Patricio\n\n\nRicardo Okada Kobayashi\n\n\nSarah Raquel Ferlin de Deus\n\n\nVinicius Rocha Biscaro\n\n\nYuri Souza Gomes"
   }
 ]
