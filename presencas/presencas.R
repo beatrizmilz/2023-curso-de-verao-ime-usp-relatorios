@@ -38,4 +38,6 @@ presenca_tratado <- presenca_bruto |>
     # entrega_trabalho_final,
   ) 
 
+presenca_tratado |> 
+  dplyr::select(nome_completo, porc) |> View()
 
