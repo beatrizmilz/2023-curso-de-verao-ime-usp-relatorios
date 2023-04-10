@@ -8,134 +8,157 @@ title: "Trabalho final"
 
 **ATENÇÃO**: O recebimento do certificado está vinculado à entrega e aprovação deste trabalho final, além de ter frequência mínima de 75%.
 
+## Trabalhos entregues
+
+## Pessoas que entregaram os trabalhos finais
+
+```{r}
+#| message: FALSE
+#| echo: FALSE
+url <- "https://docs.google.com/spreadsheets/d/16-NokZ3NTaHfavyo77gSGdH_EtsAaeaCZWNBe9JfPMA/edit#gid=198169872"
+googlesheets4::gs4_auth(email = "milz.bea@gmail.com")
+sheet <- googlesheets4::read_sheet(url, "trabalhos-finais")
+
+
+sheet |>
+  dplyr::slice(-dplyr::n()) |> 
+  dplyr::arrange(Nome) |> 
+  dplyr::rename(url = Site, repo = GitHub, nome = Nome) |> 
+  dplyr::mutate(
+  url = dplyr::case_when(
+    !is.na(url) ~ glue::glue(
+      '<a href="{url}" target="_blank">{titulo}</a>'
+    ),
+    TRUE ~ ""
+  ),
+  repo_spec = stringr::str_remove(repo, "https://github.com/"),
+   repo = dplyr::case_when(
+    !is.na(repo) ~ glue::glue(
+      '<a href="{repo}" target="_blank">{repo_spec}</a>'
+    ),
+    TRUE ~ ""
+  )
+  
+  ) |> 
+  dplyr::select(nome, repo, url) |> 
+    reactable::reactable(searchable = TRUE, columns = list(
+        nome = reactable::colDef(html = TRUE, name = "Nome"),
+        url = reactable::colDef(html = TRUE, name = "Trabalho"),
+        repo = reactable::colDef(html = TRUE, name = "Repositório")),
+        defaultPageSize = 20
+    )
+```
+
+Obs:  Algumas pessoas realizaram o curso mas solicitaram que o trabalho final não fosse divulgado, e não constam na tabela acima.
+
 ## Etapas pré-codigo
 
-- Pense no tipo de relatório que quer criar, qual é o objetivo do mesmo e o público-alvo. Por exemplo:
+-   Pense no tipo de relatório que quer criar, qual é o objetivo do mesmo e o público-alvo. Por exemplo:
 
-  - Uma análise de dados da pesquisa, a ser apresentada para outras pessoas pesquisadoras.
-  
-  - Um tutorial com código em R ou Python.
-  
-  - Uma página pessoal de divulgação.
+    -   Uma análise de dados da pesquisa, a ser apresentada para outras pessoas pesquisadoras.
 
-- Escolha uma base de dados para utilizar! Segue algumas ideias:
+    -   Um tutorial com código em R ou Python.
 
-  - Pacote [dados](https://cienciadedatos.github.io/dados/)
-  
-  - Repositório [tidytuesday](https://github.com/rfordatascience/tidytuesday) (em inglês)
-  
-  - Mais pacotes da comunidade BR: [mananciais](https://beatrizmilz.github.io/mananciais/), [reservatoriosBR](https://brunomioto.github.io/reservatoriosBR/), [qualR](https://quishqa.github.io/qualR/), [Outros](https://materiais-estudo-r.netlify.app/portugues.html#pacotes-da-comunidade)
-  
-  - Alguma que você **tenha interesse**!
+    -   Uma página pessoal de divulgação.
 
+-   Escolha uma base de dados para utilizar! Segue algumas ideias:
+
+    -   Pacote [dados](https://cienciadedatos.github.io/dados/)
+
+    -   Repositório [tidytuesday](https://github.com/rfordatascience/tidytuesday) (em inglês)
+
+    -   Mais pacotes da comunidade BR: [mananciais](https://beatrizmilz.github.io/mananciais/), [reservatoriosBR](https://brunomioto.github.io/reservatoriosBR/), [qualR](https://quishqa.github.io/qualR/), [Outros](https://materiais-estudo-r.netlify.app/portugues.html#pacotes-da-comunidade)
+
+    -   Alguma que você **tenha interesse**!
 
 ## Passo a passo com R
 
 ### Aula 1
 
-
-
-1) Crie um Projeto do RStudio para realizar a tarefa. Lembre-se de boas práticas para nomear o projeto: não utilize espaços, caracteres especiais, acentuação. O seu projeto deverá chamar "trabalho_relatorios_nome_sobrenome" (tudo minúsculo, separado por `_`). Ex: `trabalho_relatorios_beatriz_milz` 
+1)  Crie um Projeto do RStudio para realizar a tarefa. Lembre-se de boas práticas para nomear o projeto: não utilize espaços, caracteres especiais, acentuação. O seu projeto deverá chamar "trabalho_relatorios_nome_sobrenome" (tudo minúsculo, separado por `_`). Ex: `trabalho_relatorios_beatriz_milz`
 
 A função `usethis::create_project()` será útil neste passo:
 
-```r
+``` r
 usethis::create_project("caminho/trabalho_relatorios_nome_sobrenome")
 ```
 
-
 **Todos os passos seguintes serão realizados neste projeto criado.**
 
+2)  Crie a estrutura do seu projeto: uma pasta `dados`, onde adicionará bases de dados (se necessário), e uma pasta `img` para imagens (se necessário). Você pode criar manualmente, ou utilizando a função `fs::dir_create()`:
 
-
-2) Crie a estrutura do seu projeto: uma pasta `dados`, onde adicionará bases de dados (se necessário), e uma pasta `img` para imagens (se necessário). Você pode criar manualmente, ou utilizando a função `fs::dir_create()`:
-
-```r
+``` r
 fs::dir_create("dados")
 fs::dir_create("img")
 ```
 
-
 ### Aulas 2
- 
 
-3) Crie o arquivo que será utilizado. 
+3)  Crie o arquivo que será utilizado.
 
-> File -> New File -> Quarto document.
-
+> File -\> New File -\> Quarto document.
 
 Você deve salvar o arquivo com o nome `index.qmd`. Clique em `Render` assim que o arquivo for criado, e confira se o arquivo `index.html` foi gerado sem erros.
 
 ### Aula 3
 
-4) Agora você pode usar sua criatividade e adicionar conteúdo no relatório. 
+4)  Agora você pode usar sua criatividade e adicionar conteúdo no relatório.
 
-Isso depende do objetivo do relatório e o público-alvo. 
+Isso depende do objetivo do relatório e o público-alvo.
 
 Pense em quais opções de chunk utilizar em cada caso: você pretende mostrar o código ou escondê-lo? Faz sentido apra o seu público alvo ler o seu código?
 
 Adicione pelo menos:
 
-  - Um parágrafo de texto, com marcações.
+-   Um parágrafo de texto, com marcações.
 
-  - Um link para uma página da internet.
-  
-  - Uma imagem.
-  
-  - Uma tabela.
-  
-  - Caso saiba usar ggplot, tente adicionar um gráfico.
-  
-  - Caso seja uma análise de pesquisa, tente adicionar referências usando `.bib`.
-  
+-   Um link para uma página da internet.
 
+-   Uma imagem.
+
+-   Uma tabela.
+
+-   Caso saiba usar ggplot, tente adicionar um gráfico.
+
+-   Caso seja uma análise de pesquisa, tente adicionar referências usando `.bib`.
 
 ### Aula 4
 
-5) Inicie o versionamento com a seguinte função:
+5)  Inicie o versionamento com a seguinte função:
 
-```r
+``` r
 usethis::use_git()
 ```
 
 Siga os passos até que o RStudio reinicie.
 
+6)  Crie um repositório no GitHub que esteja vinculado à este projeto:
 
-
-6) Crie um repositório no GitHub que esteja vinculado à este projeto:
-
-```r
+``` r
 usethis::use_github()
 ```
 
 Siga os passos até que uma janela do GitHub seja aberta e você possa ver o repositório criado. Guarde o link deste repositório!
 
-
-
 ### Aula 5
 
-7) No painel Git do RStudio, selecione os arquivos criados e faça um **Commit**. Clique no botão de **Push** (seta verde apontada para cima). Confira no repositório do GitHub se as suas mudanças aparecem por lá.
+7)  No painel Git do RStudio, selecione os arquivos criados e faça um **Commit**. Clique no botão de **Push** (seta verde apontada para cima). Confira no repositório do GitHub se as suas mudanças aparecem por lá.
 
-
-
-8) Ative o GitHub Pages para disponibilizar na internet. Isso deverá ser feito no GitHub, na aba Settings, e então na opção Pages. [Siga as instruções neste slide](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/slides/#githubpages), usando a opção `root/`. 
+8)  Ative o GitHub Pages para disponibilizar na internet. Isso deverá ser feito no GitHub, na aba Settings, e então na opção Pages. [Siga as instruções neste slide](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/slides/#githubpages), usando a opção `root/`.
 
 Anote o link que é fornecido pelo GitHub. Espere alguns minutos, e então veja se algum conteúdo aparece na página.
 
-
-
-9) Quando estiver feliz com o resultado, lembre-se de fazer o **Commit** com as mudanças, e enviá-las para o GitHub clicando no botão de **Push** (seta verde apontada para cima).
+9)  Quando estiver feliz com o resultado, lembre-se de fazer o **Commit** com as mudanças, e enviá-las para o GitHub clicando no botão de **Push** (seta verde apontada para cima).
 
 Confira no repositório do GitHub se as suas mudanças aparecem por lá. Confira na página da internet se as mudanças estão lá.
-
 
 ## Pós curso
 
 10) Envie o link do relatório online e também do repositório do GitHub no formulário.
 
- 
 <!-- inicio font awesome -->
+
+```{=html}
 <script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
-
+```
 <!-- final font awesome -->
-
