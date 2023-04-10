@@ -10,7 +10,6 @@ title: "Trabalho final"
 
 ## Trabalhos entregues
 
-## Pessoas que entregaram os trabalhos finais
 
 ```{r}
 #| message: FALSE
