@@ -16,7 +16,7 @@ title: "Trabalho final"
 #| message: FALSE
 #| echo: FALSE
 url <- "https://docs.google.com/spreadsheets/d/16-NokZ3NTaHfavyo77gSGdH_EtsAaeaCZWNBe9JfPMA/edit#gid=198169872"
-googlesheets4::gs4_auth(email = "milz.bea@gmail.com")
+googlesheets4::gs4_deauth()
 sheet <- googlesheets4::read_sheet(url, "trabalhos-finais")
 
 
